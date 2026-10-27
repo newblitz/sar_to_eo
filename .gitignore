@@ -20,7 +20,7 @@ assets/dinov2-base/
 assets/sd-vae-ft-ema/
 assets/sar_jepa/
 assets/SAR-JEPA/
-*.pth
+# *.pth
 *.pt
 *.ckpt
 *.safetensors
