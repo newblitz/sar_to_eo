@@ -51,3 +51,4 @@ results/*.safetensors
 hf_cache/
 huggingface_cache/
 torch_cache/
+sar-jeppa/*.pth
