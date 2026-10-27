@@ -10,7 +10,7 @@ Replace YOUR_GITHUB_REPO_URL with the repository URL:
 
 ~~~bash
 %cd /kaggle/working
-!git clone YOUR_GITHUB_REPO_URL sar-to-eo
+!git clone https://github.com/newblitz/sar_to_eo
 %cd /kaggle/working/sar-to-eo
 ~~~
 
@@ -63,7 +63,7 @@ The script fails instead of silently substituting a different SAR checkpoint.
 
 ~~~bash
 %cd /kaggle/working/sar-to-eo
-!python -m sar2eo.prepare_data --root . --seed 0
+!python -m sar2eo.prepare_data --root v_2 --seed 0
 !python -m sar2eo.preflight --root .
 !python -m sar2eo.sanity
 ~~~
@@ -89,8 +89,7 @@ Check the available options if needed:
 ## 6. Run the required overfit/debug check
 
 ~~~bash
-!torchrun --standalone --nproc_per_node=2 -m sar2eo.train \
-  --run overfit --overfit --steps 1000
+!python -m sar2eo.train --run overfit --overfit --steps 1000
 ~~~
 
 Inspect runs/overfit/logs.csv and confirm that the loss decreases before
@@ -99,8 +98,7 @@ starting the full run.
 ## 7. Run the main training job
 
 ~~~bash
-!torchrun --standalone --nproc_per_node=2 -m sar2eo.train \
-  --run main --steps 60000
+!python -m sar2eo.train --run main --steps 60000
 ~~~
 
 The default configuration uses 256px images, latent size 32, SiT-B/2
@@ -110,8 +108,7 @@ alignment weight 0.5.
 To resume after a Kaggle session interruption, rerun the setup cells and use:
 
 ~~~bash
-!torchrun --standalone --nproc_per_node=2 -m sar2eo.train \
-  --run main --steps 60000
+!python -m sar2eo.train --run main --steps 60000
 ~~~
 
 ## 8. Evaluate and save results

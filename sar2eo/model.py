@@ -4,8 +4,10 @@ from pathlib import Path
 import sys
 try:
     from .sar_encoder import SARViT
+    from .compat import ensure_torchvision_ops
 except ImportError:
     from sar2eo.sar_encoder import SARViT
+    from sar2eo.compat import ensure_torchvision_ops
 
 
 class SiTBlock(nn.Module):
@@ -31,12 +33,7 @@ class SAR2EO(nn.Module):
         self.glob_proj = nn.Linear(768, d_model); nn.init.zeros_(self.glob_proj.weight); nn.init.zeros_(self.glob_proj.bias)
         self._uses_local_sit = False
         if d_model == 768 and depth == 12 and heads == 12:
-            try:
-                lib = torch.library.Library("torchvision", "DEF")
-                lib.define("nms(Tensor boxes, Tensor scores, float iou_threshold) -> Tensor")
-                lib.define("qnms(Tensor boxes, Tensor scores, float iou_threshold) -> Tensor")
-            except Exception:
-                pass
+            ensure_torchvision_ops()
             sit_root = Path(__file__).resolve().parent.parent / "assets" / "SiT"
             if sit_root.exists():
                 sys.path.insert(0, str(sit_root))

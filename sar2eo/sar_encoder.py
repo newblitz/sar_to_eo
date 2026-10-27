@@ -3,6 +3,10 @@ from pathlib import Path
 import torch
 from torch import nn
 import torch.nn.functional as F
+try:
+    from .compat import ensure_torchvision_ops
+except ImportError:
+    from sar2eo.compat import ensure_torchvision_ops
 
 
 class _Attention(nn.Module):
@@ -53,12 +57,7 @@ class SARViT(nn.Module):
     def __init__(self, in_chans: int = 1, img_size: int = 256):
         super().__init__(); self.embed_dim = 768
         try:
-            try:
-                lib = torch.library.Library("torchvision", "DEF")
-                lib.define("nms(Tensor boxes, Tensor scores, float iou_threshold) -> Tensor")
-                lib.define("qnms(Tensor boxes, Tensor scores, float iou_threshold) -> Tensor")
-            except Exception:
-                pass
+            ensure_torchvision_ops()
             import timm
             # The explicit SAR-JEPA checkpoint is loaded later; never trigger an
             # implicit network download while constructing the wrapper.

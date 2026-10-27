@@ -54,8 +54,18 @@ def split_category(rows, seed):
 
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("root", nargs="?", default="v_2"); ap.add_argument("--out", default="splits"); ap.add_argument("--seed", type=int, default=0); a = ap.parse_args()
-    root, out = Path(a.root), Path(a.out); out.mkdir(parents=True, exist_ok=True); Path("results").mkdir(exist_ok=True)
+    ap = argparse.ArgumentParser()
+    ap.add_argument("root_pos", nargs="?", help="dataset root, kept for positional CLI compatibility")
+    ap.add_argument("--root", dest="root_flag", help="dataset root")
+    ap.add_argument("--out", default="splits")
+    ap.add_argument("--seed", type=int, default=0)
+    a = ap.parse_args()
+    root_name = a.root_flag or a.root_pos or "v_2"
+    root, out = Path(root_name), Path(a.out)
+    if not (root / "agri").is_dir() and (root / "v_2").is_dir():
+        root = root / "v_2"
+    out.mkdir(parents=True, exist_ok=True)
+    Path("results").mkdir(exist_ok=True)
     print("dataset root:", root.resolve()); print("folders:", sorted(p.name for p in root.iterdir() if p.is_dir()))
     all_splits = {k: [] for k in TARGETS}; summary = {"categories": {}, "dropped": {}, "scene_split_fallback": {}}
     for folder in CATEGORIES:

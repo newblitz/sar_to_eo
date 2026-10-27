@@ -2,28 +2,16 @@
 import torch
 from torch import nn
 import torch.nn.functional as F
-
-
-_TV_LIB = None
-
-
-def _torchvision_compat():
-    # The host's CPU torchvision wheel omits compiled NMS ops while its meta
-    # registration assumes they exist. Defining the schemas keeps optional
-    # torchvision imports used by Transformers/Diffusers functional.
-    global _TV_LIB
-    try:
-        _TV_LIB = torch.library.Library("torchvision", "DEF")
-        _TV_LIB.define("nms(Tensor boxes, Tensor scores, float iou_threshold) -> Tensor")
-        _TV_LIB.define("qnms(Tensor boxes, Tensor scores, float iou_threshold) -> Tensor")
-    except Exception:
-        pass
+try:
+    from .compat import ensure_torchvision_ops
+except ImportError:
+    from sar2eo.compat import ensure_torchvision_ops
 
 
 class FrozenTargets(nn.Module):
     def __init__(self, vae_id: str, dino_id: str):
         super().__init__()
-        _torchvision_compat()
+        ensure_torchvision_ops()
         from diffusers import AutoencoderKL
         from transformers import Dinov2Model
         self.vae = AutoencoderKL.from_pretrained(vae_id, local_files_only=True)
