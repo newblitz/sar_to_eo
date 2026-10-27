@@ -15,7 +15,7 @@ __pycache__/
 v_2/
 
 # Attached checkpoints and downloaded model weights
-sar-jeppa/
+
 assets/dinov2-base/
 assets/sd-vae-ft-ema/
 assets/sar_jepa/
@@ -52,4 +52,4 @@ hf_cache/
 huggingface_cache/
 torch_cache/
 sar-jeppa/*.pth
-sar-jeppa/*.pth
+
