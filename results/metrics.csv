@@ -1,0 +1,3 @@
+metric,value
+status,not_run
+reason,missing SEN1-2 data pretrained assets and runnable Python environment

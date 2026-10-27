@@ -1,0 +1,11 @@
+torch>=2.1
+timm
+diffusers
+transformers
+huggingface_hub
+accelerate
+torchmetrics[image]
+lpips
+opencv-python-headless
+Pillow
+numpy

@@ -1,0 +1,22 @@
+path: sar-jeppa/checkpoint-200.pth
+size_bytes: 1338257471
+top_level_keys: ['model', 'optimizer', 'epoch', 'scaler', 'args']
+model_entries: 289
+module.patch_embed.proj.weight: (768, 1, 16, 16)
+module.pos_embed: (1, 197, 768)
+module.cls_token: (1, 1, 768)
+module.blocks.0.attn.rpe_k.lookup_table_weight: (1, 64, 50)
+first_block:
+module.blocks.0.norm1.weight: (768,)
+module.blocks.0.norm1.bias: (768,)
+module.blocks.0.attn.qkv.weight: (2304, 768)
+module.blocks.0.attn.qkv.bias: (2304,)
+module.blocks.0.attn.proj.weight: (768, 768)
+module.blocks.0.attn.proj.bias: (768,)
+module.blocks.0.attn.rpe_k.lookup_table_weight: (1, 64, 50)
+module.blocks.0.norm2.weight: (768,)
+module.blocks.0.norm2.bias: (768,)
+module.blocks.0.mlp.fc1.weight: (3072, 768)
+module.blocks.0.mlp.fc1.bias: (3072,)
+module.blocks.0.mlp.fc2.weight: (768, 3072)
+module.blocks.0.mlp.fc2.bias: (768,)

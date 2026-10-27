@@ -1,0 +1,33 @@
+{
+  "categories": {
+    "agriculture": {
+      "val": 150,
+      "test": 350,
+      "train": 3500
+    },
+    "barren": {
+      "val": 150,
+      "test": 350,
+      "train": 3500
+    },
+    "grassland": {
+      "val": 150,
+      "test": 350,
+      "train": 3500
+    },
+    "urban": {
+      "val": 150,
+      "test": 350,
+      "train": 3500
+    }
+  },
+  "dropped": {},
+  "scene_split_fallback": {
+    "agriculture": true,
+    "barren": true,
+    "grassland": true,
+    "urban": true
+  },
+  "bytes": 2730627140,
+  "gib": 2.5430946983397007
+}

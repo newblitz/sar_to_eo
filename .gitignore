@@ -1,0 +1,53 @@
+# Local environments and Python caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# macOS/editor metadata
+.DS_Store
+.vscode/
+.idea/
+
+# Uploaded dataset: keep it in Kaggle/Dataset storage, not GitHub
+v_2/
+
+# Attached checkpoints and downloaded model weights
+sar-jeppa/
+assets/dinov2-base/
+assets/sd-vae-ft-ema/
+assets/sar_jepa/
+assets/SAR-JEPA/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+
+# Keep the lightweight upstream SiT source, but exclude any weights/checkpoints
+# that may later be placed inside it.
+assets/SiT/*.pth
+assets/SiT/*.pt
+assets/SiT/*.ckpt
+assets/SiT/*.safetensors
+assets/SiT/*.bin
+
+# Training outputs and generated heavy artifacts
+runs/
+checkpoints/
+outputs/
+wandb/
+results/samples_*.png
+results/*.pt
+results/*.pth
+results/*.ckpt
+results/*.safetensors
+
+# Download/cache directories created by Hugging Face and other tools
+.cache/
+**/.cache/
+hf_cache/
+huggingface_cache/
+torch_cache/
