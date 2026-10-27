@@ -89,7 +89,8 @@ Check the available options if needed:
 ## 6. Run the required overfit/debug check
 
 ~~~bash
-!python -m sar2eo.train --run overfit --overfit --steps 1000
+!torchrun --standalone --nproc_per_node=2 -m sar2eo.train \
+  --run overfit --overfit --steps 1000
 ~~~
 
 Inspect runs/overfit/logs.csv and confirm that the loss decreases before
@@ -98,7 +99,8 @@ starting the full run.
 ## 7. Run the main training job
 
 ~~~bash
-!python -m sar2eo.train --run main --steps 60000
+!torchrun --standalone --nproc_per_node=2 -m sar2eo.train \
+  --run main --steps 60000
 ~~~
 
 The default configuration uses 256px images, latent size 32, SiT-B/2
@@ -108,7 +110,8 @@ alignment weight 0.5.
 To resume after a Kaggle session interruption, rerun the setup cells and use:
 
 ~~~bash
-!python -m sar2eo.train --run main --steps 60000
+!torchrun --standalone --nproc_per_node=2 -m sar2eo.train \
+  --run main --steps 60000
 ~~~
 
 ## 8. Evaluate and save results
