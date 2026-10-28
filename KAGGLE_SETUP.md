@@ -10,16 +10,21 @@ Replace YOUR_GITHUB_REPO_URL with the repository URL:
 
 ~~~bash
 %cd /kaggle/working
-!git clone https://github.com/newblitz/sar_to_eo
-%cd /kaggle/working/sar-to-eo
+!git clone https://github.com/newblitz/sar_to_eo sar_to_eo
+%cd /kaggle/working/sar_to_eo
 ~~~
 
 ## 2. Install dependencies
 
+Kaggle already supplies the CUDA-enabled PyTorch build. Do not reinstall
+PyTorch, and remove Kaggle's preinstalled TorchAudio because this project has
+no audio input and the preinstalled TorchAudio may target a different CUDA
+version.
+
 ~~~bash
-!pip install -q -U \
-  "torch>=2.1" timm diffusers transformers huggingface_hub accelerate \
-  "torchmetrics[image]" lpips opencv-python-headless Pillow numpy
+!python -m pip uninstall -y torchaudio
+!python -m pip install -q -U -r requirements-kaggle.txt
+!python -c "import importlib.util, torch; print('torch:', torch.__version__); print('cuda:', torch.cuda.is_available(), 'count:', torch.cuda.device_count()); assert torch.cuda.is_available() and torch.cuda.device_count() >= 2; assert importlib.util.find_spec('torchaudio') is None; from diffusers import AutoencoderKL; from transformers import Dinov2Model; print('diffusers/transformers imports: OK')"
 ~~~
 
 ## 3. Prepare the exact local structure
@@ -38,14 +43,15 @@ assets/sar_jepa/checkpoint-200.pth -> attached SAR-JEPA checkpoint
 
 ~~~bash
 !python scripts/kaggle_setup.py \
-  --repo-root /kaggle/working/sar-to-eo
+  --repo-root /kaggle/working/sar_to_eo \
+  --sar-jepa-input /kaggle/input/datasets/prateeking/sar-jepa-input/checkpoint-200.pth
 ~~~
 
 If the dataset is nested differently, pass its exact directory:
 
 ~~~bash
 !python scripts/kaggle_setup.py \
-  --repo-root /kaggle/working/sar-to-eo \
+  --repo-root /kaggle/working/sar_to_eo \
   --dataset-input /kaggle/input/<dataset-directory>
 ~~~
 
@@ -53,7 +59,7 @@ If the checkpoint has a nonstandard filename or location:
 
 ~~~bash
 !python scripts/kaggle_setup.py \
-  --repo-root /kaggle/working/sar-to-eo \
+  --repo-root /kaggle/working/sar_to_eo \
   --sar-jepa-input /kaggle/input/<checkpoint-dataset>/checkpoint-200.pth
 ~~~
 
@@ -62,7 +68,7 @@ The script fails instead of silently substituting a different SAR checkpoint.
 ## 4. Prepare data and run preflight
 
 ~~~bash
-%cd /kaggle/working/sar-to-eo
+%cd /kaggle/working/sar_to_eo
 !python -m sar2eo.prepare_data --root v_2 --seed 0
 !python -m sar2eo.preflight --root .
 !python -m sar2eo.sanity
@@ -74,10 +80,9 @@ DINOv2 directories, and the SAR-JEPA checkpoint.
 ## 5. Measure the frozen VAE ceiling
 
 ~~~bash
-!python -m sar2eo.vae_ceiling \
-  --config /kaggle/working/sar-to-eo/runs/main/config.json \
-  --split /kaggle/working/sar-to-eo/splits/val.txt \
-  --out /kaggle/working/sar-to-eo/results/vae_ceiling.json
+!CUDA_VISIBLE_DEVICES=0 python -m sar2eo.vae_ceiling \
+  --split /kaggle/working/sar_to_eo/splits/val.txt \
+  --out /kaggle/working/sar_to_eo/results/vae_ceiling.json
 ~~~
 
 Check the available options if needed:
@@ -89,7 +94,8 @@ Check the available options if needed:
 ## 6. Run the required overfit/debug check
 
 ~~~bash
-!python -m sar2eo.train --run overfit --overfit --steps 1000
+!CUDA_VISIBLE_DEVICES=0,1 torchrun --standalone --nproc_per_node=2 \
+  -m sar2eo.train --run overfit --overfit --steps 1000
 ~~~
 
 Inspect runs/overfit/logs.csv and confirm that the loss decreases before
@@ -98,7 +104,8 @@ starting the full run.
 ## 7. Run the main training job
 
 ~~~bash
-!python -m sar2eo.train --run main --steps 60000
+!CUDA_VISIBLE_DEVICES=0,1 torchrun --standalone --nproc_per_node=2 \
+  -m sar2eo.train --run main --steps 60000
 ~~~
 
 The default configuration uses 256px images, latent size 32, SiT-B/2
@@ -108,7 +115,8 @@ alignment weight 0.5.
 To resume after a Kaggle session interruption, rerun the setup cells and use:
 
 ~~~bash
-!python -m sar2eo.train --run main --steps 60000
+!CUDA_VISIBLE_DEVICES=0,1 torchrun --standalone --nproc_per_node=2 \
+  -m sar2eo.train --run main --steps 60000
 ~~~
 
 ## 8. Evaluate and save results
@@ -127,7 +135,7 @@ Generate one sample:
 !python -m sar2eo.sample \
   --checkpoint runs/main/checkpoint_last.pt \
   --config runs/main/config.json \
-  --sar /kaggle/working/sar-to-eo/v_2/agri/s1/<sar-file>.png \
+  --sar /kaggle/working/sar_to_eo/v_2/agri/s1/<sar-file>.png \
   --output results/sample_agri.png \
   --cfg 1.5
 ~~~

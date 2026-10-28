@@ -5,7 +5,7 @@ except ImportError:
     from sar2eo.model import SAR2EO
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("--debug", action="store_true"); ap.add_argument("--sar-checkpoint", default="sar-jeppa/checkpoint-200.pth"); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("--debug", action="store_true"); ap.add_argument("--sar-checkpoint", default="assets/sar_jepa/checkpoint-200.pth"); a = ap.parse_args()
     d, depth, heads, k = (384, 12, 6, 4) if a.debug else (768, 12, 12, 4)
     m = SAR2EO(d, depth, heads, k); 
     if not a.debug:

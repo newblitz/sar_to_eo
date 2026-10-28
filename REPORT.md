@@ -60,7 +60,7 @@ The split is balanced at 3,500 train, 150 validation, and 350 test examples per 
 - All Python files passed `py_compile` using `/opt/anaconda3/bin/python`.
 - CPU debug sanity check passed with velocity `(2,4,32,32)` and alignment tokens `(2,256,768)`.
 - Local SD-VAE loaded and produced `(B,4,32,32)` latents; local DINOv2 loaded and produced `(B,256,768)` tokens.
-- Supplied SAR-JEPA checkpoint loaded with no missing compatible weights. Its iRPE lookup-table weights are reported but not applied by the compact encoder.
+- The SAR-JEPA loader now requires the official LoMaR/iRPE source and routes the checkpoint through the upstream encoder blocks. Local verification of this exact path is pending because GitHub was unreachable on the development host; Kaggle setup clones the required source before loading.
 - EMA architecture was verified by copying the already SAR-JEPA-adapted base model.
 - All command-line entry points passed help/compile checks.
 - [results/data_preview.png](./results/data_preview.png) was visually inspected.
@@ -72,7 +72,7 @@ The split is balanced at 3,500 train, 150 validation, and 350 test examples per 
 3. SAR PNGs are already 8-bit scaled intensity, so preprocessing uses `x/127.5 - 1` without dB conversion.
 4. The filename pattern provides a candidate scene key.
 5. Terrain is metadata only and is not passed to the model.
-6. The supplied SAR-JEPA checkpoint is the intended SAR initialization. Its compact compatible encoder ignores the checkpoint's iRPE lookup tables, which is recorded as a limitation.
+6. The supplied SAR-JEPA checkpoint is the intended SAR initialization. The official LoMaR/iRPE encoder is required; no compact iRPE-dropping substitute is used when the checkpoint is present.
 7. CPU debug execution is sufficient for shape/syntax checks, but not for performance or quality conclusions.
 
 ## Problems encountered

@@ -1,0 +1,13 @@
+# Kaggle already provides the CUDA-enabled PyTorch build. Do not reinstall
+# torch or torchaudio: this project uses images only, and Kaggle's torchaudio
+# wheel may target a different CUDA version than Kaggle's PyTorch wheel.
+timm==1.0.30
+diffusers==0.42.1
+transformers==5.21.0
+huggingface_hub==1.33.0
+accelerate
+torchmetrics[image]
+lpips
+opencv-python-headless
+Pillow
+numpy

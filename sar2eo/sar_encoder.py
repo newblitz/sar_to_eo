@@ -1,4 +1,5 @@
 import re
+import sys
 from pathlib import Path
 import torch
 from torch import nn
@@ -29,22 +30,39 @@ class _Block(nn.Module):
         return x + self.mlp(self.norm2(x))
 
 
-class SARJEPAViT(nn.Module):
-    """Encoder-only compatible subset of the supplied SAR-JEPA ViT checkpoint.
+def _upstream_sar_jepa_encoder():
+    """Build the official LoMaR/iRPE encoder from the cloned SAR-JEPA repo."""
+    source_root = Path(__file__).resolve().parent.parent / "assets" / "SAR-JEPA" / "Pretraining"
+    if not source_root.exists():
+        raise FileNotFoundError(
+            f"Official SAR-JEPA source is required for the iRPE checkpoint: {source_root}"
+        )
+    source = str(source_root)
+    if source not in sys.path:
+        sys.path.insert(0, source)
+    from models_lomar import mae_vit_base_patch16_dec512d8b
 
-    The checkpoint's iRPE lookup tables are reported and ignored in this compact
-    fallback because the upstream LoMaR source is not attached. All compatible
-    patch, attention, MLP, norm and position weights are loaded.
-    """
-    def __init__(self, depth=12, dim=768, heads=12):
-        super().__init__(); self.embed_dim = dim; self.patch_embed = nn.Module(); self.patch_embed.proj = nn.Conv2d(1, dim, 16, 16); self.cls_token = nn.Parameter(torch.zeros(1, 1, dim)); self.pos_embed = nn.Parameter(torch.zeros(1, 197, dim)); self.blocks = nn.ModuleList([_Block(dim, heads) for _ in range(depth)]); self.norm = nn.LayerNorm(dim)
+    return mae_vit_base_patch16_dec512d8b(img_size=224, in_chans=1)
+
+
+class SARJEPAViT(nn.Module):
+    """Official SAR-JEPA/LoMaR encoder-only forward path with iRPE preserved."""
+    def __init__(self):
+        super().__init__()
+        self.encoder = _upstream_sar_jepa_encoder()
+        self.embed_dim = 768
 
     def forward(self, x):
-        h = self.patch_embed.proj(x).flatten(2).transpose(1, 2); pos = self.pos_embed[:, 1:]
-        pos = F.interpolate(pos.transpose(1, 2).reshape(1, self.embed_dim, 14, 14), size=(16, 16), mode="bicubic", align_corners=False).flatten(2).transpose(1, 2)
-        h = h + pos
-        for block in self.blocks: h = block(h)
-        return self.norm(h)
+        if x.shape[-2:] != (224, 224):
+            x = F.interpolate(x, size=(224, 224), mode="bilinear", align_corners=False)
+        h = self.encoder.patch_embed(x).float()
+        cls = self.encoder.cls_token.expand(h.shape[0], -1, -1)
+        h = torch.cat((cls, h), dim=1)
+        for block in self.encoder.blocks:
+            h = block(h)
+        h = self.encoder.norm(h)[:, 1:]
+        h = h.transpose(1, 2).reshape(h.shape[0], self.embed_dim, 14, 14)
+        return F.interpolate(h, size=(16, 16), mode="bilinear", align_corners=False).flatten(2).transpose(1, 2)
 
 
 class _FallbackViT(nn.Module):
@@ -90,9 +108,11 @@ def load_sar_checkpoint(model: SARViT, checkpoint: str | None) -> None:
         model.vit = SARJEPAViT().to(device)
     clean = {}
     for key, value in raw.items():
-        if key.startswith(("module.decoder", "module.hogs", "module.mask_token", "module.encoder_pred")): continue
-        key = key.removeprefix("module.").replace(".mlp.fc1.", ".mlp.0.").replace(".mlp.fc2.", ".mlp.2.")
+        if key.startswith(("module.decoder", "module.hogs", "module.mask_token", "module.encoder_pred", "module.sarfeature")): continue
+        key = key.removeprefix("module.")
         clean[key] = value
+    if has_rpe:
+        clean = {f"encoder.{key}": value for key, value in clean.items()}
     missing, unexpected = model.vit.load_state_dict(clean, strict=False)
     print("SAR-JEPA iRPE tables present:", has_rpe)
     print("SAR checkpoint missing:", missing)

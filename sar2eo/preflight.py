@@ -21,7 +21,11 @@ def main():
     for package in ["diffusers", "transformers", "huggingface_hub", "timm", "torchmetrics", "lpips", "cv2"]: print(package + ":", version(package))
     assets = {"SiT source": root / "assets/SiT", "SAR-JEPA source": root / "assets/SAR-JEPA", "SD-VAE": root / "assets/sd-vae-ft-ema", "DINOv2": root / "assets/dinov2-base", "SAR-JEPA checkpoint": root / "assets/sar_jepa"}
     for name, path in assets.items(): print(name + ":", path, "exists=" + str(path.exists()))
-    attached = root / "sar-jeppa/checkpoint-200.pth"; print("attached SAR-JEPA checkpoint:", attached, "exists=" + str(attached.exists()))
+    attached = root / "assets/sar_jepa/checkpoint-200.pth"
+    legacy_attached = root / "sar-jeppa/checkpoint-200.pth"
+    print("staged SAR-JEPA checkpoint:", attached, "exists=" + str(attached.exists()))
+    if legacy_attached.exists():
+        print("legacy SAR-JEPA checkpoint:", legacy_attached, "exists=True")
     if attached.exists():
         try: from .sar_encoder import inspect_checkpoint
         except ImportError: from sar2eo.sar_encoder import inspect_checkpoint

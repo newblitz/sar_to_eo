@@ -1,0 +1,1045 @@
+13.2s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+13.2s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+13.2s 3 0.00s - to python to disable frozen modules.
+13.2s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+14.0s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+14.0s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+14.0s 7 0.00s - to python to disable frozen modules.
+14.0s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+16.8s 9 Path to dataset files: /kaggle/input/datasets/requiemonk/sentinel12-image-pairs-segregated-by-terrain
+17.1s 10 Cloning into 'sar_to_eo'...
+18.3s 11 remote: Enumerating objects: 108, done.[K
+18.3s 12 remote: Counting objects:   0% (1/108)[Kremote: Counting objects:   1% (2/108)[Kremote: Counting objects:   2% (3/108)[Kremote: Counting objects:   3% (4/108)[Kremote: Counting objects:   4% (5/108)[Kremote: Counting objects:   5% (6/108)[Kremote: Counting objects:   6% (7/108)[Kremote: Counting objects:   7% (8/108)[Kremote: Counting objects:   8% (9/108)[Kremote: Counting objects:   9% (10/108)[Kremote: Counting objects:  10% (11/108)[Kremote: Counting objects:  11% (12/108)[Kremote: Counting objects:  12% (13/108)[Kremote: Counting objects:  13% (15/108)[Kremote: Counting objects:  14% (16/108)[Kremote: Counting objects:  15% (17/108)[Kremote: Counting objects:  16% (18/108)[Kremote: Counting objects:  17% (19/108)[Kremote: Counting objects:  18% (20/108)[Kremote: Counting objects:  19% (21/108)[Kremote: Counting objects:  20% (22/108)[Kremote: Counting objects:  21% (23/108)[Kremote: Counting objects:  22% (24/108)[Kremote: Counting objects:  23% (25/108)[Kremote: Counting objects:  24% (26/108)[Kremote: Counting objects:  25% (27/108)[Kremote: Counting objects:  26% (29/108)[Kremote: Counting objects:  27% (30/108)[Kremote: Counting objects:  28% (31/108)[Kremote: Counting objects:  29% (32/108)[Kremote: Counting objects:  30% (33/108)[Kremote: Counting objects:  31% (34/108)[Kremote: Counting objects:  32% (35/108)[Kremote: Counting objects:  33% (36/108)[Kremote: Counting objects:  34% (37/108)[Kremote: Counting objects:  35% (38/108)[Kremote: Counting objects:  36% (39/108)[Kremote: Counting objects:  37% (40/108)[Kremote: Counting objects:  38% (42/108)[Kremote: Counting objects:  39% (43/108)[Kremote: Counting objects:  40% (44/108)[Kremote: Counting objects:  41% (45/108)[Kremote: Counting objects:  42% (46/108)[Kremote: Counting objects:  43% (47/108)[Kremote: Counting objects:  44% (48/108)[Kremote: Counting objects:  45% (49/108)[Kremote: Counting objects:  46% (50/108)[Kremote: Counting objects:  47% (51/108)[Kremote: Counting objects:  48% (52/108)[Kremote: Counting objects:  49% (53/108)[Kremote: Counting objects:  50% (54/108)[Kremote: Counting objects:  51% (56/108)[Kremote: Counting objects:  52% (57/108)[Kremote: Counting objects:  53% (58/108)[Kremote: Counting objects:  54% (59/108)[Kremote: Counting objects:  55% (60/108)[Kremote: Counting objects:  56% (61/108)[Kremote: Counting objects:  57% (62/108)[Kremote: Counting objects:  58% (63/108)[Kremote: Counting objects:  59% (64/108)[Kremote: Counting objects:  60% (65/108)[Kremote: Counting objects:  61% (66/108)[Kremote: Counting objects:  62% (67/108)[Kremote: Counting objects:  63% (69/108)[Kremote: Counting objects:  64% (70/108)[Kremote: Counting objects:  65% (71/108)[Kremote: Counting objects:  66% (72/108)[Kremote: Counting objects:  67% (73/108)[Kremote: Counting objects:  68% (74/108)[Kremote: Counting objects:  69% (75/108)[Kremote: Counting objects:  70% (76/108)[Kremote: Counting objects:  71% (77/108)[Kremote: Counting objects:  72% (78/108)[Kremote: Counting objects:  73% (79/108)[Kremote: Counting objects:  74% (80/108)[Kremote: Counting objects:  75% (81/108)[Kremote: Counting objects:  76% (83/108)[Kremote: Counting objects:  77% (84/108)[Kremote: Counting objects:  78% (85/108)[Kremote: Counting objects:  79% (86/108)[Kremote: Counting objects:  80% (87/108)[Kremote: Counting objects:  81% (88/108)[Kremote: Counting objects:  82% (89/108)[Kremote: Counting objects:  83% (90/108)[Kremote: Counting objects:  84% (91/108)[Kremote: Counting objects:  85% (92/108)[Kremote: Counting objects:  86% (93/108)[Kremote: Counting objects:  87% (94/108)[Kremote: Counting objects:  88% (96/108)[Kremote: Counting objects:  89% (97/108)[Kremote: Counting objects:  90% (98/108)[Kremote: Counting objects:  91% (99/108)[Kremote: Counting objects:  92% (100/108)[Kremote: Counting objects:  93% (101/108)[Kremote: Counting objects:  94% (102/108)[Kremote: Counting objects:  95% (103/108)[Kremote: Counting objects:  96% (104/108)[Kremote: Counting objects:  97% (105/108)[Kremote: Counting objects:  98% (106/108)[Kremote: Counting objects:  99% (107/108)[Kremote: Counting objects: 100% (108/108)[Kremote: Counting objects: 100% (108/108), done.[K
+18.3s 13 remote: Compressing objects:   1% (1/75)[Kremote: Compressing objects:   2% (2/75)[Kremote: Compressing objects:   4% (3/75)[Kremote: Compressing objects:   5% (4/75)[Kremote: Compressing objects:   6% (5/75)[Kremote: Compressing objects:   8% (6/75)[Kremote: Compressing objects:   9% (7/75)[Kremote: Compressing objects:  10% (8/75)[Kremote: Compressing objects:  12% (9/75)[Kremote: Compressing objects:  13% (10/75)[Kremote: Compressing objects:  14% (11/75)[Kremote: Compressing objects:  16% (12/75)[Kremote: Compressing objects:  17% (13/75)[Kremote: Compressing objects:  18% (14/75)[Kremote: Compressing objects:  20% (15/75)[Kremote: Compressing objects:  21% (16/75)[Kremote: Compressing objects:  22% (17/75)[Kremote: Compressing objects:  24% (18/75)[Kremote: Compressing objects:  25% (19/75)[Kremote: Compressing objects:  26% (20/75)[Kremote: Compressing objects:  28% (21/75)[Kremote: Compressing objects:  29% (22/75)[Kremote: Compressing objects:  30% (23/75)[Kremote: Compressing objects:  32% (24/75)[Kremote: Compressing objects:  33% (25/75)[Kremote: Compressing objects:  34% (26/75)[Kremote: Compressing objects:  36% (27/75)[Kremote: Compressing objects:  37% (28/75)[Kremote: Compressing objects:  38% (29/75)[Kremote: Compressing objects:  40% (30/75)[Kremote: Compressing objects:  41% (31/75)[Kremote: Compressing objects:  42% (32/75)[Kremote: Compressing objects:  44% (33/75)[Kremote: Compressing objects:  45% (34/75)[Kremote: Compressing objects:  46% (35/75)[Kremote: Compressing objects:  48% (36/75)[Kremote: Compressing objects:  49% (37/75)[Kremote: Compressing objects:  50% (38/75)[Kremote: Compressing objects:  52% (39/75)[Kremote: Compressing objects:  53% (40/75)[Kremote: Compressing objects:  54% (41/75)[Kremote: Compressing objects:  56% (42/75)[Kremote: Compressing objects:  57% (43/75)[Kremote: Compressing objects:  58% (44/75)[Kremote: Compressing objects:  60% (45/75)[Kremote: Compressing objects:  61% (46/75)[Kremote: Compressing objects:  62% (47/75)[Kremote: Compressing objects:  64% (48/75)[Kremote: Compressing objects:  65% (49/75)[Kremote: Compressing objects:  66% (50/75)[Kremote: Compressing objects:  68% (51/75)[Kremote: Compressing objects:  69% (52/75)[Kremote: Compressing objects:  70% (53/75)[Kremote: Compressing objects:  72% (54/75)[Kremote: Compressing objects:  73% (55/75)[Kremote: Compressing objects:  74% (56/75)[Kremote: Compressing objects:  76% (57/75)[Kremote: Compressing objects:  77% (58/75)[Kremote: Compressing objects:  78% (59/75)[Kremote: Compressing objects:  80% (60/75)[Kremote: Compressing objects:  81% (61/75)[Kremote: Compressing objects:  82% (62/75)[Kremote: Compressing objects:  84% (63/75)[Kremote: Compressing objects:  85% (64/75)[Kremote: Compressing objects:  86% (65/75)[Kremote: Compressing objects:  88% (66/75)[Kremote: Compressing objects:  89% (67/75)[Kremote: Compressing objects:  90% (68/75)[Kremote: Compressing objects:  92% (69/75)[Kremote: Compressing objects:  93% (70/75)[Kremote: Compressing objects:  94% (71/75)[Kremote: Compressing objects:  96% (72/75)[Kremote: Compressing objects:  97% (73/75)[Kremote: Compressing objects:  98% (74/75)[Kremote: Compressing objects: 100% (75/75)[Kremote: Compressing objects: 100% (75/75), done.[K
+18.7s 14 Receiving objects:   0% (1/108)Receiving objects:   1% (2/108)Receiving objects:   2% (3/108)Receiving objects:   3% (4/108)Receiving objects:   4% (5/108)Receiving objects:   5% (6/108)Receiving objects:   6% (7/108)Receiving objects:   7% (8/108)Receiving objects:   8% (9/108)Receiving objects:   9% (10/108)Receiving objects:  10% (11/108)Receiving objects:  11% (12/108)Receiving objects:  12% (13/108)Receiving objects:  13% (15/108)Receiving objects:  14% (16/108)Receiving objects:  15% (17/108)Receiving objects:  16% (18/108)Receiving objects:  17% (19/108)Receiving objects:  18% (20/108)Receiving objects:  19% (21/108)Receiving objects:  20% (22/108)Receiving objects:  21% (23/108)Receiving objects:  22% (24/108)Receiving objects:  23% (25/108)Receiving objects:  24% (26/108)Receiving objects:  25% (27/108)Receiving objects:  26% (29/108)Receiving objects:  27% (30/108)Receiving objects:  28% (31/108)Receiving objects:  29% (32/108)Receiving objects:  30% (33/108)Receiving objects:  31% (34/108)Receiving objects:  32% (35/108)Receiving objects:  33% (36/108)Receiving objects:  34% (37/108)Receiving objects:  35% (38/108)Receiving objects:  36% (39/108)Receiving objects:  37% (40/108)Receiving objects:  38% (42/108)Receiving objects:  39% (43/108)Receiving objects:  40% (44/108)Receiving objects:  41% (45/108)Receiving objects:  42% (46/108)Receiving objects:  43% (47/108)Receiving objects:  44% (48/108)Receiving objects:  45% (49/108)Receiving objects:  46% (50/108)Receiving objects:  47% (51/108)Receiving objects:  48% (52/108)Receiving objects:  49% (53/108)Receiving objects:  50% (54/108)Receiving objects:  51% (56/108)Receiving objects:  52% (57/108)Receiving objects:  53% (58/108)Receiving objects:  54% (59/108)Receiving objects:  55% (60/108)Receiving objects:  56% (61/108)Receiving objects:  57% (62/108)Receiving objects:  58% (63/108)Receiving objects:  59% (64/108)Receiving objects:  60% (65/108)Receiving objects:  61% (66/108)Receiving objects:  62% (67/108)Receiving objects:  63% (69/108)Receiving objects:  64% (70/108)Receiving objects:  65% (71/108)Receiving objects:  66% (72/108)Receiving objects:  67% (73/108)Receiving objects:  68% (74/108)Receiving objects:  69% (75/108)Receiving objects:  70% (76/108)Receiving objects:  71% (77/108)Receiving objects:  72% (78/108)Receiving objects:  73% (79/108)Receiving objects:  74% (80/108)Receiving objects:  75% (81/108)Receiving objects:  76% (83/108)Receiving objects:  77% (84/108)Receiving objects:  78% (85/108)Receiving objects:  79% (86/108)Receiving objects:  80% (87/108)Receiving objects:  81% (88/108)Receiving objects:  82% (89/108)Receiving objects:  83% (90/108)Receiving objects:  84% (91/108)Receiving objects:  85% (92/108)Receiving objects:  86% (93/108)Receiving objects:  87% (94/108)Receiving objects:  88% (96/108)Receiving objects:  89% (97/108)Receiving objects:  90% (98/108)Receiving objects:  91% (99/108)remote: Total 108 (delta 40), reused 99 (delta 31), pack-reused 0 (from 0)[K
+18.7s 15 Receiving objects:  92% (100/108)Receiving objects:  93% (101/108)Receiving objects:  94% (102/108)Receiving objects:  95% (103/108)Receiving objects:  96% (104/108)Receiving objects:  97% (105/108)Receiving objects:  98% (106/108)Receiving objects:  99% (107/108)Receiving objects: 100% (108/108)Receiving objects: 100% (108/108), 13.01 MiB | 33.73 MiB/s, done.
+18.7s 16 Resolving deltas:   0% (0/40)Resolving deltas:   2% (1/40)Resolving deltas:   5% (2/40)Resolving deltas:   7% (3/40)Resolving deltas:  10% (4/40)Resolving deltas:  12% (5/40)Resolving deltas:  15% (6/40)Resolving deltas:  17% (7/40)Resolving deltas:  20% (8/40)Resolving deltas:  22% (9/40)Resolving deltas:  25% (10/40)Resolving deltas:  27% (11/40)Resolving deltas:  30% (12/40)Resolving deltas:  32% (13/40)Resolving deltas:  35% (14/40)Resolving deltas:  37% (15/40)Resolving deltas:  40% (16/40)Resolving deltas:  42% (17/40)Resolving deltas:  45% (18/40)Resolving deltas:  50% (20/40)Resolving deltas:  52% (21/40)Resolving deltas:  55% (22/40)Resolving deltas:  57% (23/40)Resolving deltas:  60% (24/40)Resolving deltas:  62% (25/40)Resolving deltas:  65% (26/40)Resolving deltas:  67% (27/40)Resolving deltas:  70% (28/40)Resolving deltas:  72% (29/40)Resolving deltas:  75% (30/40)Resolving deltas:  77% (31/40)Resolving deltas:  82% (33/40)Resolving deltas:  85% (34/40)Resolving deltas:  90% (36/40)Resolving deltas:  92% (37/40)Resolving deltas:  95% (38/40)Resolving deltas:  97% (39/40)Resolving deltas: 100% (40/40)Resolving deltas: 100% (40/40), done.
+18.9s 17 /kaggle/working/sar_to_eo
+19.1s 18 Already up to date.
+327.3s 19 [31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+327.3s 20 bigframes 2.48.0 requires google-cloud-bigquery-storage<3.0.0,>=2.30.0, which is not installed.
+327.3s 21 ydata-profiling 4.18.4 requires numpy<2.4,>=1.22, but you have numpy 2.5.4 which is incompatible.
+327.3s 22 dopamine-rl 4.1.2 requires gym<=0.25.2, but you have gym 0.26.2 which is incompatible.
+327.3s 23 gradio 6.26.0 requires pillow<13.0,>=8.0, but you have pillow 13.0.0 which is incompatible.
+327.3s 24 moviepy 1.0.3 requires decorator<5.0,>=4.0.2, but you have decorator 5.3.1 which is incompatible.
+327.3s 25 libcuml-cu12 26.2.0 requires cuda-toolkit[cublas,cufft,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.
+327.3s 26 cuml-cu12 26.2.0 requires cuda-toolkit[cublas,cufft,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.
+327.3s 27 numba 0.61.2 requires numpy<2.3,>=1.24, but you have numpy 2.5.4 which is incompatible.
+327.3s 28 cudf-cu12 26.2.1 requires cuda-toolkit[nvcc,nvrtc]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.
+327.3s 29 cuda-python 12.9.7 requires cuda-bindings~=12.9.7, but you have cuda-bindings 13.4.4 which is incompatible.
+327.3s 30 libcuvs-cu12 26.2.0 requires cuda-toolkit[cublas,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.
+327.3s 31 libraft-cu12 26.2.0 requires cuda-toolkit[cublas,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.[0m[31m
+328.9s 32 [0mlinked /kaggle/working/sar_to_eo/v_2 -> /kaggle/input/datasets/requiemonk/sentinel12-image-pairs-segregated-by-terrain/v_2
+328.9s 33 using existing source: /kaggle/working/sar_to_eo/assets/SiT
+328.9s 34 + git clone --depth 1 https://github.com/waterdisappear/SAR-JEPA /kaggle/working/sar_to_eo/assets/SAR-JEPA
+328.9s 35 Cloning into '/kaggle/working/sar_to_eo/assets/SAR-JEPA'...
+329.4s 36 remote: Enumerating objects: 257, done.[K
+329.4s 37 remote: Counting objects:   0% (1/257)[Kremote: Counting objects:   1% (3/257)[Kremote: Counting objects:   2% (6/257)[Kremote: Counting objects:   3% (8/257)[Kremote: Counting objects:   4% (11/257)[Kremote: Counting objects:   5% (13/257)[Kremote: Counting objects:   6% (16/257)[Kremote: Counting objects:   7% (18/257)[Kremote: Counting objects:   8% (21/257)[Kremote: Counting objects:   9% (24/257)[Kremote: Counting objects:  10% (26/257)[Kremote: Counting objects:  11% (29/257)[Kremote: Counting objects:  12% (31/257)[Kremote: Counting objects:  13% (34/257)[Kremote: Counting objects:  14% (36/257)[Kremote: Counting objects:  15% (39/257)[Kremote: Counting objects:  16% (42/257)[Kremote: Counting objects:  17% (44/257)[Kremote: Counting objects:  18% (47/257)[Kremote: Counting objects:  19% (49/257)[Kremote: Counting objects:  20% (52/257)[Kremote: Counting objects:  21% (54/257)[Kremote: Counting objects:  22% (57/257)[Kremote: Counting objects:  23% (60/257)[Kremote: Counting objects:  24% (62/257)[Kremote: Counting objects:  25% (65/257)[Kremote: Counting objects:  26% (67/257)[Kremote: Counting objects:  27% (70/257)[Kremote: Counting objects:  28% (72/257)[Kremote: Counting objects:  29% (75/257)[Kremote: Counting objects:  30% (78/257)[Kremote: Counting objects:  31% (80/257)[Kremote: Counting objects:  32% (83/257)[Kremote: Counting objects:  33% (85/257)[Kremote: Counting objects:  34% (88/257)[Kremote: Counting objects:  35% (90/257)[Kremote: Counting objects:  36% (93/257)[Kremote: Counting objects:  37% (96/257)[Kremote: Counting objects:  38% (98/257)[Kremote: Counting objects:  39% (101/257)[Kremote: Counting objects:  40% (103/257)[Kremote: Counting objects:  41% (106/257)[Kremote: Counting objects:  42% (108/257)[Kremote: Counting objects:  43% (111/257)[Kremote: Counting objects:  44% (114/257)[Kremote: Counting objects:  45% (116/257)[Kremote: Counting objects:  46% (119/257)[Kremote: Counting objects:  47% (121/257)[Kremote: Counting objects:  48% (124/257)[Kremote: Counting objects:  49% (126/257)[Kremote: Counting objects:  50% (129/257)[Kremote: Counting objects:  51% (132/257)[Kremote: Counting objects:  52% (134/257)[Kremote: Counting objects:  53% (137/257)[Kremote: Counting objects:  54% (139/257)[Kremote: Counting objects:  55% (142/257)[Kremote: Counting objects:  56% (144/257)[Kremote: Counting objects:  57% (147/257)[Kremote: Counting objects:  58% (150/257)[Kremote: Counting objects:  59% (152/257)[Kremote: Counting objects:  60% (155/257)[Kremote: Counting objects:  61% (157/257)[Kremote: Counting objects:  62% (160/257)[Kremote: Counting objects:  63% (162/257)[Kremote: Counting objects:  64% (165/257)[Kremote: Counting objects:  65% (168/257)[Kremote: Counting objects:  66% (170/257)[Kremote: Counting objects:  67% (173/257)[Kremote: Counting objects:  68% (175/257)[Kremote: Counting objects:  69% (178/257)[Kremote: Counting objects:  70% (180/257)[Kremote: Counting objects:  71% (183/257)[Kremote: Counting objects:  72% (186/257)[Kremote: Counting objects:  73% (188/257)[Kremote: Counting objects:  74% (191/257)[Kremote: Counting objects:  75% (193/257)[Kremote: Counting objects:  76% (196/257)[Kremote: Counting objects:  77% (198/257)[Kremote: Counting objects:  78% (201/257)[Kremote: Counting objects:  79% (204/257)[Kremote: Counting objects:  80% (206/257)[Kremote: Counting objects:  81% (209/257)[Kremote: Counting objects:  82% (211/257)[Kremote: Counting objects:  83% (214/257)[Kremote: Counting objects:  84% (216/257)[Kremote: Counting objects:  85% (219/257)[Kremote: Counting objects:  86% (222/257)[Kremote: Counting objects:  87% (224/257)[Kremote: Counting objects:  88% (227/257)[Kremote: Counting objects:  89% (229/257)[Kremote: Counting objects:  90% (232/257)[Kremote: Counting objects:  91% (234/257)[Kremote: Counting objects:  92% (237/257)[Kremote: Counting objects:  93% (240/257)[Kremote: Counting objects:  94% (242/257)[Kremote: Counting objects:  95% (245/257)[Kremote: Counting objects:  96% (247/257)[Kremote: Counting objects:  97% (250/257)[Kremote: Counting objects:  98% (252/257)[Kremote: Counting objects:  99% (255/257)[Kremote: Counting objects: 100% (257/257)[Kremote: Counting objects: 100% (257/257), done.[K
+329.4s 38 remote: Compressing objects:   0% (1/181)[Kremote: Compressing objects:   1% (2/181)[Kremote: Compressing objects:   2% (4/181)[Kremote: Compressing objects:   3% (6/181)[Kremote: Compressing objects:   4% (8/181)[Kremote: Compressing objects:   5% (10/181)[Kremote: Compressing objects:   6% (11/181)[Kremote: Compressing objects:   7% (13/181)[Kremote: Compressing objects:   8% (15/181)[Kremote: Compressing objects:   9% (17/181)[Kremote: Compressing objects:  10% (19/181)[Kremote: Compressing objects:  11% (20/181)[Kremote: Compressing objects:  12% (22/181)[Kremote: Compressing objects:  13% (24/181)[Kremote: Compressing objects:  14% (26/181)[Kremote: Compressing objects:  15% (28/181)[Kremote: Compressing objects:  16% (29/181)[Kremote: Compressing objects:  17% (31/181)[Kremote: Compressing objects:  18% (33/181)[Kremote: Compressing objects:  19% (35/181)[Kremote: Compressing objects:  20% (37/181)[Kremote: Compressing objects:  21% (39/181)[Kremote: Compressing objects:  22% (40/181)[Kremote: Compressing objects:  23% (42/181)[Kremote: Compressing objects:  24% (44/181)[Kremote: Compressing objects:  25% (46/181)[Kremote: Compressing objects:  26% (48/181)[Kremote: Compressing objects:  27% (49/181)[Kremote: Compressing objects:  28% (51/181)[Kremote: Compressing objects:  29% (53/181)[Kremote: Compressing objects:  30% (55/181)[Kremote: Compressing objects:  31% (57/181)[Kremote: Compressing objects:  32% (58/181)[Kremote: Compressing objects:  33% (60/181)[Kremote: Compressing objects:  34% (62/181)[Kremote: Compressing objects:  35% (64/181)[Kremote: Compressing objects:  36% (66/181)[Kremote: Compressing objects:  37% (67/181)[Kremote: Compressing objects:  38% (69/181)[Kremote: Compressing objects:  39% (71/181)[Kremote: Compressing objects:  40% (73/181)[Kremote: Compressing objects:  41% (75/181)[Kremote: Compressing objects:  42% (77/181)[Kremote: Compressing objects:  43% (78/181)[Kremote: Compressing objects:  44% (80/181)[Kremote: Compressing objects:  45% (82/181)[Kremote: Compressing objects:  46% (84/181)[Kremote: Compressing objects:  47% (86/181)[Kremote: Compressing objects:  48% (87/181)[Kremote: Compressing objects:  49% (89/181)[Kremote: Compressing objects:  50% (91/181)[Kremote: Compressing objects:  51% (93/181)[Kremote: Compressing objects:  52% (95/181)[Kremote: Compressing objects:  53% (96/181)[Kremote: Compressing objects:  54% (98/181)[Kremote: Compressing objects:  55% (100/181)[Kremote: Compressing objects:  56% (102/181)[Kremote: Compressing objects:  57% (104/181)[Kremote: Compressing objects:  58% (105/181)[Kremote: Compressing objects:  59% (107/181)[Kremote: Compressing objects:  60% (109/181)[Kremote: Compressing objects:  61% (111/181)[Kremote: Compressing objects:  62% (113/181)[Kremote: Compressing objects:  63% (115/181)[Kremote: Compressing objects:  64% (116/181)[Kremote: Compressing objects:  65% (118/181)[Kremote: Compressing objects:  66% (120/181)[Kremote: Compressing objects:  67% (122/181)[Kremote: Compressing objects:  68% (124/181)[Kremote: Compressing objects:  69% (125/181)[Kremote: Compressing objects:  70% (127/181)[Kremote: Compressing objects:  71% (129/181)[Kremote: Compressing objects:  72% (131/181)[Kremote: Compressing objects:  73% (133/181)[Kremote: Compressing objects:  74% (134/181)[Kremote: Compressing objects:  75% (136/181)[Kremote: Compressing objects:  76% (138/181)[Kremote: Compressing objects:  77% (140/181)[Kremote: Compressing objects:  78% (142/181)[Kremote: Compressing objects:  79% (143/181)[Kremote: Compressing objects:  80% (145/181)[Kremote: Compressing objects:  81% (147/181)[Kremote: Compressing objects:  82% (149/181)[Kremote: Compressing objects:  83% (151/181)[Kremote: Compressing objects:  84% (153/181)[Kremote: Compressing objects:  85% (154/181)[Kremote: Compressing objects:  86% (156/181)[Kremote: Compressing objects:  87% (158/181)[Kremote: Compressing objects:  88% (160/181)[Kremote: Compressing objects:  89% (162/181)[Kremote: Compressing objects:  90% (163/181)[Kremote: Compressing objects:  91% (165/181)[Kremote: Compressing objects:  92% (167/181)[Kremote: Compressing objects:  93% (169/181)[Kremote: Compressing objects:  94% (171/181)[Kremote: Compressing objects:  95% (172/181)[Kremote: Compressing objects:  96% (174/181)[Kremote: Compressing objects:  97% (176/181)[Kremote: Compressing objects:  98% (178/181)[Kremote: Compressing objects:  99% (180/181)[Kremote: Compressing objects: 100% (181/181)[Kremote: Compressing objects: 100% (181/181), done.[K
+329.9s 39 Receiving objects:   0% (1/257)Receiving objects:   1% (3/257)Receiving objects:   2% (6/257)Receiving objects:   3% (8/257)Receiving objects:   4% (11/257)Receiving objects:   5% (13/257)Receiving objects:   6% (16/257)Receiving objects:   7% (18/257)Receiving objects:   8% (21/257)Receiving objects:   9% (24/257)Receiving objects:  10% (26/257)Receiving objects:  11% (29/257)Receiving objects:  12% (31/257)Receiving objects:  13% (34/257)Receiving objects:  14% (36/257)Receiving objects:  15% (39/257)Receiving objects:  16% (42/257)Receiving objects:  17% (44/257)Receiving objects:  18% (47/257)Receiving objects:  19% (49/257)Receiving objects:  20% (52/257)Receiving objects:  21% (54/257)Receiving objects:  22% (57/257)Receiving objects:  23% (60/257)Receiving objects:  24% (62/257)Receiving objects:  25% (65/257)Receiving objects:  26% (67/257)Receiving objects:  27% (70/257)Receiving objects:  28% (72/257)Receiving objects:  29% (75/257)Receiving objects:  30% (78/257)Receiving objects:  31% (80/257)Receiving objects:  32% (83/257)Receiving objects:  33% (85/257)Receiving objects:  34% (88/257)Receiving objects:  35% (90/257)Receiving objects:  36% (93/257)Receiving objects:  37% (96/257)Receiving objects:  38% (98/257)Receiving objects:  39% (101/257)Receiving objects:  40% (103/257)Receiving objects:  41% (106/257)Receiving objects:  42% (108/257)Receiving objects:  43% (111/257)Receiving objects:  44% (114/257)Receiving objects:  45% (116/257)Receiving objects:  46% (119/257)Receiving objects:  47% (121/257)Receiving objects:  48% (124/257)Receiving objects:  49% (126/257)Receiving objects:  50% (129/257)Receiving objects:  51% (132/257)Receiving objects:  52% (134/257)Receiving objects:  53% (137/257)Receiving objects:  54% (139/257)Receiving objects:  55% (142/257)Receiving objects:  56% (144/257)Receiving objects:  57% (147/257)Receiving objects:  58% (150/257)Receiving objects:  59% (152/257)Receiving objects:  60% (155/257)Receiving objects:  61% (157/257)Receiving objects:  62% (160/257)Receiving objects:  63% (162/257)Receiving objects:  64% (165/257)Receiving objects:  65% (168/257)Receiving objects:  66% (170/257)Receiving objects:  67% (173/257)Receiving objects:  68% (175/257)Receiving objects:  69% (178/257)Receiving objects:  70% (180/257)Receiving objects:  71% (183/257)Receiving objects:  72% (186/257)Receiving objects:  73% (188/257)Receiving objects:  74% (191/257)Receiving objects:  75% (193/257)Receiving objects:  76% (196/257)Receiving objects:  77% (198/257)Receiving objects:  78% (201/257)Receiving objects:  79% (204/257)Receiving objects:  80% (206/257)Receiving objects:  81% (209/257)Receiving objects:  82% (211/257)Receiving objects:  83% (214/257)Receiving objects:  84% (216/257)Receiving objects:  85% (219/257)Receiving objects:  86% (222/257)Receiving objects:  87% (224/257)Receiving objects:  88% (227/257)Receiving objects:  89% (229/257)Receiving objects:  90% (232/257)Receiving objects:  91% (234/257)Receiving objects:  92% (237/257)Receiving objects:  93% (240/257)Receiving objects:  94% (242/257)Receiving objects:  95% (245/257)Receiving objects:  96% (247/257)Receiving objects:  97% (250/257)Receiving objects:  98% (252/257)remote: Total 257 (delta 51), reused 250 (delta 50), pack-reused 0 (from 0)[K
+329.9s 40 Receiving objects:  99% (255/257)Receiving objects: 100% (257/257)Receiving objects: 100% (257/257), 9.89 MiB | 22.01 MiB/s, done.
+329.9s 41 Resolving deltas:   0% (0/51)Resolving deltas:   1% (1/51)Resolving deltas:   3% (2/51)Resolving deltas:   7% (4/51)Resolving deltas:   9% (5/51)Resolving deltas:  11% (6/51)Resolving deltas:  13% (7/51)Resolving deltas:  15% (8/51)Resolving deltas:  17% (9/51)Resolving deltas:  19% (10/51)Resolving deltas:  21% (11/51)Resolving deltas:  23% (12/51)Resolving deltas:  25% (13/51)Resolving deltas:  27% (14/51)Resolving deltas:  29% (15/51)Resolving deltas:  31% (16/51)Resolving deltas:  33% (17/51)Resolving deltas:  35% (18/51)Resolving deltas:  37% (19/51)Resolving deltas:  39% (20/51)Resolving deltas:  41% (21/51)Resolving deltas:  43% (22/51)Resolving deltas:  45% (23/51)Resolving deltas:  47% (24/51)Resolving deltas:  49% (25/51)Resolving deltas:  50% (26/51)Resolving deltas:  52% (27/51)Resolving deltas:  54% (28/51)Resolving deltas:  56% (29/51)Resolving deltas:  58% (30/51)Resolving deltas:  60% (31/51)Resolving deltas:  62% (32/51)Resolving deltas:  64% (33/51)Resolving deltas:  66% (34/51)Resolving deltas:  68% (35/51)Resolving deltas:  70% (36/51)Resolving deltas:  72% (37/51)Resolving deltas:  74% (38/51)Resolving deltas:  76% (39/51)Resolving deltas:  78% (40/51)Resolving deltas:  80% (41/51)Resolving deltas:  82% (42/51)Resolving deltas:  84% (43/51)Resolving deltas:  86% (44/51)Resolving deltas:  88% (45/51)Resolving deltas:  90% (46/51)Resolving deltas:  92% (47/51)Resolving deltas:  94% (48/51)Resolving deltas:  96% (49/51)Resolving deltas:  98% (50/51)Resolving deltas: 100% (51/51)Resolving deltas: 100% (51/51), done.
+330.1s 42 + hf download stabilityai/sd-vae-ft-ema --local-dir /kaggle/working/sar_to_eo/assets/sd-vae-ft-ema
+331.3s 43 [90mHint: A new version of huggingface_hub (2.3.0) is available! You are using version 1.33.0.
+331.3s 44 To update, run: hf update[0m
+331.3s 45 [90mHint: The `hf-cli` skill is not installed. Run `hf skills add -g` to teach your AI agents how to use the `hf` CLI.[0m
+331.5s 46 Downloading bytes:                                          |  0.00B
+331.5s 47 Reconstructing (incomplete total...): |            |  0.00B /  0.00B            [A
+331.5s 48 
+331.7s 49 Fetching 5 files:   0%|                                   | 0/5 [00:00<?, ?it/s][A[A
+331.7s 50 Reconstructing (incomplete total...):   0%|        |  0.00B /  669MB            [A
+331.8s 51 Reconstructing (incomplete total...):   0%|        |  0.00B /  669MB            [A
+331.8s 52 Reconstructing (incomplete total...):   0%|        |  0.00B /  669MB            [A
+331.8s 53 Reconstructing (incomplete total...):   0%|        | 6.84kB /  669MB            [ADownloading bytes:                                          | 6.84kB
+331.8s 54 
+331.8s 55 Fetching 5 files:  20%|█████▍                     | 1/5 [00:00<00:01,  3.27it/s][A[A
+331.8s 56 Reconstructing (incomplete total...):   0%|        | 6.84kB /  669MB            [A
+332.4s 57 Reconstructing (incomplete total...):   0%|        | 7.39kB /  669MB            [ADownloading bytes: ▌                                        | 9.71MB
+334.2s 58 Reconstructing (incomplete total...):   1%|        | 9.62MB /  669MB            [ADownloading bytes: █▌                                       | 24.8MB, 13.1MB/s  Downloading bytes: ██▎                                      | 37.6MB, 35.3MB/s  Downloading bytes: ███▍                                     | 55.7MB, 52.5MB/s  Downloading bytes: ████▌                                    | 74.9MB, 79.5MB/s  Downloading bytes: █████▋                                   | 92.3MB,  105MB/s  Downloading bytes: ███████▏                                 |  118MB,  122MB/s  Downloading bytes: ████████▉                                |  145MB,  125MB/s  Downloading bytes: █████████▉                               |  162MB,  129MB/s  Downloading bytes: ███████████▍                             |  186MB,  113MB/s  Downloading bytes: ████████████▌                            |  206MB,  138MB/s  Downloading bytes: ██████████████▏                          |  231MB,  152MB/s  Downloading bytes: ███████████████▊                         |  259MB,  174MB/s  Downloading bytes: █████████████████▊                       |  290MB,  201MB/s
+334.3s 59 Reconstructing (incomplete total...):  29%|██▎     |  192MB /  669MB, 11.4MB/s  [ADownloading bytes: ████████████████████▍                    |  334MB,  182MB/s
+334.4s 60 Reconstructing (incomplete total...):  50%|████    |  335MB /  669MB, 82.2MB/s  [ADownloading bytes: ██████████████████████▉                  |  374MB,  197MB/s
+334.4s 61 
+334.7s 62 Fetching 5 files:  80%|█████████████████████▌     | 4/5 [00:02<00:00,  1.33it/s][A[ADownloading bytes: ██████████████████████████▍              |  432MB,  238MB/s  Downloading bytes: ██████████████████████████████▏          |  493MB,  319MB/s  Downloading bytes: █████████████████████████████████▋       |  550MB,  390MB/s
+334.9s 63 Reconstructing (incomplete total...):  60%|████▊   |  402MB /  669MB,  161MB/s  [ADownloading bytes: █████████████████████████████████████▊   |  618MB,  433MB/s
+335.0s 64 Reconstructing (incomplete total...):  80%|██████▍ |  536MB /  669MB,  153MB/s  [A
+335.1s 65 Reconstructing (incomplete total...): 100%|████████|  669MB /  669MB,  227MB/s  [A
+335.1s 66 
+335.1s 67 Fetching 5 files: 100%|███████████████████████████| 5/5 [00:03<00:00,  1.35it/s][A[AFetching 5 files: 100%|███████████████████████████| 5/5 [00:03<00:00,  1.39it/s]
+335.1s 68 Downloading bytes: █████████████████████████████████████████|  633MB,  391MB/s  Download complete: █████████████████████████████████████████|  633MB,  391MB/s
+335.1s 69 Reconstruction complete: 100%|█████████████████████|  669MB /  669MB,  330MB/s  [A[32m✓ Downloaded[0m
+335.1s 70 path: /kaggle/working/sar_to_eo/assets/sd-vae-ft-ema
+335.1s 71 Download complete: █████████████████████████████████████████|  633MB,  391MB/s
+335.1s 72 Reconstruction complete: 100%|█████████████████████|  669MB /  669MB,  330MB/s
+335.2s 73 + hf download facebook/dinov2-base --local-dir /kaggle/working/sar_to_eo/assets/dinov2-base
+335.9s 74 Downloading bytes:                                          |  0.00B
+335.9s 75 Reconstructing (incomplete total...): |            |  0.00B /  0.00B            [A
+335.9s 76 
+336.0s 77 Fetching 6 files:   0%|                                   | 0/6 [00:00<?, ?it/s][A[A
+336.0s 78 Reconstructing (incomplete total...):   0%|        |  0.00B /  346MB            [A
+336.0s 79 Reconstructing (incomplete total...):   0%|        |  0.00B /  693MB            [A
+336.0s 80 Reconstructing (incomplete total...):   0%|        |  0.00B /  693MB            [A
+336.0s 81 Reconstructing (incomplete total...):   0%|        | 1.52kB /  693MB            [ADownloading bytes:                                          | 1.52kB
+336.0s 82 
+336.1s 83 Fetching 6 files:  17%|████▌                      | 1/6 [00:00<00:00,  6.77it/s][A[A
+336.1s 84 Reconstructing (incomplete total...):   0%|        | 1.52kB /  693MB            [A
+336.2s 85 Reconstructing (incomplete total...):   0%|        | 2.07kB /  693MB            [A
+336.2s 86 Reconstructing (incomplete total...):   0%|        | 2.50kB /  693MB            [A
+336.2s 87 Reconstructing (incomplete total...):   0%|        | 5.55kB /  693MB            [ADownloading bytes:                                          | 5.55kB
+336.2s 88 
+337.0s 89 Fetching 6 files:  67%|██████████████████         | 4/6 [00:00<00:00, 13.37it/s][A[ADownloading bytes:                                          | 1.19MB            Downloading bytes: ██▌                                      | 44.2MB, 2.90MB/s  Downloading bytes: ████▎                                    | 72.0MB,  114MB/s  Downloading bytes: ██████▍                                  |  109MB,  157MB/s  Downloading bytes: ████████▍                                |  142MB,  217MB/s  Downloading bytes: ██████████▏                              |  173MB,  248MB/s
+337.3s 90 Reconstructing (incomplete total...):  11%|▊       | 75.5MB /  693MB            [ADownloading bytes: ████████████▎                            |  208MB,  263MB/s  Downloading bytes: ███████████████▋                         |  264MB,  280MB/s
+337.5s 91 Reconstructing (incomplete total...):  13%|█       | 88.6MB /  693MB, 73.8MB/s  [ADownloading bytes: █████████████████▋                       |  299MB,  281MB/s  Downloading bytes: ███████████████████▊                     |  335MB,  295MB/s
+337.6s 92 Reconstructing (incomplete total...):  30%|██▎     |  205MB /  693MB, 64.8MB/s  [A
+338.3s 93 Reconstructing (incomplete total...):  50%|███▉    |  346MB /  693MB,  177MB/s  [ADownloading bytes: ███████████████████████▋                 |  401MB,  257MB/s  Downloading bytes: ██████████████████████████▍              |  447MB,  284MB/s  Downloading bytes: ████████████████████████████▏            |  476MB,  263MB/s  Downloading bytes: ██████████████████████████████▏          |  509MB,  270MB/s  Downloading bytes: ████████████████████████████████▏        |  545MB,  283MB/s
+338.5s 94 Reconstructing (incomplete total...):  60%|████▊   |  413MB /  693MB,  344MB/s  [ADownloading bytes: ██████████████████████████████████▏      |  578MB,  299MB/s  Downloading bytes: ████████████████████████████████████▍    |  617MB,  307MB/s
+338.6s 95 Reconstructing (incomplete total...):  68%|█████▍  |  469MB /  693MB,  203MB/s  [A
+338.7s 96 Reconstructing (incomplete total...):  79%|██████▎ |  544MB /  693MB,  218MB/s  [ADownloading bytes: ██████████████████████████████████████▊  |  657MB,  328MB/s
+338.7s 97 Reconstructing (incomplete total...): 100%|████████|  693MB /  693MB,  282MB/s  [A
+338.7s 98 
+338.7s 99 Fetching 6 files: 100%|███████████████████████████| 6/6 [00:02<00:00,  1.65it/s][A[AFetching 6 files: 100%|███████████████████████████| 6/6 [00:02<00:00,  2.07it/s]
+338.7s 100 Downloading bytes: █████████████████████████████████████████|  657MB,  272MB/s  Download complete: █████████████████████████████████████████|  657MB,  272MB/s
+338.7s 101 Reconstruction complete: 100%|█████████████████████|  693MB /  693MB,  457MB/s  [A[32m✓ Downloaded[0m
+338.7s 102 path: /kaggle/working/sar_to_eo/assets/dinov2-base
+338.7s 103 Download complete: █████████████████████████████████████████|  657MB,  272MB/s
+338.7s 104 Reconstruction complete: 100%|█████████████████████|  693MB /  693MB,  457MB/s
+343.8s 105 linked /kaggle/working/sar_to_eo/assets/sar_jepa/checkpoint-200.pth -> /kaggle/input/datasets/prateeking/sar-jepa-input/checkpoint-200.pth
+343.8s 106 
+343.8s 107 Kaggle project layout is ready:
+343.8s 108 /kaggle/working/sar_to_eo/v_2: OK
+343.8s 109 /kaggle/working/sar_to_eo/assets/SiT: OK
+343.8s 110 /kaggle/working/sar_to_eo/assets/SAR-JEPA: OK
+343.8s 111 /kaggle/working/sar_to_eo/assets/sd-vae-ft-ema: OK
+343.8s 112 /kaggle/working/sar_to_eo/assets/dinov2-base: OK
+343.8s 113 /kaggle/working/sar_to_eo/assets/sar_jepa/checkpoint-200.pth: OK
+344.3s 114 dataset root: /kaggle/input/datasets/requiemonk/sentinel12-image-pairs-segregated-by-terrain/v_2
+344.3s 115 folders: ['agri', 'barrenland', 'grassland', 'urban']
+344.3s 116 agri sample: ['agri/s1/ROIs1868_summer_s1_59_p10.png', 'agri/s1/ROIs1868_summer_s1_59_p100.png', 'agri/s1/ROIs1868_summer_s1_59_p1000.png']
+2316.8s 117 barrenland sample: ['barrenland/s1/ROIs1970_fall_s1_114_p1.png', 'barrenland/s1/ROIs1970_fall_s1_114_p10.png', 'barrenland/s1/ROIs1970_fall_s1_114_p100.png']
+4396.6s 118 grassland sample: ['grassland/s1/ROIs1970_fall_s1_115_p100.png', 'grassland/s1/ROIs1970_fall_s1_115_p101.png', 'grassland/s1/ROIs1970_fall_s1_115_p102.png']
+6428.5s 119 urban sample: ['urban/s1/ROIs1970_fall_s1_13_p265.png', 'urban/s1/ROIs1970_fall_s1_13_p266.png', 'urban/s1/ROIs1970_fall_s1_13_p267.png']
+8540.7s 120 train 14000 {'agriculture': 3500, 'barren': 3500, 'grassland': 3500, 'urban': 3500}
+8540.7s 121 val 600 {'agriculture': 150, 'barren': 150, 'grassland': 150, 'urban': 150}
+8540.7s 122 test 1400 {'agriculture': 350, 'barren': 350, 'grassland': 350, 'urban': 350}
+8548.5s 123 selected bytes: 2730627140 GiB: 2.5430946983397007
+8563.2s 124 python: 3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]
+8563.2s 125 torch: 2.14.1+cu130
+8563.4s 126 cuda: True count: 2
+8563.6s 127 gpu: Tesla T4 memory_gb: 14.56 bf16: True
+8569.8s 128 diffusers: 0.42.1
+8573.0s 129 transformers: 5.21.0
+8573.0s 130 huggingface_hub: 1.33.0
+8574.9s 131 timm: 1.0.30
+8579.1s 132 torchmetrics: 1.9.0
+8579.1s 133 lpips: installed
+8579.2s 134 cv2: 5.0.0
+8579.2s 135 SiT source: assets/SiT exists=True
+8579.2s 136 SAR-JEPA source: assets/SAR-JEPA exists=True
+8579.2s 137 SD-VAE: assets/sd-vae-ft-ema exists=True
+8579.2s 138 DINOv2: assets/dinov2-base exists=True
+8579.2s 139 SAR-JEPA checkpoint: assets/sar_jepa exists=True
+8579.2s 140 attached SAR-JEPA checkpoint: sar-jeppa/checkpoint-200.pth exists=False
+8579.2s 141 assets/sd-vae-ft-ema/config.json exists=True
+8579.2s 142 assets/dinov2-base/config.json exists=True
+8579.2s 143 splits/train.txt exists=True
+8579.2s 144 splits/val.txt exists=True
+8579.2s 145 splits/test.txt exists=True
+8590.9s 146 SAR-JEPA checkpoint unavailable; using fallback: sar-jeppa/checkpoint-200.pth
+8592.2s 147 {'device': 'cuda', 'v': (2, 4, 32, 32), 'z': (2, 256, 768), 'parameters': 227632144, 'sar_parameters': 85449984, 'generator_parameters': 142182160}
+8595.2s 148 Config not found at runs/main/config.json; using default Config for frozen-asset evaluation.
+8604.1s 149 Traceback (most recent call last):
+8604.1s 150 File [35m"/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py"[0m, line [35m2612[0m, in [35m__getattr__[0m
+8604.1s 151 module = self._get_module(self._class_to_module[name])
+8604.1s 152 File [35m"/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py"[0m, line [35m2843[0m, in [35m_get_module[0m
+8604.1s 153 raise e
+8604.1s 154 File [35m"/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py"[0m, line [35m2841[0m, in [35m_get_module[0m
+8604.1s 155 return [31mimportlib.import_module[0m[1;31m("." + module_name, self.__name__)[0m
+8604.1s 156 [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+8604.1s 157 File [35m"/usr/lib/python3.13/importlib/__init__.py"[0m, line [35m88[0m, in [35mimport_module[0m
+8604.1s 158 return [31m_bootstrap._gcd_import[0m[1;31m(name[level:], package, level)[0m
+8604.1s 159 [31m~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+8604.1s 160 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1395[0m, in [35m_gcd_import[0m
+8604.1s 161 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1360[0m, in [35m_find_and_load[0m
+8604.1s 162 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1331[0m, in [35m_find_and_load_unlocked[0m
+8604.1s 163 File [35m"<frozen importlib._bootstrap>"[0m, line [35m935[0m, in [35m_load_unlocked[0m
+8604.1s 164 File [35m"<frozen importlib._bootstrap_external>"[0m, line [35m1023[0m, in [35mexec_module[0m
+8604.1s 165 File [35m"<frozen importlib._bootstrap>"[0m, line [35m488[0m, in [35m_call_with_frames_removed[0m
+8604.1s 166 File [35m"/usr/local/lib/python3.13/dist-packages/transformers/models/bloom/modeling_bloom.py"[0m, line [35m26[0m, in [35m<module>[0m
+8604.1s 167 from ...modeling_layers import GradientCheckpointingLayer
+8604.1s 168 File [35m"/usr/local/lib/python3.13/dist-packages/transformers/modeling_layers.py"[0m, line [35m39[0m, in [35m<module>[0m
+8604.1s 169 from .processing_utils import Unpack
+8604.1s 170 File [35m"/usr/local/lib/python3.13/dist-packages/transformers/processing_utils.py"[0m, line [35m35[0m, in [35m<module>[0m
+8604.1s 171 from .audio_utils import AudioInput, load_audio, make_list_of_audio
+8604.1s 172 File [35m"/usr/local/lib/python3.13/dist-packages/transformers/audio_utils.py"[0m, line [35m58[0m, in [35m<module>[0m
+8604.1s 173 import torchaudio
+8604.1s 174 File [35m"/usr/local/lib/python3.13/dist-packages/torchaudio/__init__.py"[0m, line [35m7[0m, in [35m<module>[0m
+8604.1s 175 [1;31mfrom . import _extension[0m  # noqa  # usort: skip
+8604.1s 176 [1;31m^^^^^^^^^^^^^^^^^^^^^^^^[0m
+8604.1s 177 File [35m"/usr/local/lib/python3.13/dist-packages/torchaudio/_extension/__init__.py"[0m, line [35m36[0m, in [35m<module>[0m
+8604.1s 178 [31m_check_cuda_version[0m[1;31m()[0m
+8604.1s 179 [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+8604.1s 180 File [35m"/usr/local/lib/python3.13/dist-packages/torchaudio/_extension/utils.py"[0m, line [35m124[0m, in [35m_check_cuda_version[0m
+8604.1s 181 raise RuntimeError(
+8604.1s 182 ...<3 lines>...
+8604.1s 183 )
+8604.1s 184 [1;35mRuntimeError[0m: [35mDetected that PyTorch and TorchAudio were compiled with different CUDA versions. PyTorch has CUDA version 13.0 whereas TorchAudio has CUDA version 12.8. Please install the TorchAudio version that matches your PyTorch version.[0m
+8604.1s 185 
+8604.1s 186 The above exception was the direct cause of the following exception:
+8604.1s 187 
+8604.1s 188 Traceback (most recent call last):
+8604.1s 189 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py"[0m, line [35m1044[0m, in [35m_get_module[0m
+8604.1s 190 return [31mimportlib.import_module[0m[1;31m("." + module_name, self.__name__)[0m
+8604.1s 191 [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+8604.1s 192 File [35m"/usr/lib/python3.13/importlib/__init__.py"[0m, line [35m88[0m, in [35mimport_module[0m
+8604.1s 193 return [31m_bootstrap._gcd_import[0m[1;31m(name[level:], package, level)[0m
+8604.1s 194 [31m~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+8604.1s 195 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1395[0m, in [35m_gcd_import[0m
+8604.1s 196 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1360[0m, in [35m_find_and_load[0m
+8604.1s 197 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1331[0m, in [35m_find_and_load_unlocked[0m
+8604.1s 198 File [35m"<frozen importlib._bootstrap>"[0m, line [35m935[0m, in [35m_load_unlocked[0m
+8604.1s 199 File [35m"<frozen importlib._bootstrap_external>"[0m, line [35m1023[0m, in [35mexec_module[0m
+8604.1s 200 File [35m"<frozen importlib._bootstrap>"[0m, line [35m488[0m, in [35m_call_with_frames_removed[0m
+8604.1s 201 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/loaders/peft.py"[0m, line [35m26[0m, in [35m<module>[0m
+8604.1s 202 from ..hooks.group_offloading import _maybe_remove_and_reapply_group_offloading
+8604.1s 203 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/hooks/__init__.py"[0m, line [35m25[0m, in [35m<module>[0m
+8604.1s 204 from .layerwise_casting import apply_layerwise_casting, apply_layerwise_casting_hook
+8604.1s 205 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/hooks/layerwise_casting.py"[0m, line [35m36[0m, in [35m<module>[0m
+8604.1s 206 from peft.helpers import disable_input_dtype_casting
+8604.1s 207 File [35m"/usr/local/lib/python3.13/dist-packages/peft/__init__.py"[0m, line [35m17[0m, in [35m<module>[0m
+8604.1s 208 from .auto import (
+8604.1s 209 ...<8 lines>...
+8604.1s 210 )
+8604.1s 211 File [35m"/usr/local/lib/python3.13/dist-packages/peft/auto.py"[0m, line [35m31[0m, in [35m<module>[0m
+8604.1s 212 from .config import PeftConfig
+8604.1s 213 File [35m"/usr/local/lib/python3.13/dist-packages/peft/config.py"[0m, line [35m30[0m, in [35m<module>[0m
+8604.1s 214 from .utils import CONFIG_NAME, PeftType, TaskType
+8604.1s 215 File [35m"/usr/local/lib/python3.13/dist-packages/peft/utils/__init__.py"[0m, line [35m15[0m, in [35m<module>[0m
+8604.1s 216 from .constants import ALLOWED_COMPUTE_DTYPES, UPCAST_DTYPES
+8604.1s 217 File [35m"/usr/local/lib/python3.13/dist-packages/peft/utils/constants.py"[0m, line [35m16[0m, in [35m<module>[0m
+8604.1s 218 from transformers import BloomPreTrainedModel
+8604.1s 219 File [35m"/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py"[0m, line [35m2700[0m, in [35m__getattr__[0m
+8604.1s 220 raise ModuleNotFoundError(import_error_message) from e
+8604.1s 221 [1;35mModuleNotFoundError[0m: [35mCould not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.[0m
+8604.1s 222 
+8604.1s 223 The above exception was the direct cause of the following exception:
+8604.1s 224 
+8604.1s 225 Traceback (most recent call last):
+8604.1s 226 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py"[0m, line [35m1044[0m, in [35m_get_module[0m
+8604.1s 227 return [31mimportlib.import_module[0m[1;31m("." + module_name, self.__name__)[0m
+8604.1s 228 [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+8604.1s 229 File [35m"/usr/lib/python3.13/importlib/__init__.py"[0m, line [35m88[0m, in [35mimport_module[0m
+8604.1s 230 return [31m_bootstrap._gcd_import[0m[1;31m(name[level:], package, level)[0m
+8604.1s 231 [31m~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+8604.1s 232 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1395[0m, in [35m_gcd_import[0m
+8604.1s 233 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1360[0m, in [35m_find_and_load[0m
+8604.1s 234 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1310[0m, in [35m_find_and_load_unlocked[0m
+8604.1s 235 File [35m"<frozen importlib._bootstrap>"[0m, line [35m488[0m, in [35m_call_with_frames_removed[0m
+8604.1s 236 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1395[0m, in [35m_gcd_import[0m
+8604.1s 237 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1360[0m, in [35m_find_and_load[0m
+8604.1s 238 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1331[0m, in [35m_find_and_load_unlocked[0m
+8604.1s 239 File [35m"<frozen importlib._bootstrap>"[0m, line [35m935[0m, in [35m_load_unlocked[0m
+8604.1s 240 File [35m"<frozen importlib._bootstrap_external>"[0m, line [35m1023[0m, in [35mexec_module[0m
+8604.1s 241 File [35m"<frozen importlib._bootstrap>"[0m, line [35m488[0m, in [35m_call_with_frames_removed[0m
+8604.1s 242 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/__init__.py"[0m, line [35m1[0m, in [35m<module>[0m
+8604.1s 243 from .autoencoder_asym_kl import AsymmetricAutoencoderKL
+8604.1s 244 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/autoencoder_asym_kl.py"[0m, line [35m21[0m, in [35m<module>[0m
+8604.1s 245 from .vae import AutoencoderMixin, DecoderOutput, DiagonalGaussianDistribution, Encoder, MaskConditionDecoder
+8604.1s 246 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/vae.py"[0m, line [35m24[0m, in [35m<module>[0m
+8604.1s 247 from ..unets.unet_2d_blocks import (
+8604.1s 248 ...<4 lines>...
+8604.1s 249 )
+8604.1s 250 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/__init__.py"[0m, line [35m6[0m, in [35m<module>[0m
+8604.1s 251 from .unet_2d import UNet2DModel
+8604.1s 252 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d.py"[0m, line [35m23[0m, in [35m<module>[0m
+8604.1s 253 from .unet_2d_blocks import UNetMidBlock2D, get_down_block, get_up_block
+8604.1s 254 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d_blocks.py"[0m, line [35m36[0m, in [35m<module>[0m
+8604.1s 255 from ..transformers.dual_transformer_2d import DualTransformer2DModel
+8604.1s 256 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/__init__.py"[0m, line [35m5[0m, in [35m<module>[0m
+8604.1s 257 from .ace_step_transformer import AceStepTransformer1DModel
+8604.1s 258 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/ace_step_transformer.py"[0m, line [35m24[0m, in [35m<module>[0m
+8604.1s 259 from ...loaders import PeftAdapterMixin
+8604.1s 260 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1420[0m, in [35m_handle_fromlist[0m
+8604.1s 261 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py"[0m, line [35m1034[0m, in [35m__getattr__[0m
+8604.1s 262 module = self._get_module(self._class_to_module[name])
+8604.1s 263 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py"[0m, line [35m1046[0m, in [35m_get_module[0m
+8604.1s 264 raise RuntimeError(
+8604.1s 265 ...<2 lines>...
+8604.1s 266 ) from e
+8604.1s 267 [1;35mRuntimeError[0m: [35mFailed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+8604.1s 268 Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.[0m
+8604.1s 269 
+8604.1s 270 The above exception was the direct cause of the following exception:
+8604.1s 271 
+8604.1s 272 Traceback (most recent call last):
+8604.1s 273 File [35m"<frozen runpy>"[0m, line [35m203[0m, in [35m_run_module_as_main[0m
+8604.1s 274 File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+8604.1s 275 File [35m"/kaggle/working/sar_to_eo/sar2eo/vae_ceiling.py"[0m, line [35m39[0m, in [35m<module>[0m
+8604.1s 276 if __name__ == "__main__": [31mmain[0m[1;31m()[0m
+8604.1s 277 [31m~~~~[0m[1;31m^^[0m
+8604.1s 278 File [35m"/kaggle/working/sar_to_eo/sar2eo/vae_ceiling.py"[0m, line [35m25[0m, in [35mmain[0m
+8604.1s 279 device = torch.device("cuda" if torch.cuda.is_available() else "cpu"); targets = [31mFrozenTargets[0m[1;31m(cfg.vae_id, cfg.dino_id)[0m.to(device); loader = DataLoader(PairedSEN12(a.split), batch_size=1, num_workers=cfg.num_workers)
+8604.1s 280 [31m~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+8604.1s 281 File [35m"/kaggle/working/sar_to_eo/sar2eo/frozen.py"[0m, line [35m15[0m, in [35m__init__[0m
+8604.1s 282 from diffusers import AutoencoderKL
+8604.1s 283 File [35m"<frozen importlib._bootstrap>"[0m, line [35m1420[0m, in [35m_handle_fromlist[0m
+8604.1s 284 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py"[0m, line [35m1035[0m, in [35m__getattr__[0m
+8604.1s 285 value = getattr(module, name)
+8604.1s 286 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py"[0m, line [35m1034[0m, in [35m__getattr__[0m
+8604.1s 287 module = self._get_module(self._class_to_module[name])
+8604.1s 288 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py"[0m, line [35m1046[0m, in [35m_get_module[0m
+8604.1s 289 raise RuntimeError(
+8604.1s 290 ...<2 lines>...
+8604.1s 291 ) from e
+8604.1s 292 [1;35mRuntimeError[0m: [35mFailed to import diffusers.models.autoencoders.autoencoder_kl because of the following error (look up to see its traceback):
+8604.1s 293 Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+8604.1s 294 Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.[0m
+8607.0s 295 W1028 09:29:05.374000 197 torch/distributed/run.py:982]
+8607.0s 296 W1028 09:29:05.374000 197 torch/distributed/run.py:982] *****************************************
+8607.0s 297 W1028 09:29:05.374000 197 torch/distributed/run.py:982] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+8607.0s 298 W1028 09:29:05.374000 197 torch/distributed/run.py:982] *****************************************
+8609.6s 299 /usr/local/lib/python3.13/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+8609.6s 300 return func(*args, **kwargs)
+8609.6s 301 [rank0]:[W1028 09:29:07.033393584 ProcessGroupNCCL.cpp:5310] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+8610.0s 302 /usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:431: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+8610.0s 303 self.check_worker_number_rationality()
+8610.0s 304 /usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:431: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+8610.0s 305 self.check_worker_number_rationality()
+8978.6s 306 SAR-JEPA iRPE tables present: True
+8978.6s 307 SAR checkpoint missing: []
+8978.6s 308 SAR checkpoint unexpected: ['blocks.0.attn.rpe_k.lookup_table_weight', 'blocks.1.attn.rpe_k.lookup_table_weight', 'blocks.2.attn.rpe_k.lookup_table_weight', 'blocks.3.attn.rpe_k.lookup_table_weight', 'blocks.4.attn.rpe_k.lookup_table_weight', 'blocks.5.attn.rpe_k.lookup_table_weight', 'blocks.6.attn.rpe_k.lookup_table_weight', 'blocks.7.attn.rpe_k.lookup_table_weight', 'blocks.8.attn.rpe_k.lookup_table_weight', 'blocks.9.attn.rpe_k.lookup_table_weight', 'blocks.10.attn.rpe_k.lookup_table_weight', 'blocks.11.attn.rpe_k.lookup_table_weight']
+8978.6s 309 SAR-JEPA iRPE tables present: True
+8978.6s 310 SAR checkpoint missing: []
+8978.6s 311 SAR checkpoint unexpected: ['blocks.0.attn.rpe_k.lookup_table_weight', 'blocks.1.attn.rpe_k.lookup_table_weight', 'blocks.2.attn.rpe_k.lookup_table_weight', 'blocks.3.attn.rpe_k.lookup_table_weight', 'blocks.4.attn.rpe_k.lookup_table_weight', 'blocks.5.attn.rpe_k.lookup_table_weight', 'blocks.6.attn.rpe_k.lookup_table_weight', 'blocks.7.attn.rpe_k.lookup_table_weight', 'blocks.8.attn.rpe_k.lookup_table_weight', 'blocks.9.attn.rpe_k.lookup_table_weight', 'blocks.10.attn.rpe_k.lookup_table_weight', 'blocks.11.attn.rpe_k.lookup_table_weight']
+8986.3s 312 [rank1]: Traceback (most recent call last):
+8986.3s 313 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2612, in __getattr__
+8986.3s 314 [rank1]:     module = self._get_module(self._class_to_module[name])
+8986.3s 315 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2843, in _get_module
+8986.3s 316 [rank1]:     raise e
+8986.3s 317 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2841, in _get_module
+8986.3s 318 [rank1]:     return importlib.import_module("." + module_name, self.__name__)
+8986.3s 319 [rank1]:            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.3s 320 [rank1]:   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+8986.3s 321 [rank1]:     return _bootstrap._gcd_import(name[level:], package, level)
+8986.3s 322 [rank1]:            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.3s 323 [rank1]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+8986.3s 324 [rank1]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+8986.3s 325 [rank1]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+8986.3s 326 [rank1]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+8986.3s 327 [rank1]:   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+8986.3s 328 [rank1]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+8986.3s 329 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/models/bloom/modeling_bloom.py", line 26, in <module>
+8986.3s 330 [rank1]:     from ...modeling_layers import GradientCheckpointingLayer
+8986.3s 331 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/modeling_layers.py", line 39, in <module>
+8986.3s 332 [rank1]:     from .processing_utils import Unpack
+8986.3s 333 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/processing_utils.py", line 35, in <module>
+8986.3s 334 [rank1]:     from .audio_utils import AudioInput, load_audio, make_list_of_audio
+8986.3s 335 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/audio_utils.py", line 58, in <module>
+8986.3s 336 [rank1]:     import torchaudio
+8986.3s 337 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/torchaudio/__init__.py", line 7, in <module>
+8986.3s 338 [rank1]:     from . import _extension  # noqa  # usort: skip
+8986.3s 339 [rank1]:     ^^^^^^^^^^^^^^^^^^^^^^^^
+8986.3s 340 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/torchaudio/_extension/__init__.py", line 36, in <module>
+8986.3s 341 [rank1]:     _check_cuda_version()
+8986.3s 342 [rank1]:     ~~~~~~~~~~~~~~~~~~~^^
+8986.3s 343 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/torchaudio/_extension/utils.py", line 124, in _check_cuda_version
+8986.3s 344 [rank1]:     raise RuntimeError(
+8986.3s 345 [rank1]:     ...<3 lines>...
+8986.3s 346 [rank1]:     )
+8986.3s 347 [rank1]: RuntimeError: Detected that PyTorch and TorchAudio were compiled with different CUDA versions. PyTorch has CUDA version 13.0 whereas TorchAudio has CUDA version 12.8. Please install the TorchAudio version that matches your PyTorch version.
+8986.3s 348 
+8986.3s 349 [rank1]: The above exception was the direct cause of the following exception:
+8986.3s 350 
+8986.3s 351 [rank1]: Traceback (most recent call last):
+8986.3s 352 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1044, in _get_module
+8986.3s 353 [rank1]:     return importlib.import_module("." + module_name, self.__name__)
+8986.3s 354 [rank1]:            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.3s 355 [rank1]:   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+8986.3s 356 [rank1]:     return _bootstrap._gcd_import(name[level:], package, level)
+8986.3s 357 [rank1]:            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.3s 358 [rank1]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+8986.3s 359 [rank1]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+8986.3s 360 [rank1]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+8986.3s 361 [rank1]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+8986.3s 362 [rank1]:   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+8986.3s 363 [rank1]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+8986.3s 364 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/loaders/peft.py", line 26, in <module>
+8986.3s 365 [rank1]:     from ..hooks.group_offloading import _maybe_remove_and_reapply_group_offloading
+8986.3s 366 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/hooks/__init__.py", line 25, in <module>
+8986.3s 367 [rank1]:     from .layerwise_casting import apply_layerwise_casting, apply_layerwise_casting_hook
+8986.3s 368 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/hooks/layerwise_casting.py", line 36, in <module>
+8986.3s 369 [rank1]:     from peft.helpers import disable_input_dtype_casting
+8986.3s 370 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/peft/__init__.py", line 17, in <module>
+8986.3s 371 [rank1]:     from .auto import (
+8986.3s 372 [rank1]:     ...<8 lines>...
+8986.3s 373 [rank1]:     )
+8986.3s 374 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/peft/auto.py", line 31, in <module>
+8986.3s 375 [rank1]:     from .config import PeftConfig
+8986.3s 376 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/peft/config.py", line 30, in <module>
+8986.3s 377 [rank1]:     from .utils import CONFIG_NAME, PeftType, TaskType
+8986.3s 378 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/peft/utils/__init__.py", line 15, in <module>
+8986.3s 379 [rank1]:     from .constants import ALLOWED_COMPUTE_DTYPES, UPCAST_DTYPES
+8986.3s 380 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/peft/utils/constants.py", line 16, in <module>
+8986.3s 381 [rank1]:     from transformers import BloomPreTrainedModel
+8986.3s 382 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2700, in __getattr__
+8986.3s 383 [rank1]:     raise ModuleNotFoundError(import_error_message) from e
+8986.3s 384 [rank1]: ModuleNotFoundError: Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.
+8986.3s 385 
+8986.3s 386 [rank1]: The above exception was the direct cause of the following exception:
+8986.3s 387 
+8986.3s 388 [rank1]: Traceback (most recent call last):
+8986.3s 389 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1044, in _get_module
+8986.3s 390 [rank1]:     return importlib.import_module("." + module_name, self.__name__)
+8986.3s 391 [rank1]:            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.3s 392 [rank1]:   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+8986.3s 393 [rank1]:     return _bootstrap._gcd_import(name[level:], package, level)
+8986.3s 394 [rank1]:            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.3s 395 [rank1]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+8986.3s 396 [rank1]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+8986.3s 397 [rank1]:   File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+8986.3s 398 [rank1]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+8986.3s 399 [rank1]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+8986.3s 400 [rank1]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+8986.3s 401 [rank1]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+8986.3s 402 [rank1]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+8986.3s 403 [rank1]:   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+8986.3s 404 [rank1]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+8986.3s 405 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/__init__.py", line 1, in <module>
+8986.3s 406 [rank1]:     from .autoencoder_asym_kl import AsymmetricAutoencoderKL
+8986.3s 407 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/autoencoder_asym_kl.py", line 21, in <module>
+8986.3s 408 [rank1]:     from .vae import AutoencoderMixin, DecoderOutput, DiagonalGaussianDistribution, Encoder, MaskConditionDecoder
+8986.3s 409 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/vae.py", line 24, in <module>
+8986.3s 410 [rank1]:     from ..unets.unet_2d_blocks import (
+8986.3s 411 [rank1]:     ...<4 lines>...
+8986.3s 412 [rank1]:     )
+8986.3s 413 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/__init__.py", line 6, in <module>
+8986.3s 414 [rank1]:     from .unet_2d import UNet2DModel
+8986.3s 415 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d.py", line 23, in <module>
+8986.3s 416 [rank1]:     from .unet_2d_blocks import UNetMidBlock2D, get_down_block, get_up_block
+8986.3s 417 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d_blocks.py", line 36, in <module>
+8986.3s 418 [rank1]:     from ..transformers.dual_transformer_2d import DualTransformer2DModel
+8986.3s 419 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/__init__.py", line 5, in <module>
+8986.3s 420 [rank1]:     from .ace_step_transformer import AceStepTransformer1DModel
+8986.3s 421 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/ace_step_transformer.py", line 24, in <module>
+8986.3s 422 [rank1]:     from ...loaders import PeftAdapterMixin
+8986.3s 423 [rank1]:   File "<frozen importlib._bootstrap>", line 1420, in _handle_fromlist
+8986.3s 424 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1034, in __getattr__
+8986.3s 425 [rank1]:     module = self._get_module(self._class_to_module[name])
+8986.3s 426 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1046, in _get_module
+8986.3s 427 [rank1]:     raise RuntimeError(
+8986.3s 428 [rank1]:     ...<2 lines>...
+8986.3s 429 [rank1]:     ) from e
+8986.3s 430 [rank1]: RuntimeError: Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+8986.3s 431 [rank1]: Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.
+8986.3s 432 
+8986.3s 433 [rank1]: The above exception was the direct cause of the following exception:
+8986.3s 434 
+8986.3s 435 [rank1]: Traceback (most recent call last):
+8986.3s 436 [rank1]:   File "<frozen runpy>", line 203, in _run_module_as_main
+8986.3s 437 [rank1]:   File "<frozen runpy>", line 88, in _run_code
+8986.3s 438 [rank1]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 359, in <module>
+8986.3s 439 [rank1]:     main()
+8986.3s 440 [rank1]:     ~~~~^^
+8986.3s 441 [rank1]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 223, in main
+8986.3s 442 [rank1]:     targets = FrozenTargets(cfg.vae_id, cfg.dino_id).to(device)
+8986.3s 443 [rank1]:               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.3s 444 [rank1]:   File "/kaggle/working/sar_to_eo/sar2eo/frozen.py", line 15, in __init__
+8986.3s 445 [rank1]:     from diffusers import AutoencoderKL
+8986.3s 446 [rank1]:   File "<frozen importlib._bootstrap>", line 1420, in _handle_fromlist
+8986.3s 447 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1035, in __getattr__
+8986.3s 448 [rank1]:     value = getattr(module, name)
+8986.3s 449 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1034, in __getattr__
+8986.3s 450 [rank1]:     module = self._get_module(self._class_to_module[name])
+8986.3s 451 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1046, in _get_module
+8986.3s 452 [rank1]:     raise RuntimeError(
+8986.3s 453 [rank1]:     ...<2 lines>...
+8986.3s 454 [rank1]:     ) from e
+8986.3s 455 [rank1]: RuntimeError: Failed to import diffusers.models.autoencoders.autoencoder_kl because of the following error (look up to see its traceback):
+8986.3s 456 [rank1]: Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+8986.3s 457 [rank1]: Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.
+8986.4s 458 [rank0]: Traceback (most recent call last):
+8986.4s 459 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2612, in __getattr__
+8986.4s 460 [rank0]:     module = self._get_module(self._class_to_module[name])
+8986.4s 461 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2843, in _get_module
+8986.4s 462 [rank0]:     raise e
+8986.4s 463 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2841, in _get_module
+8986.4s 464 [rank0]:     return importlib.import_module("." + module_name, self.__name__)
+8986.4s 465 [rank0]:            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.4s 466 [rank0]:   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+8986.4s 467 [rank0]:     return _bootstrap._gcd_import(name[level:], package, level)
+8986.4s 468 [rank0]:            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.4s 469 [rank0]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+8986.4s 470 [rank0]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+8986.4s 471 [rank0]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+8986.4s 472 [rank0]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+8986.4s 473 [rank0]:   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+8986.4s 474 [rank0]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+8986.4s 475 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/models/bloom/modeling_bloom.py", line 26, in <module>
+8986.4s 476 [rank0]:     from ...modeling_layers import GradientCheckpointingLayer
+8986.4s 477 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/modeling_layers.py", line 39, in <module>
+8986.4s 478 [rank0]:     from .processing_utils import Unpack
+8986.4s 479 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/processing_utils.py", line 35, in <module>
+8986.4s 480 [rank0]:     from .audio_utils import AudioInput, load_audio, make_list_of_audio
+8986.4s 481 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/audio_utils.py", line 58, in <module>
+8986.4s 482 [rank0]:     import torchaudio
+8986.4s 483 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/torchaudio/__init__.py", line 7, in <module>
+8986.4s 484 [rank0]:     from . import _extension  # noqa  # usort: skip
+8986.4s 485 [rank0]:     ^^^^^^^^^^^^^^^^^^^^^^^^
+8986.4s 486 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/torchaudio/_extension/__init__.py", line 36, in <module>
+8986.4s 487 [rank0]:     _check_cuda_version()
+8986.4s 488 [rank0]:     ~~~~~~~~~~~~~~~~~~~^^
+8986.4s 489 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/torchaudio/_extension/utils.py", line 124, in _check_cuda_version
+8986.4s 490 [rank0]:     raise RuntimeError(
+8986.4s 491 [rank0]:     ...<3 lines>...
+8986.4s 492 [rank0]:     )
+8986.4s 493 [rank0]: RuntimeError: Detected that PyTorch and TorchAudio were compiled with different CUDA versions. PyTorch has CUDA version 13.0 whereas TorchAudio has CUDA version 12.8. Please install the TorchAudio version that matches your PyTorch version.
+8986.4s 494 
+8986.4s 495 [rank0]: The above exception was the direct cause of the following exception:
+8986.4s 496 
+8986.4s 497 [rank0]: Traceback (most recent call last):
+8986.4s 498 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1044, in _get_module
+8986.4s 499 [rank0]:     return importlib.import_module("." + module_name, self.__name__)
+8986.4s 500 [rank0]:            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.4s 501 [rank0]:   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+8986.4s 502 [rank0]:     return _bootstrap._gcd_import(name[level:], package, level)
+8986.4s 503 [rank0]:            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.4s 504 [rank0]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+8986.4s 505 [rank0]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+8986.4s 506 [rank0]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+8986.4s 507 [rank0]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+8986.4s 508 [rank0]:   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+8986.4s 509 [rank0]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+8986.4s 510 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/loaders/peft.py", line 26, in <module>
+8986.4s 511 [rank0]:     from ..hooks.group_offloading import _maybe_remove_and_reapply_group_offloading
+8986.4s 512 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/hooks/__init__.py", line 25, in <module>
+8986.4s 513 [rank0]:     from .layerwise_casting import apply_layerwise_casting, apply_layerwise_casting_hook
+8986.4s 514 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/hooks/layerwise_casting.py", line 36, in <module>
+8986.4s 515 [rank0]:     from peft.helpers import disable_input_dtype_casting
+8986.4s 516 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/peft/__init__.py", line 17, in <module>
+8986.4s 517 [rank0]:     from .auto import (
+8986.4s 518 [rank0]:     ...<8 lines>...
+8986.4s 519 [rank0]:     )
+8986.4s 520 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/peft/auto.py", line 31, in <module>
+8986.4s 521 [rank0]:     from .config import PeftConfig
+8986.4s 522 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/peft/config.py", line 30, in <module>
+8986.4s 523 [rank0]:     from .utils import CONFIG_NAME, PeftType, TaskType
+8986.4s 524 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/peft/utils/__init__.py", line 15, in <module>
+8986.4s 525 [rank0]:     from .constants import ALLOWED_COMPUTE_DTYPES, UPCAST_DTYPES
+8986.4s 526 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/peft/utils/constants.py", line 16, in <module>
+8986.4s 527 [rank0]:     from transformers import BloomPreTrainedModel
+8986.4s 528 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2700, in __getattr__
+8986.4s 529 [rank0]:     raise ModuleNotFoundError(import_error_message) from e
+8986.4s 530 [rank0]: ModuleNotFoundError: Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.
+8986.4s 531 
+8986.4s 532 [rank0]: The above exception was the direct cause of the following exception:
+8986.4s 533 
+8986.4s 534 [rank0]: Traceback (most recent call last):
+8986.4s 535 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1044, in _get_module
+8986.4s 536 [rank0]:     return importlib.import_module("." + module_name, self.__name__)
+8986.4s 537 [rank0]:            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.4s 538 [rank0]:   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+8986.4s 539 [rank0]:     return _bootstrap._gcd_import(name[level:], package, level)
+8986.4s 540 [rank0]:            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.4s 541 [rank0]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+8986.4s 542 [rank0]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+8986.4s 543 [rank0]:   File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+8986.4s 544 [rank0]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+8986.4s 545 [rank0]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+8986.4s 546 [rank0]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+8986.4s 547 [rank0]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+8986.4s 548 [rank0]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+8986.4s 549 [rank0]:   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+8986.4s 550 [rank0]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+8986.4s 551 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/__init__.py", line 1, in <module>
+8986.4s 552 [rank0]:     from .autoencoder_asym_kl import AsymmetricAutoencoderKL
+8986.4s 553 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/autoencoder_asym_kl.py", line 21, in <module>
+8986.4s 554 [rank0]:     from .vae import AutoencoderMixin, DecoderOutput, DiagonalGaussianDistribution, Encoder, MaskConditionDecoder
+8986.4s 555 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/vae.py", line 24, in <module>
+8986.4s 556 [rank0]:     from ..unets.unet_2d_blocks import (
+8986.4s 557 [rank0]:     ...<4 lines>...
+8986.4s 558 [rank0]:     )
+8986.4s 559 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/__init__.py", line 6, in <module>
+8986.4s 560 [rank0]:     from .unet_2d import UNet2DModel
+8986.4s 561 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d.py", line 23, in <module>
+8986.4s 562 [rank0]:     from .unet_2d_blocks import UNetMidBlock2D, get_down_block, get_up_block
+8986.4s 563 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d_blocks.py", line 36, in <module>
+8986.4s 564 [rank0]:     from ..transformers.dual_transformer_2d import DualTransformer2DModel
+8986.4s 565 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/__init__.py", line 5, in <module>
+8986.4s 566 [rank0]:     from .ace_step_transformer import AceStepTransformer1DModel
+8986.4s 567 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/ace_step_transformer.py", line 24, in <module>
+8986.4s 568 [rank0]:     from ...loaders import PeftAdapterMixin
+8986.4s 569 [rank0]:   File "<frozen importlib._bootstrap>", line 1420, in _handle_fromlist
+8986.4s 570 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1034, in __getattr__
+8986.4s 571 [rank0]:     module = self._get_module(self._class_to_module[name])
+8986.4s 572 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1046, in _get_module
+8986.4s 573 [rank0]:     raise RuntimeError(
+8986.4s 574 [rank0]:     ...<2 lines>...
+8986.4s 575 [rank0]:     ) from e
+8986.4s 576 [rank0]: RuntimeError: Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+8986.4s 577 [rank0]: Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.
+8986.4s 578 
+8986.4s 579 [rank0]: The above exception was the direct cause of the following exception:
+8986.4s 580 
+8986.4s 581 [rank0]: Traceback (most recent call last):
+8986.4s 582 [rank0]:   File "<frozen runpy>", line 203, in _run_module_as_main
+8986.4s 583 [rank0]:   File "<frozen runpy>", line 88, in _run_code
+8986.4s 584 [rank0]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 359, in <module>
+8986.4s 585 [rank0]:     main()
+8986.4s 586 [rank0]:     ~~~~^^
+8986.4s 587 [rank0]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 223, in main
+8986.4s 588 [rank0]:     targets = FrozenTargets(cfg.vae_id, cfg.dino_id).to(device)
+8986.4s 589 [rank0]:               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+8986.4s 590 [rank0]:   File "/kaggle/working/sar_to_eo/sar2eo/frozen.py", line 15, in __init__
+8986.4s 591 [rank0]:     from diffusers import AutoencoderKL
+8986.4s 592 [rank0]:   File "<frozen importlib._bootstrap>", line 1420, in _handle_fromlist
+8986.4s 593 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1035, in __getattr__
+8986.4s 594 [rank0]:     value = getattr(module, name)
+8986.4s 595 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1034, in __getattr__
+8986.4s 596 [rank0]:     module = self._get_module(self._class_to_module[name])
+8986.4s 597 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1046, in _get_module
+8986.4s 598 [rank0]:     raise RuntimeError(
+8986.4s 599 [rank0]:     ...<2 lines>...
+8986.4s 600 [rank0]:     ) from e
+8986.4s 601 [rank0]: RuntimeError: Failed to import diffusers.models.autoencoders.autoencoder_kl because of the following error (look up to see its traceback):
+8986.4s 602 [rank0]: Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+8986.4s 603 [rank0]: Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.
+8987.8s 604 W1028 09:35:26.167000 197 torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 206 closing signal SIGTERM
+8987.9s 605 E1028 09:35:26.233000 197 torch/distributed/elastic/multiprocessing/api.py:1002] failed (exitcode: 1) local_rank: 1 (pid: 207) of binary: /usr/bin/python3
+8987.9s 606 Traceback (most recent call last):
+8987.9s 607 File [35m"/usr/local/bin/torchrun"[0m, line [35m6[0m, in [35m<module>[0m
+8987.9s 608 sys.exit([31mmain[0m[1;31m()[0m)
+8987.9s 609 [31m~~~~[0m[1;31m^^[0m
+8987.9s 610 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py"[0m, line [35m380[0m, in [35mwrapper[0m
+8987.9s 611 return f(*args, **kwargs)
+8987.9s 612 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/run.py"[0m, line [35m1138[0m, in [35mmain[0m
+8987.9s 613 [31mrun[0m[1;31m(args)[0m
+8987.9s 614 [31m~~~[0m[1;31m^^^^^^[0m
+8987.9s 615 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/run.py"[0m, line [35m1129[0m, in [35mrun[0m
+8987.9s 616 [31melastic_launch([0m
+8987.9s 617 [31m~~~~~~~~~~~~~~~[0m
+8987.9s 618 [31mconfig=config,[0m
+8987.9s 619 [31m~~~~~~~~~~~~~~[0m
+8987.9s 620 [31mentrypoint=cmd,[0m
+8987.9s 621 [31m~~~~~~~~~~~~~~~[0m
+8987.9s 622 [31m)[0m[1;31m(*cmd_args)[0m
+8987.9s 623 [31m~[0m[1;31m^^^^^^^^^^^[0m
+8987.9s 624 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/launcher/api.py"[0m, line [35m197[0m, in [35m__call__[0m
+8987.9s 625 return launch_agent(
+8987.9s 626 self._config,
+8987.9s 627 ...<2 lines>...
+8987.9s 628 health_check_server=self._health_check_server,
+8987.9s 629 )
+8987.9s 630 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/launcher/api.py"[0m, line [35m386[0m, in [35mlaunch_agent[0m
+8987.9s 631 raise ChildFailedError(
+8987.9s 632 ...<2 lines>...
+8987.9s 633 )
+8987.9s 634 [1;35mtorch.distributed.elastic.multiprocessing.errors.ChildFailedError[0m: [35m
+8987.9s 635 ============================================================
+8987.9s 636 sar2eo.train FAILED
+8987.9s 637 ------------------------------------------------------------
+8987.9s 638 Failures:
+8987.9s 639 [1]:
+8987.9s 640 time      : 2026-10-28_09:35:26
+8987.9s 641 host      : e2fbd77b5602
+8987.9s 642 rank      : 0 (local_rank: 0)
+8987.9s 643 exitcode  : 1 (pid: 206)
+8987.9s 644 error_file: <N/A>
+8987.9s 645 traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+8987.9s 646 ------------------------------------------------------------
+8987.9s 647 Root Cause (first observed failure):
+8987.9s 648 [0]:
+8987.9s 649 time      : 2026-10-28_09:35:26
+8987.9s 650 host      : e2fbd77b5602
+8987.9s 651 rank      : 1 (local_rank: 1)
+8987.9s 652 exitcode  : 1 (pid: 207)
+8987.9s 653 error_file: <N/A>
+8987.9s 654 traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+8987.9s 655 ============================================================[0m
+8990.3s 656 W1028 09:35:28.639000 225 torch/distributed/run.py:982]
+8990.3s 657 W1028 09:35:28.639000 225 torch/distributed/run.py:982] *****************************************
+8990.3s 658 W1028 09:35:28.639000 225 torch/distributed/run.py:982] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+8990.3s 659 W1028 09:35:28.639000 225 torch/distributed/run.py:982] *****************************************
+8993.1s 660 /usr/local/lib/python3.13/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+8993.1s 661 return func(*args, **kwargs)
+8993.1s 662 [rank0]:[W1028 09:35:31.584194444 ProcessGroupNCCL.cpp:5310] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+8993.5s 663 /usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:431: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+8993.5s 664 self.check_worker_number_rationality()
+8993.5s 665 /usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:431: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+8993.5s 666 self.check_worker_number_rationality()
+9000.5s 667 SAR-JEPA iRPE tables present: True
+9000.5s 668 SAR checkpoint missing: []
+9000.5s 669 SAR checkpoint unexpected: ['blocks.0.attn.rpe_k.lookup_table_weight', 'blocks.1.attn.rpe_k.lookup_table_weight', 'blocks.2.attn.rpe_k.lookup_table_weight', 'blocks.3.attn.rpe_k.lookup_table_weight', 'blocks.4.attn.rpe_k.lookup_table_weight', 'blocks.5.attn.rpe_k.lookup_table_weight', 'blocks.6.attn.rpe_k.lookup_table_weight', 'blocks.7.attn.rpe_k.lookup_table_weight', 'blocks.8.attn.rpe_k.lookup_table_weight', 'blocks.9.attn.rpe_k.lookup_table_weight', 'blocks.10.attn.rpe_k.lookup_table_weight', 'blocks.11.attn.rpe_k.lookup_table_weight']
+9000.6s 670 SAR-JEPA iRPE tables present: True
+9000.6s 671 SAR checkpoint missing: []
+9000.6s 672 SAR checkpoint unexpected: ['blocks.0.attn.rpe_k.lookup_table_weight', 'blocks.1.attn.rpe_k.lookup_table_weight', 'blocks.2.attn.rpe_k.lookup_table_weight', 'blocks.3.attn.rpe_k.lookup_table_weight', 'blocks.4.attn.rpe_k.lookup_table_weight', 'blocks.5.attn.rpe_k.lookup_table_weight', 'blocks.6.attn.rpe_k.lookup_table_weight', 'blocks.7.attn.rpe_k.lookup_table_weight', 'blocks.8.attn.rpe_k.lookup_table_weight', 'blocks.9.attn.rpe_k.lookup_table_weight', 'blocks.10.attn.rpe_k.lookup_table_weight', 'blocks.11.attn.rpe_k.lookup_table_weight']
+9008.4s 673 [rank1]: Traceback (most recent call last):
+9008.4s 674 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2612, in __getattr__
+9008.4s 675 [rank1]:     module = self._get_module(self._class_to_module[name])
+9008.4s 676 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2843, in _get_module
+9008.4s 677 [rank1]:     raise e
+9008.4s 678 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2841, in _get_module
+9008.4s 679 [rank1]:     return importlib.import_module("." + module_name, self.__name__)
+9008.4s 680 [rank1]:            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.4s 681 [rank1]:   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+9008.4s 682 [rank1]:     return _bootstrap._gcd_import(name[level:], package, level)
+9008.4s 683 [rank1]:            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.4s 684 [rank1]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+9008.4s 685 [rank1]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+9008.4s 686 [rank1]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+9008.4s 687 [rank1]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+9008.4s 688 [rank1]:   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+9008.4s 689 [rank1]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+9008.4s 690 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/models/bloom/modeling_bloom.py", line 26, in <module>
+9008.4s 691 [rank1]:     from ...modeling_layers import GradientCheckpointingLayer
+9008.4s 692 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/modeling_layers.py", line 39, in <module>
+9008.4s 693 [rank1]:     from .processing_utils import Unpack
+9008.4s 694 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/processing_utils.py", line 35, in <module>
+9008.4s 695 [rank1]:     from .audio_utils import AudioInput, load_audio, make_list_of_audio
+9008.4s 696 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/audio_utils.py", line 58, in <module>
+9008.4s 697 [rank1]:     import torchaudio
+9008.4s 698 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/torchaudio/__init__.py", line 7, in <module>
+9008.4s 699 [rank1]:     from . import _extension  # noqa  # usort: skip
+9008.4s 700 [rank1]:     ^^^^^^^^^^^^^^^^^^^^^^^^
+9008.4s 701 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/torchaudio/_extension/__init__.py", line 36, in <module>
+9008.4s 702 [rank1]:     _check_cuda_version()
+9008.4s 703 [rank1]:     ~~~~~~~~~~~~~~~~~~~^^
+9008.4s 704 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/torchaudio/_extension/utils.py", line 124, in _check_cuda_version
+9008.4s 705 [rank1]:     raise RuntimeError(
+9008.4s 706 [rank1]:     ...<3 lines>...
+9008.4s 707 [rank1]:     )
+9008.4s 708 [rank1]: RuntimeError: Detected that PyTorch and TorchAudio were compiled with different CUDA versions. PyTorch has CUDA version 13.0 whereas TorchAudio has CUDA version 12.8. Please install the TorchAudio version that matches your PyTorch version.
+9008.4s 709 
+9008.4s 710 [rank1]: The above exception was the direct cause of the following exception:
+9008.4s 711 
+9008.4s 712 [rank1]: Traceback (most recent call last):
+9008.4s 713 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1044, in _get_module
+9008.4s 714 [rank1]:     return importlib.import_module("." + module_name, self.__name__)
+9008.4s 715 [rank1]:            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.4s 716 [rank1]:   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+9008.4s 717 [rank1]:     return _bootstrap._gcd_import(name[level:], package, level)
+9008.4s 718 [rank1]:            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.4s 719 [rank1]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+9008.4s 720 [rank1]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+9008.4s 721 [rank1]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+9008.4s 722 [rank1]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+9008.4s 723 [rank1]:   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+9008.4s 724 [rank1]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+9008.4s 725 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/loaders/peft.py", line 26, in <module>
+9008.4s 726 [rank1]:     from ..hooks.group_offloading import _maybe_remove_and_reapply_group_offloading
+9008.4s 727 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/hooks/__init__.py", line 25, in <module>
+9008.4s 728 [rank1]:     from .layerwise_casting import apply_layerwise_casting, apply_layerwise_casting_hook
+9008.4s 729 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/hooks/layerwise_casting.py", line 36, in <module>
+9008.4s 730 [rank1]:     from peft.helpers import disable_input_dtype_casting
+9008.4s 731 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/peft/__init__.py", line 17, in <module>
+9008.4s 732 [rank1]:     from .auto import (
+9008.4s 733 [rank1]:     ...<8 lines>...
+9008.4s 734 [rank1]:     )
+9008.4s 735 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/peft/auto.py", line 31, in <module>
+9008.4s 736 [rank1]:     from .config import PeftConfig
+9008.4s 737 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/peft/config.py", line 30, in <module>
+9008.4s 738 [rank1]:     from .utils import CONFIG_NAME, PeftType, TaskType
+9008.4s 739 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/peft/utils/__init__.py", line 15, in <module>
+9008.4s 740 [rank1]:     from .constants import ALLOWED_COMPUTE_DTYPES, UPCAST_DTYPES
+9008.4s 741 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/peft/utils/constants.py", line 16, in <module>
+9008.4s 742 [rank1]:     from transformers import BloomPreTrainedModel
+9008.4s 743 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2700, in __getattr__
+9008.4s 744 [rank1]:     raise ModuleNotFoundError(import_error_message) from e
+9008.4s 745 [rank1]: ModuleNotFoundError: Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.
+9008.4s 746 
+9008.4s 747 [rank1]: The above exception was the direct cause of the following exception:
+9008.4s 748 
+9008.4s 749 [rank1]: Traceback (most recent call last):
+9008.4s 750 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1044, in _get_module
+9008.4s 751 [rank1]:     return importlib.import_module("." + module_name, self.__name__)
+9008.4s 752 [rank1]:            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.4s 753 [rank1]:   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+9008.4s 754 [rank1]:     return _bootstrap._gcd_import(name[level:], package, level)
+9008.4s 755 [rank1]:            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.4s 756 [rank1]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+9008.4s 757 [rank1]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+9008.4s 758 [rank1]:   File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+9008.4s 759 [rank1]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+9008.4s 760 [rank1]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+9008.4s 761 [rank1]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+9008.4s 762 [rank1]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+9008.4s 763 [rank1]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+9008.4s 764 [rank1]:   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+9008.4s 765 [rank1]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+9008.4s 766 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/__init__.py", line 1, in <module>
+9008.4s 767 [rank1]:     from .autoencoder_asym_kl import AsymmetricAutoencoderKL
+9008.4s 768 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/autoencoder_asym_kl.py", line 21, in <module>
+9008.4s 769 [rank1]:     from .vae import AutoencoderMixin, DecoderOutput, DiagonalGaussianDistribution, Encoder, MaskConditionDecoder
+9008.4s 770 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/vae.py", line 24, in <module>
+9008.4s 771 [rank1]:     from ..unets.unet_2d_blocks import (
+9008.4s 772 [rank1]:     ...<4 lines>...
+9008.4s 773 [rank1]:     )
+9008.4s 774 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/__init__.py", line 6, in <module>
+9008.4s 775 [rank1]:     from .unet_2d import UNet2DModel
+9008.4s 776 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d.py", line 23, in <module>
+9008.4s 777 [rank1]:     from .unet_2d_blocks import UNetMidBlock2D, get_down_block, get_up_block
+9008.4s 778 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d_blocks.py", line 36, in <module>
+9008.4s 779 [rank1]:     from ..transformers.dual_transformer_2d import DualTransformer2DModel
+9008.4s 780 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/__init__.py", line 5, in <module>
+9008.4s 781 [rank1]:     from .ace_step_transformer import AceStepTransformer1DModel
+9008.4s 782 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/ace_step_transformer.py", line 24, in <module>
+9008.4s 783 [rank1]:     from ...loaders import PeftAdapterMixin
+9008.4s 784 [rank1]:   File "<frozen importlib._bootstrap>", line 1420, in _handle_fromlist
+9008.4s 785 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1034, in __getattr__
+9008.4s 786 [rank1]:     module = self._get_module(self._class_to_module[name])
+9008.4s 787 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1046, in _get_module
+9008.4s 788 [rank1]:     raise RuntimeError(
+9008.4s 789 [rank1]:     ...<2 lines>...
+9008.4s 790 [rank1]:     ) from e
+9008.4s 791 [rank1]: RuntimeError: Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+9008.4s 792 [rank1]: Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.
+9008.4s 793 
+9008.4s 794 [rank1]: The above exception was the direct cause of the following exception:
+9008.4s 795 
+9008.4s 796 [rank1]: Traceback (most recent call last):
+9008.4s 797 [rank1]:   File "<frozen runpy>", line 203, in _run_module_as_main
+9008.4s 798 [rank1]:   File "<frozen runpy>", line 88, in _run_code
+9008.4s 799 [rank1]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 359, in <module>
+9008.4s 800 [rank1]:     main()
+9008.4s 801 [rank1]:     ~~~~^^
+9008.4s 802 [rank1]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 223, in main
+9008.4s 803 [rank1]:     targets = FrozenTargets(cfg.vae_id, cfg.dino_id).to(device)
+9008.4s 804 [rank1]:               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.4s 805 [rank1]:   File "/kaggle/working/sar_to_eo/sar2eo/frozen.py", line 15, in __init__
+9008.4s 806 [rank1]:     from diffusers import AutoencoderKL
+9008.4s 807 [rank1]:   File "<frozen importlib._bootstrap>", line 1420, in _handle_fromlist
+9008.4s 808 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1035, in __getattr__
+9008.4s 809 [rank1]:     value = getattr(module, name)
+9008.4s 810 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1034, in __getattr__
+9008.4s 811 [rank1]:     module = self._get_module(self._class_to_module[name])
+9008.4s 812 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1046, in _get_module
+9008.4s 813 [rank1]:     raise RuntimeError(
+9008.4s 814 [rank1]:     ...<2 lines>...
+9008.4s 815 [rank1]:     ) from e
+9008.4s 816 [rank1]: RuntimeError: Failed to import diffusers.models.autoencoders.autoencoder_kl because of the following error (look up to see its traceback):
+9008.4s 817 [rank1]: Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+9008.4s 818 [rank1]: Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.
+9008.4s 819 [rank0]: Traceback (most recent call last):
+9008.4s 820 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2612, in __getattr__
+9008.4s 821 [rank0]:     module = self._get_module(self._class_to_module[name])
+9008.4s 822 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2843, in _get_module
+9008.4s 823 [rank0]:     raise e
+9008.4s 824 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2841, in _get_module
+9008.4s 825 [rank0]:     return importlib.import_module("." + module_name, self.__name__)
+9008.4s 826 [rank0]:            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.4s 827 [rank0]:   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+9008.4s 828 [rank0]:     return _bootstrap._gcd_import(name[level:], package, level)
+9008.4s 829 [rank0]:            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.4s 830 [rank0]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+9008.4s 831 [rank0]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+9008.4s 832 [rank0]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+9008.4s 833 [rank0]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+9008.4s 834 [rank0]:   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+9008.4s 835 [rank0]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+9008.4s 836 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/models/bloom/modeling_bloom.py", line 26, in <module>
+9008.4s 837 [rank0]:     from ...modeling_layers import GradientCheckpointingLayer
+9008.4s 838 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/modeling_layers.py", line 39, in <module>
+9008.4s 839 [rank0]:     from .processing_utils import Unpack
+9008.4s 840 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/processing_utils.py", line 35, in <module>
+9008.4s 841 [rank0]:     from .audio_utils import AudioInput, load_audio, make_list_of_audio
+9008.4s 842 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/audio_utils.py", line 58, in <module>
+9008.4s 843 [rank0]:     import torchaudio
+9008.4s 844 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/torchaudio/__init__.py", line 7, in <module>
+9008.4s 845 [rank0]:     from . import _extension  # noqa  # usort: skip
+9008.4s 846 [rank0]:     ^^^^^^^^^^^^^^^^^^^^^^^^
+9008.4s 847 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/torchaudio/_extension/__init__.py", line 36, in <module>
+9008.4s 848 [rank0]:     _check_cuda_version()
+9008.4s 849 [rank0]:     ~~~~~~~~~~~~~~~~~~~^^
+9008.4s 850 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/torchaudio/_extension/utils.py", line 124, in _check_cuda_version
+9008.4s 851 [rank0]:     raise RuntimeError(
+9008.4s 852 [rank0]:     ...<3 lines>...
+9008.4s 853 [rank0]:     )
+9008.4s 854 [rank0]: RuntimeError: Detected that PyTorch and TorchAudio were compiled with different CUDA versions. PyTorch has CUDA version 13.0 whereas TorchAudio has CUDA version 12.8. Please install the TorchAudio version that matches your PyTorch version.
+9008.4s 855 
+9008.4s 856 [rank0]: The above exception was the direct cause of the following exception:
+9008.4s 857 
+9008.4s 858 [rank0]: Traceback (most recent call last):
+9008.4s 859 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1044, in _get_module
+9008.4s 860 [rank0]:     return importlib.import_module("." + module_name, self.__name__)
+9008.4s 861 [rank0]:            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.4s 862 [rank0]:   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+9008.4s 863 [rank0]:     return _bootstrap._gcd_import(name[level:], package, level)
+9008.4s 864 [rank0]:            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.4s 865 [rank0]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+9008.4s 866 [rank0]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+9008.4s 867 [rank0]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+9008.4s 868 [rank0]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+9008.4s 869 [rank0]:   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+9008.4s 870 [rank0]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+9008.4s 871 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/loaders/peft.py", line 26, in <module>
+9008.4s 872 [rank0]:     from ..hooks.group_offloading import _maybe_remove_and_reapply_group_offloading
+9008.4s 873 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/hooks/__init__.py", line 25, in <module>
+9008.4s 874 [rank0]:     from .layerwise_casting import apply_layerwise_casting, apply_layerwise_casting_hook
+9008.4s 875 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/hooks/layerwise_casting.py", line 36, in <module>
+9008.4s 876 [rank0]:     from peft.helpers import disable_input_dtype_casting
+9008.4s 877 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/peft/__init__.py", line 17, in <module>
+9008.4s 878 [rank0]:     from .auto import (
+9008.4s 879 [rank0]:     ...<8 lines>...
+9008.4s 880 [rank0]:     )
+9008.4s 881 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/peft/auto.py", line 31, in <module>
+9008.4s 882 [rank0]:     from .config import PeftConfig
+9008.4s 883 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/peft/config.py", line 30, in <module>
+9008.4s 884 [rank0]:     from .utils import CONFIG_NAME, PeftType, TaskType
+9008.4s 885 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/peft/utils/__init__.py", line 15, in <module>
+9008.4s 886 [rank0]:     from .constants import ALLOWED_COMPUTE_DTYPES, UPCAST_DTYPES
+9008.4s 887 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/peft/utils/constants.py", line 16, in <module>
+9008.4s 888 [rank0]:     from transformers import BloomPreTrainedModel
+9008.4s 889 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/transformers/utils/import_utils.py", line 2700, in __getattr__
+9008.4s 890 [rank0]:     raise ModuleNotFoundError(import_error_message) from e
+9008.4s 891 [rank0]: ModuleNotFoundError: Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.
+9008.4s 892 
+9008.4s 893 [rank0]: The above exception was the direct cause of the following exception:
+9008.4s 894 
+9008.4s 895 [rank0]: Traceback (most recent call last):
+9008.5s 896 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1044, in _get_module
+9008.5s 897 [rank0]:     return importlib.import_module("." + module_name, self.__name__)
+9008.5s 898 [rank0]:            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.5s 899 [rank0]:   File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+9008.5s 900 [rank0]:     return _bootstrap._gcd_import(name[level:], package, level)
+9008.5s 901 [rank0]:            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.5s 902 [rank0]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+9008.5s 903 [rank0]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+9008.5s 904 [rank0]:   File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+9008.5s 905 [rank0]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+9008.5s 906 [rank0]:   File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+9008.5s 907 [rank0]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+9008.5s 908 [rank0]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+9008.5s 909 [rank0]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+9008.5s 910 [rank0]:   File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+9008.5s 911 [rank0]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+9008.5s 912 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/__init__.py", line 1, in <module>
+9008.5s 913 [rank0]:     from .autoencoder_asym_kl import AsymmetricAutoencoderKL
+9008.5s 914 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/autoencoder_asym_kl.py", line 21, in <module>
+9008.5s 915 [rank0]:     from .vae import AutoencoderMixin, DecoderOutput, DiagonalGaussianDistribution, Encoder, MaskConditionDecoder
+9008.5s 916 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/vae.py", line 24, in <module>
+9008.5s 917 [rank0]:     from ..unets.unet_2d_blocks import (
+9008.5s 918 [rank0]:     ...<4 lines>...
+9008.5s 919 [rank0]:     )
+9008.5s 920 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/__init__.py", line 6, in <module>
+9008.5s 921 [rank0]:     from .unet_2d import UNet2DModel
+9008.5s 922 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d.py", line 23, in <module>
+9008.5s 923 [rank0]:     from .unet_2d_blocks import UNetMidBlock2D, get_down_block, get_up_block
+9008.5s 924 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d_blocks.py", line 36, in <module>
+9008.5s 925 [rank0]:     from ..transformers.dual_transformer_2d import DualTransformer2DModel
+9008.5s 926 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/__init__.py", line 5, in <module>
+9008.5s 927 [rank0]:     from .ace_step_transformer import AceStepTransformer1DModel
+9008.5s 928 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/models/transformers/ace_step_transformer.py", line 24, in <module>
+9008.5s 929 [rank0]:     from ...loaders import PeftAdapterMixin
+9008.5s 930 [rank0]:   File "<frozen importlib._bootstrap>", line 1420, in _handle_fromlist
+9008.5s 931 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1034, in __getattr__
+9008.5s 932 [rank0]:     module = self._get_module(self._class_to_module[name])
+9008.5s 933 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1046, in _get_module
+9008.5s 934 [rank0]:     raise RuntimeError(
+9008.5s 935 [rank0]:     ...<2 lines>...
+9008.5s 936 [rank0]:     ) from e
+9008.5s 937 [rank0]: RuntimeError: Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+9008.5s 938 [rank0]: Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.
+9008.5s 939 
+9008.5s 940 [rank0]: The above exception was the direct cause of the following exception:
+9008.5s 941 
+9008.5s 942 [rank0]: Traceback (most recent call last):
+9008.5s 943 [rank0]:   File "<frozen runpy>", line 203, in _run_module_as_main
+9008.5s 944 [rank0]:   File "<frozen runpy>", line 88, in _run_code
+9008.5s 945 [rank0]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 359, in <module>
+9008.5s 946 [rank0]:     main()
+9008.5s 947 [rank0]:     ~~~~^^
+9008.5s 948 [rank0]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 223, in main
+9008.5s 949 [rank0]:     targets = FrozenTargets(cfg.vae_id, cfg.dino_id).to(device)
+9008.5s 950 [rank0]:               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+9008.5s 951 [rank0]:   File "/kaggle/working/sar_to_eo/sar2eo/frozen.py", line 15, in __init__
+9008.5s 952 [rank0]:     from diffusers import AutoencoderKL
+9008.5s 953 [rank0]:   File "<frozen importlib._bootstrap>", line 1420, in _handle_fromlist
+9008.5s 954 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1035, in __getattr__
+9008.5s 955 [rank0]:     value = getattr(module, name)
+9008.5s 956 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1034, in __getattr__
+9008.5s 957 [rank0]:     module = self._get_module(self._class_to_module[name])
+9008.5s 958 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py", line 1046, in _get_module
+9008.5s 959 [rank0]:     raise RuntimeError(
+9008.5s 960 [rank0]:     ...<2 lines>...
+9008.5s 961 [rank0]:     ) from e
+9008.5s 962 [rank0]: RuntimeError: Failed to import diffusers.models.autoencoders.autoencoder_kl because of the following error (look up to see its traceback):
+9008.5s 963 [rank0]: Failed to import diffusers.loaders.peft because of the following error (look up to see its traceback):
+9008.5s 964 [rank0]: Could not import module 'BloomPreTrainedModel'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.
+9009.9s 965 W1028 09:35:48.239000 225 torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 234 closing signal SIGTERM
+9010.0s 966 E1028 09:35:48.353000 225 torch/distributed/elastic/multiprocessing/api.py:1002] failed (exitcode: 1) local_rank: 1 (pid: 235) of binary: /usr/bin/python3
+9010.0s 967 Traceback (most recent call last):
+9010.0s 968 File [35m"/usr/local/bin/torchrun"[0m, line [35m6[0m, in [35m<module>[0m
+9010.0s 969 sys.exit([31mmain[0m[1;31m()[0m)
+9010.0s 970 [31m~~~~[0m[1;31m^^[0m
+9010.0s 971 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py"[0m, line [35m380[0m, in [35mwrapper[0m
+9010.0s 972 return f(*args, **kwargs)
+9010.0s 973 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/run.py"[0m, line [35m1138[0m, in [35mmain[0m
+9010.0s 974 [31mrun[0m[1;31m(args)[0m
+9010.0s 975 [31m~~~[0m[1;31m^^^^^^[0m
+9010.0s 976 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/run.py"[0m, line [35m1129[0m, in [35mrun[0m
+9010.0s 977 [31melastic_launch([0m
+9010.0s 978 [31m~~~~~~~~~~~~~~~[0m
+9010.0s 979 [31mconfig=config,[0m
+9010.0s 980 [31m~~~~~~~~~~~~~~[0m
+9010.0s 981 [31mentrypoint=cmd,[0m
+9010.0s 982 [31m~~~~~~~~~~~~~~~[0m
+9010.0s 983 [31m)[0m[1;31m(*cmd_args)[0m
+9010.0s 984 [31m~[0m[1;31m^^^^^^^^^^^[0m
+9010.0s 985 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/launcher/api.py"[0m, line [35m197[0m, in [35m__call__[0m
+9010.0s 986 return launch_agent(
+9010.0s 987 self._config,
+9010.0s 988 ...<2 lines>...
+9010.0s 989 health_check_server=self._health_check_server,
+9010.0s 990 )
+9010.0s 991 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/launcher/api.py"[0m, line [35m386[0m, in [35mlaunch_agent[0m
+9010.0s 992 raise ChildFailedError(
+9010.0s 993 ...<2 lines>...
+9010.0s 994 )
+9010.0s 995 [1;35mtorch.distributed.elastic.multiprocessing.errors.ChildFailedError[0m: [35m
+9010.0s 996 ============================================================
+9010.0s 997 sar2eo.train FAILED
+9010.0s 998 ------------------------------------------------------------
+9010.0s 999 Failures:
+9010.0s 1000 [1]:
+9010.0s 1001 time      : 2026-10-28_09:35:48
+9010.0s 1002 host      : e2fbd77b5602
+9010.0s 1003 rank      : 0 (local_rank: 0)
+9010.0s 1004 exitcode  : 1 (pid: 234)
+9010.0s 1005 error_file: <N/A>
+9010.0s 1006 traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+9010.0s 1007 ------------------------------------------------------------
+9010.0s 1008 Root Cause (first observed failure):
+9010.0s 1009 [0]:
+9010.0s 1010 time      : 2026-10-28_09:35:48
+9010.0s 1011 host      : e2fbd77b5602
+9010.0s 1012 rank      : 1 (local_rank: 1)
+9010.0s 1013 exitcode  : 1 (pid: 235)
+9010.0s 1014 error_file: <N/A>
+9010.0s 1015 traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+9010.0s 1016 ============================================================[0m
+9019.3s 1017 SAR-JEPA iRPE tables present: True
+9019.3s 1018 SAR checkpoint missing: []
+9019.3s 1019 SAR checkpoint unexpected: ['blocks.0.attn.rpe_k.lookup_table_weight', 'blocks.1.attn.rpe_k.lookup_table_weight', 'blocks.2.attn.rpe_k.lookup_table_weight', 'blocks.3.attn.rpe_k.lookup_table_weight', 'blocks.4.attn.rpe_k.lookup_table_weight', 'blocks.5.attn.rpe_k.lookup_table_weight', 'blocks.6.attn.rpe_k.lookup_table_weight', 'blocks.7.attn.rpe_k.lookup_table_weight', 'blocks.8.attn.rpe_k.lookup_table_weight', 'blocks.9.attn.rpe_k.lookup_table_weight', 'blocks.10.attn.rpe_k.lookup_table_weight', 'blocks.11.attn.rpe_k.lookup_table_weight']
+9019.8s 1020 Traceback (most recent call last):
+9019.8s 1021 File [35m"<frozen runpy>"[0m, line [35m203[0m, in [35m_run_module_as_main[0m
+9019.8s 1022 File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+9019.8s 1023 File [35m"/kaggle/working/sar_to_eo/sar2eo/evaluate.py"[0m, line [35m52[0m, in [35m<module>[0m
+9019.8s 1024 if __name__ == "__main__": [31mmain[0m[1;31m()[0m
+9019.8s 1025 [31m~~~~[0m[1;31m^^[0m
+9019.8s 1026 File [35m"/kaggle/working/sar_to_eo/sar2eo/evaluate.py"[0m, line [35m34[0m, in [35mmain[0m
+9019.8s 1027 state = torch.load(a.checkpoint, map_location=device, weights_only=False)
+9019.8s 1028 File [35m"/usr/local/lib/python3.13/dist-packages/torch/serialization.py"[0m, line [35m1565[0m, in [35mload[0m
+9019.8s 1029 with [31m_open_file_like[0m[1;31m(f, "rb")[0m as opened_file:
+9019.8s 1030 [31m~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^[0m
+9019.8s 1031 File [35m"/usr/local/lib/python3.13/dist-packages/torch/serialization.py"[0m, line [35m795[0m, in [35m_open_file_like[0m
+9019.8s 1032 return _open_file(name_or_buffer, mode)
+9019.8s 1033 File [35m"/usr/local/lib/python3.13/dist-packages/torch/serialization.py"[0m, line [35m776[0m, in [35m__init__[0m
+9019.8s 1034 super().__init__([31mopen[0m[1;31m(name, mode)[0m)  # noqa: SIM115
+9019.8s 1035 [31m~~~~[0m[1;31m^^^^^^^^^^^^[0m
+9019.8s 1036 [1;35mFileNotFoundError[0m: [35m[Errno 2] No such file or directory: 'runs/main/checkpoint_last.pt'[0m
+9021.0s 1037 /bin/bash: line 1: sar-file: No such file or directory
+9024.1s 1038 /usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+9024.1s 1039 cells[i][c] = re.sub('\\\\\|', '|', cell)
+9024.3s 1040 /usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+9024.3s 1041 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+9025.1s 1042 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+9025.3s 1043 [NbConvertApp] Writing 127162 bytes to __notebook__.ipynb
+9027.7s 1044 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+9028.3s 1045 [NbConvertApp] Writing 397862 bytes to __results__.html

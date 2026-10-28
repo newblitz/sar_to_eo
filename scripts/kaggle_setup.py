@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import os
 import subprocess
+import sys
 from pathlib import Path
 
 
@@ -68,6 +69,20 @@ def download_hf(repo_id: str, destination: Path) -> None:
     run("hf", "download", repo_id, "--local-dir", str(destination))
 
 
+def remove_unused_torchaudio() -> None:
+    # This image-only project never imports torchaudio. Kaggle can ship a
+    # torchaudio wheel built for CUDA 12.x alongside PyTorch CUDA 13.x; merely
+    # having the package installed makes Transformers import it while loading
+    # DINOv2 and abort before the model starts.
+    try:
+        import importlib.util
+
+        if importlib.util.find_spec("torchaudio") is not None:
+            run(sys.executable, "-m", "pip", "uninstall", "-y", "torchaudio")
+    except (ModuleNotFoundError, ValueError):
+        pass
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path.cwd())
@@ -80,6 +95,7 @@ def main() -> None:
     root = args.repo_root.resolve()
     input_root = args.kaggle_input.resolve()
     os.chdir(root)
+    remove_unused_torchaudio()
     (root / "assets").mkdir(exist_ok=True)
 
     dataset = args.dataset_input.resolve() if args.dataset_input else find_dataset(input_root)
