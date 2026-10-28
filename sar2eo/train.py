@@ -179,8 +179,9 @@ def main():
             drop_last=True,
         )
 
-    base_model = SAR2EO(cfg.d_model, cfg.depth, cfg.heads, cfg.align_layer, cfg.dino_dim, cfg.in_chans).to(device)
+    base_model = SAR2EO(cfg.d_model, cfg.depth, cfg.heads, cfg.align_layer, cfg.dino_dim, cfg.in_chans)
     load_sar_checkpoint(base_model.sar_encoder, cfg.sar_checkpoint)
+    base_model = base_model.to(device)
     # Copy after SAR-JEPA adaptation. Constructing a second SAR2EO independently
     # can select the timm ViT path, while the loaded base model uses the compact
     # SAR-JEPA-compatible encoder with different key names and positional shape.

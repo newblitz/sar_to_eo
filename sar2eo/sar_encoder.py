@@ -86,7 +86,8 @@ def load_sar_checkpoint(model: SARViT, checkpoint: str | None) -> None:
     state = torch.load(checkpoint, map_location="cpu", weights_only=False); raw = state.get("model", state.get("state_dict", state));
     has_rpe = any("rpe" in k for k in raw)
     if has_rpe:
-        model.vit = SARJEPAViT()
+        device = next(model.vit.parameters()).device
+        model.vit = SARJEPAViT().to(device)
     clean = {}
     for key, value in raw.items():
         if key.startswith(("module.decoder", "module.hogs", "module.mask_token", "module.encoder_pred")): continue
