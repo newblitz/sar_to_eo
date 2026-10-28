@@ -1,0 +1,409 @@
+7.5s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.5s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.5s 3 0.00s - to python to disable frozen modules.
+7.5s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.1s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.1s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.1s 7 0.00s - to python to disable frozen modules.
+8.1s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+10.5s 9 Path to dataset files: /kaggle/input/datasets/requiemonk/sentinel12-image-pairs-segregated-by-terrain
+10.7s 10 Cloning into 'sar_to_eo'...
+11.5s 11 remote: Enumerating objects: 92, done.[K
+11.5s 12 remote: Counting objects:   1% (1/92)[Kremote: Counting objects:   2% (2/92)[Kremote: Counting objects:   3% (3/92)[Kremote: Counting objects:   4% (4/92)[Kremote: Counting objects:   5% (5/92)[Kremote: Counting objects:   6% (6/92)[Kremote: Counting objects:   7% (7/92)[Kremote: Counting objects:   8% (8/92)[Kremote: Counting objects:   9% (9/92)[Kremote: Counting objects:  10% (10/92)[Kremote: Counting objects:  11% (11/92)[Kremote: Counting objects:  13% (12/92)[Kremote: Counting objects:  14% (13/92)[Kremote: Counting objects:  15% (14/92)[Kremote: Counting objects:  16% (15/92)[Kremote: Counting objects:  17% (16/92)[Kremote: Counting objects:  18% (17/92)[Kremote: Counting objects:  19% (18/92)[Kremote: Counting objects:  20% (19/92)[Kremote: Counting objects:  21% (20/92)[Kremote: Counting objects:  22% (21/92)[Kremote: Counting objects:  23% (22/92)[Kremote: Counting objects:  25% (23/92)[Kremote: Counting objects:  26% (24/92)[Kremote: Counting objects:  27% (25/92)[Kremote: Counting objects:  28% (26/92)[Kremote: Counting objects:  29% (27/92)[Kremote: Counting objects:  30% (28/92)[Kremote: Counting objects:  31% (29/92)[Kremote: Counting objects:  32% (30/92)[Kremote: Counting objects:  33% (31/92)[Kremote: Counting objects:  34% (32/92)[Kremote: Counting objects:  35% (33/92)[Kremote: Counting objects:  36% (34/92)[Kremote: Counting objects:  38% (35/92)[Kremote: Counting objects:  39% (36/92)[Kremote: Counting objects:  40% (37/92)[Kremote: Counting objects:  41% (38/92)[Kremote: Counting objects:  42% (39/92)[Kremote: Counting objects:  43% (40/92)[Kremote: Counting objects:  44% (41/92)[Kremote: Counting objects:  45% (42/92)[Kremote: Counting objects:  46% (43/92)[Kremote: Counting objects:  47% (44/92)[Kremote: Counting objects:  48% (45/92)[Kremote: Counting objects:  50% (46/92)[Kremote: Counting objects:  51% (47/92)[Kremote: Counting objects:  52% (48/92)[Kremote: Counting objects:  53% (49/92)[Kremote: Counting objects:  54% (50/92)[Kremote: Counting objects:  55% (51/92)[Kremote: Counting objects:  56% (52/92)[Kremote: Counting objects:  57% (53/92)[Kremote: Counting objects:  58% (54/92)[Kremote: Counting objects:  59% (55/92)[Kremote: Counting objects:  60% (56/92)[Kremote: Counting objects:  61% (57/92)[Kremote: Counting objects:  63% (58/92)[Kremote: Counting objects:  64% (59/92)[Kremote: Counting objects:  65% (60/92)[Kremote: Counting objects:  66% (61/92)[Kremote: Counting objects:  67% (62/92)[Kremote: Counting objects:  68% (63/92)[Kremote: Counting objects:  69% (64/92)[Kremote: Counting objects:  70% (65/92)[Kremote: Counting objects:  71% (66/92)[Kremote: Counting objects:  72% (67/92)[Kremote: Counting objects:  73% (68/92)[Kremote: Counting objects:  75% (69/92)[Kremote: Counting objects:  76% (70/92)[Kremote: Counting objects:  77% (71/92)[Kremote: Counting objects:  78% (72/92)[Kremote: Counting objects:  79% (73/92)[Kremote: Counting objects:  80% (74/92)[Kremote: Counting objects:  81% (75/92)[Kremote: Counting objects:  82% (76/92)[Kremote: Counting objects:  83% (77/92)[Kremote: Counting objects:  84% (78/92)[Kremote: Counting objects:  85% (79/92)[Kremote: Counting objects:  86% (80/92)[Kremote: Counting objects:  88% (81/92)[Kremote: Counting objects:  89% (82/92)[Kremote: Counting objects:  90% (83/92)[Kremote: Counting objects:  91% (84/92)[Kremote: Counting objects:  92% (85/92)[Kremote: Counting objects:  93% (86/92)[Kremote: Counting objects:  94% (87/92)[Kremote: Counting objects:  95% (88/92)[Kremote: Counting objects:  96% (89/92)[Kremote: Counting objects:  97% (90/92)[Kremote: Counting objects:  98% (91/92)[Kremote: Counting objects: 100% (92/92)[Kremote: Counting objects: 100% (92/92), done.[K
+11.5s 13 remote: Compressing objects:   1% (1/68)[Kremote: Compressing objects:   2% (2/68)[Kremote: Compressing objects:   4% (3/68)[Kremote: Compressing objects:   5% (4/68)[Kremote: Compressing objects:   7% (5/68)[Kremote: Compressing objects:   8% (6/68)[Kremote: Compressing objects:  10% (7/68)[Kremote: Compressing objects:  11% (8/68)[Kremote: Compressing objects:  13% (9/68)[Kremote: Compressing objects:  14% (10/68)[Kremote: Compressing objects:  16% (11/68)[Kremote: Compressing objects:  17% (12/68)[Kremote: Compressing objects:  19% (13/68)[Kremote: Compressing objects:  20% (14/68)[Kremote: Compressing objects:  22% (15/68)[Kremote: Compressing objects:  23% (16/68)[Kremote: Compressing objects:  25% (17/68)[Kremote: Compressing objects:  26% (18/68)[Kremote: Compressing objects:  27% (19/68)[Kremote: Compressing objects:  29% (20/68)[Kremote: Compressing objects:  30% (21/68)[Kremote: Compressing objects:  32% (22/68)[Kremote: Compressing objects:  33% (23/68)[Kremote: Compressing objects:  35% (24/68)[Kremote: Compressing objects:  36% (25/68)[Kremote: Compressing objects:  38% (26/68)[Kremote: Compressing objects:  39% (27/68)[Kremote: Compressing objects:  41% (28/68)[Kremote: Compressing objects:  42% (29/68)[Kremote: Compressing objects:  44% (30/68)[Kremote: Compressing objects:  45% (31/68)[Kremote: Compressing objects:  47% (32/68)[Kremote: Compressing objects:  48% (33/68)[Kremote: Compressing objects:  50% (34/68)[Kremote: Compressing objects:  51% (35/68)[Kremote: Compressing objects:  52% (36/68)[Kremote: Compressing objects:  54% (37/68)[Kremote: Compressing objects:  55% (38/68)[Kremote: Compressing objects:  57% (39/68)[Kremote: Compressing objects:  58% (40/68)[Kremote: Compressing objects:  60% (41/68)[Kremote: Compressing objects:  61% (42/68)[Kremote: Compressing objects:  63% (43/68)[Kremote: Compressing objects:  64% (44/68)[Kremote: Compressing objects:  66% (45/68)[Kremote: Compressing objects:  67% (46/68)[Kremote: Compressing objects:  69% (47/68)[Kremote: Compressing objects:  70% (48/68)[Kremote: Compressing objects:  72% (49/68)[Kremote: Compressing objects:  73% (50/68)[Kremote: Compressing objects:  75% (51/68)[Kremote: Compressing objects:  76% (52/68)[Kremote: Compressing objects:  77% (53/68)[Kremote: Compressing objects:  79% (54/68)[Kremote: Compressing objects:  80% (55/68)[Kremote: Compressing objects:  82% (56/68)[Kremote: Compressing objects:  83% (57/68)[Kremote: Compressing objects:  85% (58/68)[Kremote: Compressing objects:  86% (59/68)[Kremote: Compressing objects:  88% (60/68)[Kremote: Compressing objects:  89% (61/68)[Kremote: Compressing objects:  91% (62/68)[Kremote: Compressing objects:  92% (63/68)[Kremote: Compressing objects:  94% (64/68)[Kremote: Compressing objects:  95% (65/68)[Kremote: Compressing objects:  97% (66/68)[Kremote: Compressing objects:  98% (67/68)[Kremote: Compressing objects: 100% (68/68)[Kremote: Compressing objects: 100% (68/68), done.[K
+12.0s 14 Receiving objects:   1% (1/92)Receiving objects:   2% (2/92)Receiving objects:   3% (3/92)Receiving objects:   4% (4/92)Receiving objects:   5% (5/92)Receiving objects:   6% (6/92)Receiving objects:   7% (7/92)Receiving objects:   8% (8/92)Receiving objects:   9% (9/92)Receiving objects:  10% (10/92)Receiving objects:  11% (11/92)Receiving objects:  13% (12/92)Receiving objects:  14% (13/92)Receiving objects:  15% (14/92)Receiving objects:  16% (15/92)Receiving objects:  17% (16/92)Receiving objects:  18% (17/92)Receiving objects:  19% (18/92)Receiving objects:  20% (19/92)Receiving objects:  21% (20/92)Receiving objects:  22% (21/92)Receiving objects:  23% (22/92)Receiving objects:  25% (23/92)Receiving objects:  26% (24/92)Receiving objects:  27% (25/92)Receiving objects:  28% (26/92)Receiving objects:  29% (27/92)Receiving objects:  30% (28/92)Receiving objects:  31% (29/92)Receiving objects:  32% (30/92)Receiving objects:  33% (31/92)Receiving objects:  34% (32/92)Receiving objects:  35% (33/92)Receiving objects:  36% (34/92)Receiving objects:  38% (35/92)Receiving objects:  39% (36/92)Receiving objects:  40% (37/92)Receiving objects:  41% (38/92)Receiving objects:  42% (39/92)Receiving objects:  43% (40/92)Receiving objects:  44% (41/92)Receiving objects:  45% (42/92)Receiving objects:  46% (43/92)Receiving objects:  47% (44/92)Receiving objects:  48% (45/92)Receiving objects:  50% (46/92)Receiving objects:  51% (47/92)Receiving objects:  52% (48/92)Receiving objects:  53% (49/92)Receiving objects:  54% (50/92)Receiving objects:  55% (51/92)Receiving objects:  56% (52/92)Receiving objects:  57% (53/92)Receiving objects:  58% (54/92)Receiving objects:  59% (55/92)Receiving objects:  60% (56/92)Receiving objects:  61% (57/92)Receiving objects:  63% (58/92)Receiving objects:  64% (59/92)Receiving objects:  65% (60/92)Receiving objects:  66% (61/92)Receiving objects:  67% (62/92)Receiving objects:  68% (63/92)Receiving objects:  69% (64/92)Receiving objects:  70% (65/92)Receiving objects:  71% (66/92)Receiving objects:  72% (67/92)Receiving objects:  73% (68/92)Receiving objects:  75% (69/92)Receiving objects:  76% (70/92)Receiving objects:  77% (71/92)Receiving objects:  78% (72/92)Receiving objects:  79% (73/92)Receiving objects:  80% (74/92)Receiving objects:  81% (75/92)Receiving objects:  82% (76/92)Receiving objects:  83% (77/92)Receiving objects:  84% (78/92)Receiving objects:  85% (79/92)Receiving objects:  86% (80/92)Receiving objects:  88% (81/92)Receiving objects:  89% (82/92)Receiving objects:  90% (83/92)Receiving objects:  91% (84/92)remote: Total 92 (delta 27), reused 87 (delta 22), pack-reused 0 (from 0)[K
+12.0s 15 Receiving objects:  92% (85/92)Receiving objects:  93% (86/92)Receiving objects:  94% (87/92)Receiving objects:  95% (88/92)Receiving objects:  96% (89/92)Receiving objects:  97% (90/92)Receiving objects:  98% (91/92)Receiving objects: 100% (92/92)Receiving objects: 100% (92/92), 13.00 MiB | 27.16 MiB/s, done.
+12.0s 16 Resolving deltas:   0% (0/27)Resolving deltas:   7% (2/27)Resolving deltas:  11% (3/27)Resolving deltas:  14% (4/27)Resolving deltas:  22% (6/27)Resolving deltas:  25% (7/27)Resolving deltas:  29% (8/27)Resolving deltas:  33% (9/27)Resolving deltas:  37% (10/27)Resolving deltas:  40% (11/27)Resolving deltas:  44% (12/27)Resolving deltas:  48% (13/27)Resolving deltas:  51% (14/27)Resolving deltas:  55% (15/27)Resolving deltas:  59% (16/27)Resolving deltas:  62% (17/27)Resolving deltas:  66% (18/27)Resolving deltas:  70% (19/27)Resolving deltas:  74% (20/27)Resolving deltas:  77% (21/27)Resolving deltas:  81% (22/27)Resolving deltas:  85% (23/27)Resolving deltas:  88% (24/27)Resolving deltas:  92% (25/27)Resolving deltas:  96% (26/27)Resolving deltas: 100% (27/27)Resolving deltas: 100% (27/27), done.
+12.2s 17 /kaggle/working/sar_to_eo
+12.4s 18 Already up to date.
+326.1s 19 [31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+326.1s 20 bigframes 2.48.0 requires google-cloud-bigquery-storage<3.0.0,>=2.30.0, which is not installed.
+326.1s 21 ydata-profiling 4.18.4 requires numpy<2.4,>=1.22, but you have numpy 2.5.4 which is incompatible.
+326.1s 22 dopamine-rl 4.1.2 requires gym<=0.25.2, but you have gym 0.26.2 which is incompatible.
+326.1s 23 gradio 6.26.0 requires pillow<13.0,>=8.0, but you have pillow 13.0.0 which is incompatible.
+326.1s 24 moviepy 1.0.3 requires decorator<5.0,>=4.0.2, but you have decorator 5.3.1 which is incompatible.
+326.1s 25 libcuml-cu12 26.2.0 requires cuda-toolkit[cublas,cufft,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.
+326.1s 26 cuml-cu12 26.2.0 requires cuda-toolkit[cublas,cufft,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.
+326.1s 27 numba 0.61.2 requires numpy<2.3,>=1.24, but you have numpy 2.5.4 which is incompatible.
+326.1s 28 cudf-cu12 26.2.1 requires cuda-toolkit[nvcc,nvrtc]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.
+326.1s 29 cuda-python 12.9.7 requires cuda-bindings~=12.9.7, but you have cuda-bindings 13.4.4 which is incompatible.
+326.1s 30 libcuvs-cu12 26.2.0 requires cuda-toolkit[cublas,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.
+326.1s 31 libraft-cu12 26.2.0 requires cuda-toolkit[cublas,curand,cusolver,cusparse]==12.*, but you have cuda-toolkit 13.0.3.0 which is incompatible.[0m[31m
+327.6s 32 [0mlinked /kaggle/working/sar_to_eo/v_2 -> /kaggle/input/datasets/requiemonk/sentinel12-image-pairs-segregated-by-terrain/v_2
+327.6s 33 using existing source: /kaggle/working/sar_to_eo/assets/SiT
+327.6s 34 + git clone --depth 1 https://github.com/waterdisappear/SAR-JEPA /kaggle/working/sar_to_eo/assets/SAR-JEPA
+327.6s 35 Cloning into '/kaggle/working/sar_to_eo/assets/SAR-JEPA'...
+328.1s 36 remote: Enumerating objects: 257, done.[K
+328.1s 37 remote: Counting objects:   0% (1/257)[Kremote: Counting objects:   1% (3/257)[Kremote: Counting objects:   2% (6/257)[Kremote: Counting objects:   3% (8/257)[Kremote: Counting objects:   4% (11/257)[Kremote: Counting objects:   5% (13/257)[Kremote: Counting objects:   6% (16/257)[Kremote: Counting objects:   7% (18/257)[Kremote: Counting objects:   8% (21/257)[Kremote: Counting objects:   9% (24/257)[Kremote: Counting objects:  10% (26/257)[Kremote: Counting objects:  11% (29/257)[Kremote: Counting objects:  12% (31/257)[Kremote: Counting objects:  13% (34/257)[Kremote: Counting objects:  14% (36/257)[Kremote: Counting objects:  15% (39/257)[Kremote: Counting objects:  16% (42/257)[Kremote: Counting objects:  17% (44/257)[Kremote: Counting objects:  18% (47/257)[Kremote: Counting objects:  19% (49/257)[Kremote: Counting objects:  20% (52/257)[Kremote: Counting objects:  21% (54/257)[Kremote: Counting objects:  22% (57/257)[Kremote: Counting objects:  23% (60/257)[Kremote: Counting objects:  24% (62/257)[Kremote: Counting objects:  25% (65/257)[Kremote: Counting objects:  26% (67/257)[Kremote: Counting objects:  27% (70/257)[Kremote: Counting objects:  28% (72/257)[Kremote: Counting objects:  29% (75/257)[Kremote: Counting objects:  30% (78/257)[Kremote: Counting objects:  31% (80/257)[Kremote: Counting objects:  32% (83/257)[Kremote: Counting objects:  33% (85/257)[Kremote: Counting objects:  34% (88/257)[Kremote: Counting objects:  35% (90/257)[Kremote: Counting objects:  36% (93/257)[Kremote: Counting objects:  37% (96/257)[Kremote: Counting objects:  38% (98/257)[Kremote: Counting objects:  39% (101/257)[Kremote: Counting objects:  40% (103/257)[Kremote: Counting objects:  41% (106/257)[Kremote: Counting objects:  42% (108/257)[Kremote: Counting objects:  43% (111/257)[Kremote: Counting objects:  44% (114/257)[Kremote: Counting objects:  45% (116/257)[Kremote: Counting objects:  46% (119/257)[Kremote: Counting objects:  47% (121/257)[Kremote: Counting objects:  48% (124/257)[Kremote: Counting objects:  49% (126/257)[Kremote: Counting objects:  50% (129/257)[Kremote: Counting objects:  51% (132/257)[Kremote: Counting objects:  52% (134/257)[Kremote: Counting objects:  53% (137/257)[Kremote: Counting objects:  54% (139/257)[Kremote: Counting objects:  55% (142/257)[Kremote: Counting objects:  56% (144/257)[Kremote: Counting objects:  57% (147/257)[Kremote: Counting objects:  58% (150/257)[Kremote: Counting objects:  59% (152/257)[Kremote: Counting objects:  60% (155/257)[Kremote: Counting objects:  61% (157/257)[Kremote: Counting objects:  62% (160/257)[Kremote: Counting objects:  63% (162/257)[Kremote: Counting objects:  64% (165/257)[Kremote: Counting objects:  65% (168/257)[Kremote: Counting objects:  66% (170/257)[Kremote: Counting objects:  67% (173/257)[Kremote: Counting objects:  68% (175/257)[Kremote: Counting objects:  69% (178/257)[Kremote: Counting objects:  70% (180/257)[Kremote: Counting objects:  71% (183/257)[Kremote: Counting objects:  72% (186/257)[Kremote: Counting objects:  73% (188/257)[Kremote: Counting objects:  74% (191/257)[Kremote: Counting objects:  75% (193/257)[Kremote: Counting objects:  76% (196/257)[Kremote: Counting objects:  77% (198/257)[Kremote: Counting objects:  78% (201/257)[Kremote: Counting objects:  79% (204/257)[Kremote: Counting objects:  80% (206/257)[Kremote: Counting objects:  81% (209/257)[Kremote: Counting objects:  82% (211/257)[Kremote: Counting objects:  83% (214/257)[Kremote: Counting objects:  84% (216/257)[Kremote: Counting objects:  85% (219/257)[Kremote: Counting objects:  86% (222/257)[Kremote: Counting objects:  87% (224/257)[Kremote: Counting objects:  88% (227/257)[Kremote: Counting objects:  89% (229/257)[Kremote: Counting objects:  90% (232/257)[Kremote: Counting objects:  91% (234/257)[Kremote: Counting objects:  92% (237/257)[Kremote: Counting objects:  93% (240/257)[Kremote: Counting objects:  94% (242/257)[Kremote: Counting objects:  95% (245/257)[Kremote: Counting objects:  96% (247/257)[Kremote: Counting objects:  97% (250/257)[Kremote: Counting objects:  98% (252/257)[Kremote: Counting objects:  99% (255/257)[Kremote: Counting objects: 100% (257/257)[Kremote: Counting objects: 100% (257/257), done.[K
+328.2s 38 remote: Compressing objects:   0% (1/181)[Kremote: Compressing objects:   1% (2/181)[Kremote: Compressing objects:   2% (4/181)[Kremote: Compressing objects:   3% (6/181)[Kremote: Compressing objects:   4% (8/181)[Kremote: Compressing objects:   5% (10/181)[Kremote: Compressing objects:   6% (11/181)[Kremote: Compressing objects:   7% (13/181)[Kremote: Compressing objects:   8% (15/181)[Kremote: Compressing objects:   9% (17/181)[Kremote: Compressing objects:  10% (19/181)[Kremote: Compressing objects:  11% (20/181)[Kremote: Compressing objects:  12% (22/181)[Kremote: Compressing objects:  13% (24/181)[Kremote: Compressing objects:  14% (26/181)[Kremote: Compressing objects:  15% (28/181)[Kremote: Compressing objects:  16% (29/181)[Kremote: Compressing objects:  17% (31/181)[Kremote: Compressing objects:  18% (33/181)[Kremote: Compressing objects:  19% (35/181)[Kremote: Compressing objects:  20% (37/181)[Kremote: Compressing objects:  21% (39/181)[Kremote: Compressing objects:  22% (40/181)[Kremote: Compressing objects:  23% (42/181)[Kremote: Compressing objects:  24% (44/181)[Kremote: Compressing objects:  25% (46/181)[Kremote: Compressing objects:  26% (48/181)[Kremote: Compressing objects:  27% (49/181)[Kremote: Compressing objects:  28% (51/181)[Kremote: Compressing objects:  29% (53/181)[Kremote: Compressing objects:  30% (55/181)[Kremote: Compressing objects:  31% (57/181)[Kremote: Compressing objects:  32% (58/181)[Kremote: Compressing objects:  33% (60/181)[Kremote: Compressing objects:  34% (62/181)[Kremote: Compressing objects:  35% (64/181)[Kremote: Compressing objects:  36% (66/181)[Kremote: Compressing objects:  37% (67/181)[Kremote: Compressing objects:  38% (69/181)[Kremote: Compressing objects:  39% (71/181)[Kremote: Compressing objects:  40% (73/181)[Kremote: Compressing objects:  41% (75/181)[Kremote: Compressing objects:  42% (77/181)[Kremote: Compressing objects:  43% (78/181)[Kremote: Compressing objects:  44% (80/181)[Kremote: Compressing objects:  45% (82/181)[Kremote: Compressing objects:  46% (84/181)[Kremote: Compressing objects:  47% (86/181)[Kremote: Compressing objects:  48% (87/181)[Kremote: Compressing objects:  49% (89/181)[Kremote: Compressing objects:  50% (91/181)[Kremote: Compressing objects:  51% (93/181)[Kremote: Compressing objects:  52% (95/181)[Kremote: Compressing objects:  53% (96/181)[Kremote: Compressing objects:  54% (98/181)[Kremote: Compressing objects:  55% (100/181)[Kremote: Compressing objects:  56% (102/181)[Kremote: Compressing objects:  57% (104/181)[Kremote: Compressing objects:  58% (105/181)[Kremote: Compressing objects:  59% (107/181)[Kremote: Compressing objects:  60% (109/181)[Kremote: Compressing objects:  61% (111/181)[Kremote: Compressing objects:  62% (113/181)[Kremote: Compressing objects:  63% (115/181)[Kremote: Compressing objects:  64% (116/181)[Kremote: Compressing objects:  65% (118/181)[Kremote: Compressing objects:  66% (120/181)[Kremote: Compressing objects:  67% (122/181)[Kremote: Compressing objects:  68% (124/181)[Kremote: Compressing objects:  69% (125/181)[Kremote: Compressing objects:  70% (127/181)[Kremote: Compressing objects:  71% (129/181)[Kremote: Compressing objects:  72% (131/181)[Kremote: Compressing objects:  73% (133/181)[Kremote: Compressing objects:  74% (134/181)[Kremote: Compressing objects:  75% (136/181)[Kremote: Compressing objects:  76% (138/181)[Kremote: Compressing objects:  77% (140/181)[Kremote: Compressing objects:  78% (142/181)[Kremote: Compressing objects:  79% (143/181)[Kremote: Compressing objects:  80% (145/181)[Kremote: Compressing objects:  81% (147/181)[Kremote: Compressing objects:  82% (149/181)[Kremote: Compressing objects:  83% (151/181)[Kremote: Compressing objects:  84% (153/181)[Kremote: Compressing objects:  85% (154/181)[Kremote: Compressing objects:  86% (156/181)[Kremote: Compressing objects:  87% (158/181)[Kremote: Compressing objects:  88% (160/181)[Kremote: Compressing objects:  89% (162/181)[Kremote: Compressing objects:  90% (163/181)[Kremote: Compressing objects:  91% (165/181)[Kremote: Compressing objects:  92% (167/181)[Kremote: Compressing objects:  93% (169/181)[Kremote: Compressing objects:  94% (171/181)[Kremote: Compressing objects:  95% (172/181)[Kremote: Compressing objects:  96% (174/181)[Kremote: Compressing objects:  97% (176/181)[Kremote: Compressing objects:  98% (178/181)[Kremote: Compressing objects:  99% (180/181)[Kremote: Compressing objects: 100% (181/181)[Kremote: Compressing objects: 100% (181/181), done.[K
+328.6s 39 Receiving objects:   0% (1/257)Receiving objects:   1% (3/257)Receiving objects:   2% (6/257)Receiving objects:   3% (8/257)Receiving objects:   4% (11/257)Receiving objects:   5% (13/257)Receiving objects:   6% (16/257)Receiving objects:   7% (18/257)Receiving objects:   8% (21/257)Receiving objects:   9% (24/257)Receiving objects:  10% (26/257)Receiving objects:  11% (29/257)Receiving objects:  12% (31/257)Receiving objects:  13% (34/257)Receiving objects:  14% (36/257)Receiving objects:  15% (39/257)Receiving objects:  16% (42/257)Receiving objects:  17% (44/257)Receiving objects:  18% (47/257)Receiving objects:  19% (49/257)Receiving objects:  20% (52/257)Receiving objects:  21% (54/257)Receiving objects:  22% (57/257)Receiving objects:  23% (60/257)Receiving objects:  24% (62/257)Receiving objects:  25% (65/257)Receiving objects:  26% (67/257)Receiving objects:  27% (70/257)Receiving objects:  28% (72/257)Receiving objects:  29% (75/257)Receiving objects:  30% (78/257)Receiving objects:  31% (80/257)Receiving objects:  32% (83/257)Receiving objects:  33% (85/257)Receiving objects:  34% (88/257)Receiving objects:  35% (90/257)Receiving objects:  36% (93/257)Receiving objects:  37% (96/257)Receiving objects:  38% (98/257)Receiving objects:  39% (101/257)Receiving objects:  40% (103/257)Receiving objects:  41% (106/257)Receiving objects:  42% (108/257)Receiving objects:  43% (111/257)Receiving objects:  44% (114/257)Receiving objects:  45% (116/257)Receiving objects:  46% (119/257)Receiving objects:  47% (121/257)Receiving objects:  48% (124/257)Receiving objects:  49% (126/257)Receiving objects:  50% (129/257)Receiving objects:  51% (132/257)Receiving objects:  52% (134/257)Receiving objects:  53% (137/257)Receiving objects:  54% (139/257)Receiving objects:  55% (142/257)Receiving objects:  56% (144/257)Receiving objects:  57% (147/257)Receiving objects:  58% (150/257)Receiving objects:  59% (152/257)Receiving objects:  60% (155/257)Receiving objects:  61% (157/257)Receiving objects:  62% (160/257)Receiving objects:  63% (162/257)Receiving objects:  64% (165/257)Receiving objects:  65% (168/257)Receiving objects:  66% (170/257)Receiving objects:  67% (173/257)Receiving objects:  68% (175/257)Receiving objects:  69% (178/257)Receiving objects:  70% (180/257)Receiving objects:  71% (183/257)Receiving objects:  72% (186/257)Receiving objects:  73% (188/257)Receiving objects:  74% (191/257)Receiving objects:  75% (193/257)Receiving objects:  76% (196/257)Receiving objects:  77% (198/257)Receiving objects:  78% (201/257)Receiving objects:  79% (204/257)Receiving objects:  80% (206/257)Receiving objects:  81% (209/257)Receiving objects:  82% (211/257)Receiving objects:  83% (214/257)Receiving objects:  84% (216/257)Receiving objects:  85% (219/257)Receiving objects:  86% (222/257)Receiving objects:  87% (224/257)Receiving objects:  88% (227/257)Receiving objects:  89% (229/257)Receiving objects:  90% (232/257)Receiving objects:  91% (234/257)Receiving objects:  92% (237/257)Receiving objects:  93% (240/257)Receiving objects:  94% (242/257)Receiving objects:  95% (245/257)Receiving objects:  96% (247/257)Receiving objects:  97% (250/257)Receiving objects:  98% (252/257)remote: Total 257 (delta 51), reused 250 (delta 50), pack-reused 0 (from 0)[K
+328.6s 40 Receiving objects:  99% (255/257)Receiving objects: 100% (257/257)Receiving objects: 100% (257/257), 9.89 MiB | 23.22 MiB/s, done.
+328.7s 41 Resolving deltas:   0% (0/51)Resolving deltas:   3% (2/51)Resolving deltas:   5% (3/51)Resolving deltas:   7% (4/51)Resolving deltas:   9% (5/51)Resolving deltas:  11% (6/51)Resolving deltas:  13% (7/51)Resolving deltas:  15% (8/51)Resolving deltas:  17% (9/51)Resolving deltas:  19% (10/51)Resolving deltas:  21% (11/51)Resolving deltas:  23% (12/51)Resolving deltas:  25% (13/51)Resolving deltas:  27% (14/51)Resolving deltas:  29% (15/51)Resolving deltas:  31% (16/51)Resolving deltas:  33% (17/51)Resolving deltas:  35% (18/51)Resolving deltas:  37% (19/51)Resolving deltas:  39% (20/51)Resolving deltas:  41% (21/51)Resolving deltas:  43% (22/51)Resolving deltas:  45% (23/51)Resolving deltas:  47% (24/51)Resolving deltas:  49% (25/51)Resolving deltas:  50% (26/51)Resolving deltas:  52% (27/51)Resolving deltas:  54% (28/51)Resolving deltas:  56% (29/51)Resolving deltas:  58% (30/51)Resolving deltas:  60% (31/51)Resolving deltas:  62% (32/51)Resolving deltas:  64% (33/51)Resolving deltas:  66% (34/51)Resolving deltas:  68% (35/51)Resolving deltas:  70% (36/51)Resolving deltas:  72% (37/51)Resolving deltas:  74% (38/51)Resolving deltas:  76% (39/51)Resolving deltas:  78% (40/51)Resolving deltas:  80% (41/51)Resolving deltas:  82% (42/51)Resolving deltas:  84% (43/51)Resolving deltas:  86% (44/51)Resolving deltas:  88% (45/51)Resolving deltas:  90% (46/51)Resolving deltas:  92% (47/51)Resolving deltas:  94% (48/51)Resolving deltas:  96% (49/51)Resolving deltas:  98% (50/51)Resolving deltas: 100% (51/51)Resolving deltas: 100% (51/51), done.
+328.8s 42 + hf download stabilityai/sd-vae-ft-ema --local-dir /kaggle/working/sar_to_eo/assets/sd-vae-ft-ema
+331.6s 43 [90mHint: A new version of huggingface_hub (2.3.0) is available! You are using version 1.33.0.
+331.6s 44 To update, run: hf update[0m
+331.6s 45 [90mHint: The `hf-cli` skill is not installed. Run `hf skills add -g` to teach your AI agents how to use the `hf` CLI.[0m
+331.9s 46 Downloading bytes:                                          |  0.00B
+331.9s 47 Reconstructing (incomplete total...): |            |  0.00B /  0.00B            [A
+331.9s 48 
+332.0s 49 Fetching 5 files:   0%|                                   | 0/5 [00:00<?, ?it/s][A[AStill waiting to acquire lock on /kaggle/working/sar_to_eo/assets/sd-vae-ft-ema/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+332.0s 50 
+332.0s 51 Reconstructing (incomplete total...):   0%|        |  0.00B / 1.46kB            [A
+332.0s 52 Reconstructing (incomplete total...): 100%|████████| 1.46kB / 1.46kB            [ADownloading bytes: █████████████████████████████████████████| 1.46kB
+332.0s 53 
+332.1s 54 Fetching 5 files:  20%|█████▍                     | 1/5 [00:00<00:00,  6.31it/s][A[A
+332.1s 55 Reconstructing (incomplete total...):   0%|        | 1.46kB /  335MB            [A
+332.1s 56 Reconstructing (incomplete total...):   0%|        | 1.46kB /  669MB            [A
+332.2s 57 Reconstructing (incomplete total...):   0%|        | 1.46kB /  669MB            [A
+332.2s 58 Reconstructing (incomplete total...):   0%|        | 8.30kB /  669MB            [ADownloading bytes:                                          | 8.30kB
+332.2s 59 
+332.2s 60 Fetching 5 files:  40%|██████████▊                | 2/5 [00:00<00:00,  7.13it/s][A[A
+332.7s 61 Reconstructing (incomplete total...):   0%|        | 8.30kB /  669MB            [A
+334.1s 62 Reconstructing (incomplete total...):   1%|        | 9.62MB /  669MB            [ADownloading bytes: █                                        | 17.8MB            Downloading bytes: ██▎                                      | 38.3MB, 25.2MB/s  Downloading bytes: ████▎                                    | 70.5MB, 55.4MB/s  Downloading bytes: ██████▉                                  |  112MB,  107MB/s  Downloading bytes: █████████▍                               |  153MB,  143MB/s  Downloading bytes: ███████████▊                             |  194MB,  163MB/s  Downloading bytes: █████████████▊                           |  226MB,  210MB/s  Downloading bytes: ████████████████▎                        |  267MB,  193MB/s  Downloading bytes: ███████████████████▎                     |  316MB,  197MB/s  Downloading bytes: ██████████████████████▌                  |  368MB,  254MB/s
+334.2s 63 Reconstructing (incomplete total...):  11%|▉       | 76.7MB /  669MB, 13.7MB/s  [ADownloading bytes: █████████████████████████                |  409MB,  310MB/s  Downloading bytes: ███████████████████████████▋             |  452MB,  331MB/s
+334.6s 64 Reconstructing (incomplete total...):  50%|████    |  335MB /  669MB, 38.9MB/s  [ADownloading bytes: ██████████████████████████████▍          |  498MB,  355MB/s  Downloading bytes: █████████████████████████████████        |  539MB,  381MB/s
+334.8s 65 Reconstructing (incomplete total...):  64%|█████   |  428MB /  669MB,  216MB/s  [ADownloading bytes: ████████████████████████████████████▏    |  591MB,  382MB/s  Downloading bytes: ██████████████████████████████████████▍  |  628MB,  333MB/s
+334.8s 66 
+334.8s 67 Fetching 5 files:  80%|█████████████████████▌     | 4/5 [00:02<00:00,  1.14it/s][A[A
+334.9s 68 Reconstructing (incomplete total...): 100%|████████|  669MB /  669MB,  236MB/s  [A
+334.9s 69 
+334.9s 70 Fetching 5 files: 100%|███████████████████████████| 5/5 [00:03<00:00,  1.56it/s][A[AFetching 5 files: 100%|███████████████████████████| 5/5 [00:03<00:00,  1.65it/s]
+334.9s 71 Downloading bytes: █████████████████████████████████████████|  633MB,  338MB/s  Download complete: █████████████████████████████████████████|  633MB,  338MB/s
+334.9s 72 Reconstruction complete: 100%|█████████████████████|  669MB /  669MB,  378MB/s  [A[32m✓ Downloaded[0m
+334.9s 73 path: /kaggle/working/sar_to_eo/assets/sd-vae-ft-ema
+335.0s 74 Download complete: █████████████████████████████████████████|  633MB,  338MB/s
+335.0s 75 Reconstruction complete: 100%|█████████████████████|  669MB /  669MB,  378MB/s
+335.0s 76 + hf download facebook/dinov2-base --local-dir /kaggle/working/sar_to_eo/assets/dinov2-base
+335.6s 77 Downloading bytes:                                          |  0.00B
+335.6s 78 Reconstructing (incomplete total...): |            |  0.00B /  0.00B            [A
+335.6s 79 
+335.7s 80 Fetching 6 files:   0%|                                   | 0/6 [00:00<?, ?it/s][A[A
+335.7s 81 Reconstructing (incomplete total...):   0%|        |  0.00B /  346MB            [AStill waiting to acquire lock on /kaggle/working/sar_to_eo/assets/dinov2-base/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+335.7s 82 Still waiting to acquire lock on /kaggle/working/sar_to_eo/assets/dinov2-base/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+335.7s 83 
+335.8s 84 Reconstructing (incomplete total...):   0%|        |  0.00B /  693MB            [A
+335.8s 85 Reconstructing (incomplete total...):   0%|        |  0.00B /  693MB            [A
+335.8s 86 Reconstructing (incomplete total...):   0%|        | 3.05kB /  693MB            [ADownloading bytes:                                          | 3.05kB
+335.8s 87 
+335.9s 88 Fetching 6 files:  17%|████▌                      | 1/6 [00:00<00:00,  6.49it/s][A[A
+335.9s 89 Reconstructing (incomplete total...):   0%|        | 3.05kB /  693MB            [A
+335.9s 90 
+336.0s 91 Fetching 6 files:  33%|█████████                  | 2/6 [00:00<00:00,  8.08it/s][A[A
+337.1s 92 Reconstructing (incomplete total...):   0%|        | 3.60kB /  693MB            [ADownloading bytes: ▋                                        | 12.5MB            Downloading bytes: █▊                                       | 31.5MB, 24.9MB/s  Downloading bytes: ██▊                                      | 46.8MB, 61.5MB/s  Downloading bytes: ████▎                                    | 73.2MB, 83.3MB/s  Downloading bytes: █████▋                                   | 96.3MB,  129MB/s  Downloading bytes: ███████▌                                 |  129MB,  156MB/s  Downloading bytes: █████████▊                               |  165MB,  201MB/s  Downloading bytes: █████████████▋                           |  232MB,  248MB/s
+337.5s 93 Reconstructing (incomplete total...):  31%|██▍     |  214MB /  693MB            [ADownloading bytes: ███████████████▌                         |  264MB,  286MB/s  Downloading bytes: ██████████████████▏                      |  306MB,  235MB/s
+337.9s 94 Reconstructing (incomplete total...):  43%|███▍    |  299MB /  693MB,  152MB/s  [ADownloading bytes: ████████████████████▍                    |  344MB,  227MB/s  Downloading bytes: ██████████████████████▏                  |  376MB,  216MB/s  Downloading bytes: ████████████████████████▌                |  415MB,  235MB/s
+338.0s 95 Reconstructing (incomplete total...):  52%|████▏   |  363MB /  693MB,  169MB/s  [A
+338.1s 96 Reconstructing (incomplete total...):  61%|████▉   |  422MB /  693MB,  167MB/s  [ADownloading bytes: ███████████████████████████▌             |  466MB,  268MB/s
+338.2s 97 Reconstructing (incomplete total...):  68%|█████▍  |  474MB /  693MB,  207MB/s  [ADownloading bytes: █████████████████████████████▋           |  502MB,  263MB/s  Downloading bytes: ███████████████████████████████▊         |  537MB,  283MB/s
+338.2s 98 Reconstructing (incomplete total...):  79%|██████▎ |  547MB /  693MB,  243MB/s  [A
+338.2s 99 
+338.5s 100 Fetching 6 files:  67%|██████████████████         | 4/6 [00:02<00:01,  1.27it/s][A[ADownloading bytes: ██████████████████████████████████▍      |  582MB,  297MB/s
+339.1s 101 Reconstructing (incomplete total...):  87%|██████▉ |  605MB /  693MB,  312MB/s  [ADownloading bytes: ████████████████████████████████████▎    |  613MB,  268MB/s  Downloading bytes: ██████████████████████████████████████▏  |  645MB,  277MB/s
+340.0s 102 Reconstructing (incomplete total...):  98%|███████▊|  679MB /  693MB,  268MB/s  [A
+340.0s 103 Reconstructing (incomplete total...):  98%|███████▊|  679MB /  693MB,  191MB/s  [A
+340.0s 104 
+349.1s 105 Fetching 6 files:  83%|██████████████████████▌    | 5/6 [00:04<00:01,  1.07s/it][A[A
+349.1s 106 
+349.1s 107 Fetching 6 files: 100%|███████████████████████████| 6/6 [00:13<00:00,  3.55s/it][A[AFetching 6 files: 100%|███████████████████████████| 6/6 [00:13<00:00,  2.25s/it]
+349.1s 108 Downloading bytes: █████████████████████████████████████████|  657MB,  193MB/s  Download complete: █████████████████████████████████████████|  657MB,  193MB/s
+349.1s 109 Reconstruction complete: 100%|█████████████████████|  693MB /  693MB,  191MB/s  [A[32m✓ Downloaded[0m
+349.1s 110 path: /kaggle/working/sar_to_eo/assets/dinov2-base
+349.1s 111 Download complete: █████████████████████████████████████████|  657MB,  193MB/s
+349.1s 112 Reconstruction complete: 100%|█████████████████████|  693MB /  693MB,  191MB/s
+357.4s 113 linked /kaggle/working/sar_to_eo/assets/sar_jepa/checkpoint-200.pth -> /kaggle/input/datasets/prateeking/sar-jepa-input/checkpoint-200.pth
+357.4s 114 
+357.4s 115 Kaggle project layout is ready:
+357.4s 116 /kaggle/working/sar_to_eo/v_2: OK
+357.4s 117 /kaggle/working/sar_to_eo/assets/SiT: OK
+357.4s 118 /kaggle/working/sar_to_eo/assets/SAR-JEPA: OK
+357.4s 119 /kaggle/working/sar_to_eo/assets/sd-vae-ft-ema: OK
+357.4s 120 /kaggle/working/sar_to_eo/assets/dinov2-base: OK
+357.4s 121 /kaggle/working/sar_to_eo/assets/sar_jepa/checkpoint-200.pth: OK
+357.8s 122 dataset root: /kaggle/input/datasets/requiemonk/sentinel12-image-pairs-segregated-by-terrain/v_2
+357.8s 123 folders: ['agri', 'barrenland', 'grassland', 'urban']
+357.8s 124 agri sample: ['agri/s1/ROIs1868_summer_s1_59_p10.png', 'agri/s1/ROIs1868_summer_s1_59_p100.png', 'agri/s1/ROIs1868_summer_s1_59_p1000.png']
+2380.7s 125 barrenland sample: ['barrenland/s1/ROIs1970_fall_s1_114_p1.png', 'barrenland/s1/ROIs1970_fall_s1_114_p10.png', 'barrenland/s1/ROIs1970_fall_s1_114_p100.png']
+4390.9s 126 grassland sample: ['grassland/s1/ROIs1970_fall_s1_115_p100.png', 'grassland/s1/ROIs1970_fall_s1_115_p101.png', 'grassland/s1/ROIs1970_fall_s1_115_p102.png']
+6462.7s 127 urban sample: ['urban/s1/ROIs1970_fall_s1_13_p265.png', 'urban/s1/ROIs1970_fall_s1_13_p266.png', 'urban/s1/ROIs1970_fall_s1_13_p267.png']
+8597.0s 128 train 14000 {'agriculture': 3500, 'barren': 3500, 'grassland': 3500, 'urban': 3500}
+8597.0s 129 val 600 {'agriculture': 150, 'barren': 150, 'grassland': 150, 'urban': 150}
+8597.0s 130 test 1400 {'agriculture': 350, 'barren': 350, 'grassland': 350, 'urban': 350}
+8605.2s 131 selected bytes: 2730627140 GiB: 2.5430946983397007
+8614.9s 132 python: 3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]
+8614.9s 133 torch: 2.14.1+cu130
+8615.2s 134 cuda: True count: 2
+8615.4s 135 gpu: Tesla T4 memory_gb: 14.56 bf16: True
+8620.1s 136 diffusers: 0.42.1
+8623.2s 137 transformers: 5.21.0
+8623.2s 138 huggingface_hub: 1.33.0
+8624.8s 139 timm: 1.0.30
+8627.8s 140 torchmetrics: 1.9.0
+8627.8s 141 lpips: installed
+8627.8s 142 cv2: 5.0.0
+8627.8s 143 SiT source: assets/SiT exists=True
+8627.8s 144 SAR-JEPA source: assets/SAR-JEPA exists=True
+8627.8s 145 SD-VAE: assets/sd-vae-ft-ema exists=True
+8627.8s 146 DINOv2: assets/dinov2-base exists=True
+8627.8s 147 SAR-JEPA checkpoint: assets/sar_jepa exists=True
+8627.8s 148 attached SAR-JEPA checkpoint: sar-jeppa/checkpoint-200.pth exists=False
+8627.8s 149 assets/sd-vae-ft-ema/config.json exists=True
+8627.8s 150 assets/dinov2-base/config.json exists=True
+8627.8s 151 splits/train.txt exists=True
+8627.8s 152 splits/val.txt exists=True
+8627.8s 153 splits/test.txt exists=True
+8638.0s 154 SAR-JEPA checkpoint unavailable; using fallback: sar-jeppa/checkpoint-200.pth
+8639.4s 155 {'device': 'cuda', 'v': (2, 4, 32, 32), 'z': (2, 256, 768), 'parameters': 227632144, 'sar_parameters': 85449984, 'generator_parameters': 142182160}
+8642.3s 156 Traceback (most recent call last):
+8642.3s 157 File [35m"<frozen runpy>"[0m, line [35m203[0m, in [35m_run_module_as_main[0m
+8642.3s 158 File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+8642.3s 159 File [35m"/kaggle/working/sar_to_eo/sar2eo/vae_ceiling.py"[0m, line [35m35[0m, in [35m<module>[0m
+8642.3s 160 if __name__ == "__main__": [31mmain[0m[1;31m()[0m
+8642.3s 161 [31m~~~~[0m[1;31m^^[0m
+8642.3s 162 File [35m"/kaggle/working/sar_to_eo/sar2eo/vae_ceiling.py"[0m, line [35m21[0m, in [35mmain[0m
+8642.3s 163 cfg = Config.load(a.config); device = torch.device("cuda" if torch.cuda.is_available() else "cpu"); targets = FrozenTargets(cfg.vae_id, cfg.dino_id).to(device); loader = DataLoader(PairedSEN12(a.split), batch_size=1, num_workers=cfg.num_workers)
+8642.3s 164 File [35m"/kaggle/working/sar_to_eo/sar2eo/configs.py"[0m, line [35m50[0m, in [35mload[0m
+8642.3s 165 return cls(**json.loads([31mPath(path).read_text[0m[1;31m()[0m))
+8642.3s 166 [31m~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+8642.3s 167 File [35m"/usr/lib/python3.13/pathlib/_local.py"[0m, line [35m546[0m, in [35mread_text[0m
+8642.3s 168 return [31mPathBase.read_text[0m[1;31m(self, encoding, errors, newline)[0m
+8642.3s 169 [31m~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+8642.3s 170 File [35m"/usr/lib/python3.13/pathlib/_abc.py"[0m, line [35m632[0m, in [35mread_text[0m
+8642.3s 171 with [31mself.open[0m[1;31m(mode='r', encoding=encoding, errors=errors, newline=newline)[0m as f:
+8642.3s 172 [31m~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+8642.3s 173 File [35m"/usr/lib/python3.13/pathlib/_local.py"[0m, line [35m537[0m, in [35mopen[0m
+8642.3s 174 return [31mio.open[0m[1;31m(self, mode, buffering, encoding, errors, newline)[0m
+8642.3s 175 [31m~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+8642.3s 176 [1;35mFileNotFoundError[0m: [35m[Errno 2] No such file or directory: 'runs/main/config.json'[0m
+8644.7s 177 W1028 00:08:00.728000 192 torch/distributed/run.py:982]
+8644.7s 178 W1028 00:08:00.728000 192 torch/distributed/run.py:982] *****************************************
+8644.7s 179 W1028 00:08:00.728000 192 torch/distributed/run.py:982] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+8644.7s 180 W1028 00:08:00.728000 192 torch/distributed/run.py:982] *****************************************
+8647.3s 181 /usr/local/lib/python3.13/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+8647.3s 182 return func(*args, **kwargs)
+8647.3s 183 [rank0]:[W1028 00:08:03.509186014 ProcessGroupNCCL.cpp:5310] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+8647.7s 184 /usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:431: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+8647.7s 185 self.check_worker_number_rationality()
+8647.7s 186 /usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:431: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+8647.7s 187 self.check_worker_number_rationality()
+8990.0s 188 SAR-JEPA iRPE tables present: True
+8990.0s 189 SAR checkpoint missing: []
+8990.0s 190 SAR checkpoint unexpected: ['blocks.0.attn.rpe_k.lookup_table_weight', 'blocks.1.attn.rpe_k.lookup_table_weight', 'blocks.2.attn.rpe_k.lookup_table_weight', 'blocks.3.attn.rpe_k.lookup_table_weight', 'blocks.4.attn.rpe_k.lookup_table_weight', 'blocks.5.attn.rpe_k.lookup_table_weight', 'blocks.6.attn.rpe_k.lookup_table_weight', 'blocks.7.attn.rpe_k.lookup_table_weight', 'blocks.8.attn.rpe_k.lookup_table_weight', 'blocks.9.attn.rpe_k.lookup_table_weight', 'blocks.10.attn.rpe_k.lookup_table_weight', 'blocks.11.attn.rpe_k.lookup_table_weight']
+8990.0s 191 SAR-JEPA iRPE tables present: True
+8990.0s 192 SAR checkpoint missing: []
+8990.0s 193 SAR checkpoint unexpected: ['blocks.0.attn.rpe_k.lookup_table_weight', 'blocks.1.attn.rpe_k.lookup_table_weight', 'blocks.2.attn.rpe_k.lookup_table_weight', 'blocks.3.attn.rpe_k.lookup_table_weight', 'blocks.4.attn.rpe_k.lookup_table_weight', 'blocks.5.attn.rpe_k.lookup_table_weight', 'blocks.6.attn.rpe_k.lookup_table_weight', 'blocks.7.attn.rpe_k.lookup_table_weight', 'blocks.8.attn.rpe_k.lookup_table_weight', 'blocks.9.attn.rpe_k.lookup_table_weight', 'blocks.10.attn.rpe_k.lookup_table_weight', 'blocks.11.attn.rpe_k.lookup_table_weight']
+8993.0s 194 [rank1]: Traceback (most recent call last):
+8993.0s 195 [rank1]:   File "<frozen runpy>", line 203, in _run_module_as_main
+8993.0s 196 [rank1]:   File "<frozen runpy>", line 88, in _run_code
+8993.0s 197 [rank1]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 355, in <module>
+8993.0s 198 [rank1]:     main()
+8993.0s 199 [rank1]:     ~~~~^^
+8993.0s 200 [rank1]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 184, in main
+8993.0s 201 [rank1]:     ema.load_state_dict(base_model.state_dict())
+8993.0s 202 [rank1]:     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+8993.0s 203 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 2643, in load_state_dict
+8993.0s 204 [rank1]:     raise RuntimeError(
+8993.0s 205 [rank1]:     ...<3 lines>...
+8993.0s 206 [rank1]:     )
+8993.0s 207 [rank1]: RuntimeError: Error(s) in loading state_dict for SAR2EO:
+8993.0s 208 [rank1]: 	Missing key(s) in state_dict: "sar_encoder.vit.blocks.0.mlp.fc1.weight", "sar_encoder.vit.blocks.0.mlp.fc1.bias", "sar_encoder.vit.blocks.0.mlp.fc2.weight", "sar_encoder.vit.blocks.0.mlp.fc2.bias", "sar_encoder.vit.blocks.1.mlp.fc1.weight", "sar_encoder.vit.blocks.1.mlp.fc1.bias", "sar_encoder.vit.blocks.1.mlp.fc2.weight", "sar_encoder.vit.blocks.1.mlp.fc2.bias", "sar_encoder.vit.blocks.2.mlp.fc1.weight", "sar_encoder.vit.blocks.2.mlp.fc1.bias", "sar_encoder.vit.blocks.2.mlp.fc2.weight", "sar_encoder.vit.blocks.2.mlp.fc2.bias", "sar_encoder.vit.blocks.3.mlp.fc1.weight", "sar_encoder.vit.blocks.3.mlp.fc1.bias", "sar_encoder.vit.blocks.3.mlp.fc2.weight", "sar_encoder.vit.blocks.3.mlp.fc2.bias", "sar_encoder.vit.blocks.4.mlp.fc1.weight", "sar_encoder.vit.blocks.4.mlp.fc1.bias", "sar_encoder.vit.blocks.4.mlp.fc2.weight", "sar_encoder.vit.blocks.4.mlp.fc2.bias", "sar_encoder.vit.blocks.5.mlp.fc1.weight", "sar_encoder.vit.blocks.5.mlp.fc1.bias", "sar_encoder.vit.blocks.5.mlp.fc2.weight", "sar_encoder.vit.blocks.5.mlp.fc2.bias", "sar_encoder.vit.blocks.6.mlp.fc1.weight", "sar_encoder.vit.blocks.6.mlp.fc1.bias", "sar_encoder.vit.blocks.6.mlp.fc2.weight", "sar_encoder.vit.blocks.6.mlp.fc2.bias", "sar_encoder.vit.blocks.7.mlp.fc1.weight", "sar_encoder.vit.blocks.7.mlp.fc1.bias", "sar_encoder.vit.blocks.7.mlp.fc2.weight", "sar_encoder.vit.blocks.7.mlp.fc2.bias", "sar_encoder.vit.blocks.8.mlp.fc1.weight", "sar_encoder.vit.blocks.8.mlp.fc1.bias", "sar_encoder.vit.blocks.8.mlp.fc2.weight", "sar_encoder.vit.blocks.8.mlp.fc2.bias", "sar_encoder.vit.blocks.9.mlp.fc1.weight", "sar_encoder.vit.blocks.9.mlp.fc1.bias", "sar_encoder.vit.blocks.9.mlp.fc2.weight", "sar_encoder.vit.blocks.9.mlp.fc2.bias", "sar_encoder.vit.blocks.10.mlp.fc1.weight", "sar_encoder.vit.blocks.10.mlp.fc1.bias", "sar_encoder.vit.blocks.10.mlp.fc2.weight", "sar_encoder.vit.blocks.10.mlp.fc2.bias", "sar_encoder.vit.blocks.11.mlp.fc1.weight", "sar_encoder.vit.blocks.11.mlp.fc1.bias", "sar_encoder.vit.blocks.11.mlp.fc2.weight", "sar_encoder.vit.blocks.11.mlp.fc2.bias".
+8993.0s 209 [rank1]: 	Unexpected key(s) in state_dict: "sar_encoder.vit.cls_token", "sar_encoder.vit.blocks.0.mlp.0.weight", "sar_encoder.vit.blocks.0.mlp.0.bias", "sar_encoder.vit.blocks.0.mlp.2.weight", "sar_encoder.vit.blocks.0.mlp.2.bias", "sar_encoder.vit.blocks.1.mlp.0.weight", "sar_encoder.vit.blocks.1.mlp.0.bias", "sar_encoder.vit.blocks.1.mlp.2.weight", "sar_encoder.vit.blocks.1.mlp.2.bias", "sar_encoder.vit.blocks.2.mlp.0.weight", "sar_encoder.vit.blocks.2.mlp.0.bias", "sar_encoder.vit.blocks.2.mlp.2.weight", "sar_encoder.vit.blocks.2.mlp.2.bias", "sar_encoder.vit.blocks.3.mlp.0.weight", "sar_encoder.vit.blocks.3.mlp.0.bias", "sar_encoder.vit.blocks.3.mlp.2.weight", "sar_encoder.vit.blocks.3.mlp.2.bias", "sar_encoder.vit.blocks.4.mlp.0.weight", "sar_encoder.vit.blocks.4.mlp.0.bias", "sar_encoder.vit.blocks.4.mlp.2.weight", "sar_encoder.vit.blocks.4.mlp.2.bias", "sar_encoder.vit.blocks.5.mlp.0.weight", "sar_encoder.vit.blocks.5.mlp.0.bias", "sar_encoder.vit.blocks.5.mlp.2.weight", "sar_encoder.vit.blocks.5.mlp.2.bias", "sar_encoder.vit.blocks.6.mlp.0.weight", "sar_encoder.vit.blocks.6.mlp.0.bias", "sar_encoder.vit.blocks.6.mlp.2.weight", "sar_encoder.vit.blocks.6.mlp.2.bias", "sar_encoder.vit.blocks.7.mlp.0.weight", "sar_encoder.vit.blocks.7.mlp.0.bias", "sar_encoder.vit.blocks.7.mlp.2.weight", "sar_encoder.vit.blocks.7.mlp.2.bias", "sar_encoder.vit.blocks.8.mlp.0.weight", "sar_encoder.vit.blocks.8.mlp.0.bias", "sar_encoder.vit.blocks.8.mlp.2.weight", "sar_encoder.vit.blocks.8.mlp.2.bias", "sar_encoder.vit.blocks.9.mlp.0.weight", "sar_encoder.vit.blocks.9.mlp.0.bias", "sar_encoder.vit.blocks.9.mlp.2.weight", "sar_encoder.vit.blocks.9.mlp.2.bias", "sar_encoder.vit.blocks.10.mlp.0.weight", "sar_encoder.vit.blocks.10.mlp.0.bias", "sar_encoder.vit.blocks.10.mlp.2.weight", "sar_encoder.vit.blocks.10.mlp.2.bias", "sar_encoder.vit.blocks.11.mlp.0.weight", "sar_encoder.vit.blocks.11.mlp.0.bias", "sar_encoder.vit.blocks.11.mlp.2.weight", "sar_encoder.vit.blocks.11.mlp.2.bias".
+8993.0s 210 [rank1]: 	size mismatch for sar_encoder.vit.pos_embed: copying a param with shape torch.Size([1, 197, 768]) from checkpoint, the shape in current model is torch.Size([1, 256, 768]).
+8993.0s 211 [rank0]: Traceback (most recent call last):
+8993.0s 212 [rank0]:   File "<frozen runpy>", line 203, in _run_module_as_main
+8993.0s 213 [rank0]:   File "<frozen runpy>", line 88, in _run_code
+8993.0s 214 [rank0]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 355, in <module>
+8993.0s 215 [rank0]:     main()
+8993.0s 216 [rank0]:     ~~~~^^
+8993.0s 217 [rank0]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 184, in main
+8993.0s 218 [rank0]:     ema.load_state_dict(base_model.state_dict())
+8993.0s 219 [rank0]:     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+8993.0s 220 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 2643, in load_state_dict
+8993.0s 221 [rank0]:     raise RuntimeError(
+8993.0s 222 [rank0]:     ...<3 lines>...
+8993.0s 223 [rank0]:     )
+8993.0s 224 [rank0]: RuntimeError: Error(s) in loading state_dict for SAR2EO:
+8993.0s 225 [rank0]: 	Missing key(s) in state_dict: "sar_encoder.vit.blocks.0.mlp.fc1.weight", "sar_encoder.vit.blocks.0.mlp.fc1.bias", "sar_encoder.vit.blocks.0.mlp.fc2.weight", "sar_encoder.vit.blocks.0.mlp.fc2.bias", "sar_encoder.vit.blocks.1.mlp.fc1.weight", "sar_encoder.vit.blocks.1.mlp.fc1.bias", "sar_encoder.vit.blocks.1.mlp.fc2.weight", "sar_encoder.vit.blocks.1.mlp.fc2.bias", "sar_encoder.vit.blocks.2.mlp.fc1.weight", "sar_encoder.vit.blocks.2.mlp.fc1.bias", "sar_encoder.vit.blocks.2.mlp.fc2.weight", "sar_encoder.vit.blocks.2.mlp.fc2.bias", "sar_encoder.vit.blocks.3.mlp.fc1.weight", "sar_encoder.vit.blocks.3.mlp.fc1.bias", "sar_encoder.vit.blocks.3.mlp.fc2.weight", "sar_encoder.vit.blocks.3.mlp.fc2.bias", "sar_encoder.vit.blocks.4.mlp.fc1.weight", "sar_encoder.vit.blocks.4.mlp.fc1.bias", "sar_encoder.vit.blocks.4.mlp.fc2.weight", "sar_encoder.vit.blocks.4.mlp.fc2.bias", "sar_encoder.vit.blocks.5.mlp.fc1.weight", "sar_encoder.vit.blocks.5.mlp.fc1.bias", "sar_encoder.vit.blocks.5.mlp.fc2.weight", "sar_encoder.vit.blocks.5.mlp.fc2.bias", "sar_encoder.vit.blocks.6.mlp.fc1.weight", "sar_encoder.vit.blocks.6.mlp.fc1.bias", "sar_encoder.vit.blocks.6.mlp.fc2.weight", "sar_encoder.vit.blocks.6.mlp.fc2.bias", "sar_encoder.vit.blocks.7.mlp.fc1.weight", "sar_encoder.vit.blocks.7.mlp.fc1.bias", "sar_encoder.vit.blocks.7.mlp.fc2.weight", "sar_encoder.vit.blocks.7.mlp.fc2.bias", "sar_encoder.vit.blocks.8.mlp.fc1.weight", "sar_encoder.vit.blocks.8.mlp.fc1.bias", "sar_encoder.vit.blocks.8.mlp.fc2.weight", "sar_encoder.vit.blocks.8.mlp.fc2.bias", "sar_encoder.vit.blocks.9.mlp.fc1.weight", "sar_encoder.vit.blocks.9.mlp.fc1.bias", "sar_encoder.vit.blocks.9.mlp.fc2.weight", "sar_encoder.vit.blocks.9.mlp.fc2.bias", "sar_encoder.vit.blocks.10.mlp.fc1.weight", "sar_encoder.vit.blocks.10.mlp.fc1.bias", "sar_encoder.vit.blocks.10.mlp.fc2.weight", "sar_encoder.vit.blocks.10.mlp.fc2.bias", "sar_encoder.vit.blocks.11.mlp.fc1.weight", "sar_encoder.vit.blocks.11.mlp.fc1.bias", "sar_encoder.vit.blocks.11.mlp.fc2.weight", "sar_encoder.vit.blocks.11.mlp.fc2.bias".
+8993.0s 226 [rank0]: 	Unexpected key(s) in state_dict: "sar_encoder.vit.cls_token", "sar_encoder.vit.blocks.0.mlp.0.weight", "sar_encoder.vit.blocks.0.mlp.0.bias", "sar_encoder.vit.blocks.0.mlp.2.weight", "sar_encoder.vit.blocks.0.mlp.2.bias", "sar_encoder.vit.blocks.1.mlp.0.weight", "sar_encoder.vit.blocks.1.mlp.0.bias", "sar_encoder.vit.blocks.1.mlp.2.weight", "sar_encoder.vit.blocks.1.mlp.2.bias", "sar_encoder.vit.blocks.2.mlp.0.weight", "sar_encoder.vit.blocks.2.mlp.0.bias", "sar_encoder.vit.blocks.2.mlp.2.weight", "sar_encoder.vit.blocks.2.mlp.2.bias", "sar_encoder.vit.blocks.3.mlp.0.weight", "sar_encoder.vit.blocks.3.mlp.0.bias", "sar_encoder.vit.blocks.3.mlp.2.weight", "sar_encoder.vit.blocks.3.mlp.2.bias", "sar_encoder.vit.blocks.4.mlp.0.weight", "sar_encoder.vit.blocks.4.mlp.0.bias", "sar_encoder.vit.blocks.4.mlp.2.weight", "sar_encoder.vit.blocks.4.mlp.2.bias", "sar_encoder.vit.blocks.5.mlp.0.weight", "sar_encoder.vit.blocks.5.mlp.0.bias", "sar_encoder.vit.blocks.5.mlp.2.weight", "sar_encoder.vit.blocks.5.mlp.2.bias", "sar_encoder.vit.blocks.6.mlp.0.weight", "sar_encoder.vit.blocks.6.mlp.0.bias", "sar_encoder.vit.blocks.6.mlp.2.weight", "sar_encoder.vit.blocks.6.mlp.2.bias", "sar_encoder.vit.blocks.7.mlp.0.weight", "sar_encoder.vit.blocks.7.mlp.0.bias", "sar_encoder.vit.blocks.7.mlp.2.weight", "sar_encoder.vit.blocks.7.mlp.2.bias", "sar_encoder.vit.blocks.8.mlp.0.weight", "sar_encoder.vit.blocks.8.mlp.0.bias", "sar_encoder.vit.blocks.8.mlp.2.weight", "sar_encoder.vit.blocks.8.mlp.2.bias", "sar_encoder.vit.blocks.9.mlp.0.weight", "sar_encoder.vit.blocks.9.mlp.0.bias", "sar_encoder.vit.blocks.9.mlp.2.weight", "sar_encoder.vit.blocks.9.mlp.2.bias", "sar_encoder.vit.blocks.10.mlp.0.weight", "sar_encoder.vit.blocks.10.mlp.0.bias", "sar_encoder.vit.blocks.10.mlp.2.weight", "sar_encoder.vit.blocks.10.mlp.2.bias", "sar_encoder.vit.blocks.11.mlp.0.weight", "sar_encoder.vit.blocks.11.mlp.0.bias", "sar_encoder.vit.blocks.11.mlp.2.weight", "sar_encoder.vit.blocks.11.mlp.2.bias".
+8993.0s 227 [rank0]: 	size mismatch for sar_encoder.vit.pos_embed: copying a param with shape torch.Size([1, 197, 768]) from checkpoint, the shape in current model is torch.Size([1, 256, 768]).
+8994.3s 228 W1028 00:13:50.359000 192 torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 201 closing signal SIGTERM
+8994.3s 229 E1028 00:13:50.360000 192 torch/distributed/elastic/multiprocessing/api.py:1002] failed (exitcode: 1) local_rank: 1 (pid: 202) of binary: /usr/bin/python3
+8994.3s 230 Traceback (most recent call last):
+8994.3s 231 File [35m"/usr/local/bin/torchrun"[0m, line [35m6[0m, in [35m<module>[0m
+8994.3s 232 sys.exit([31mmain[0m[1;31m()[0m)
+8994.3s 233 [31m~~~~[0m[1;31m^^[0m
+8994.3s 234 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py"[0m, line [35m380[0m, in [35mwrapper[0m
+8994.3s 235 return f(*args, **kwargs)
+8994.3s 236 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/run.py"[0m, line [35m1138[0m, in [35mmain[0m
+8994.3s 237 [31mrun[0m[1;31m(args)[0m
+8994.3s 238 [31m~~~[0m[1;31m^^^^^^[0m
+8994.3s 239 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/run.py"[0m, line [35m1129[0m, in [35mrun[0m
+8994.3s 240 [31melastic_launch([0m
+8994.3s 241 [31m~~~~~~~~~~~~~~~[0m
+8994.3s 242 [31mconfig=config,[0m
+8994.3s 243 [31m~~~~~~~~~~~~~~[0m
+8994.3s 244 [31mentrypoint=cmd,[0m
+8994.3s 245 [31m~~~~~~~~~~~~~~~[0m
+8994.3s 246 [31m)[0m[1;31m(*cmd_args)[0m
+8994.3s 247 [31m~[0m[1;31m^^^^^^^^^^^[0m
+8994.3s 248 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/launcher/api.py"[0m, line [35m197[0m, in [35m__call__[0m
+8994.3s 249 return launch_agent(
+8994.3s 250 self._config,
+8994.3s 251 ...<2 lines>...
+8994.3s 252 health_check_server=self._health_check_server,
+8994.3s 253 )
+8994.3s 254 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/launcher/api.py"[0m, line [35m386[0m, in [35mlaunch_agent[0m
+8994.3s 255 raise ChildFailedError(
+8994.3s 256 ...<2 lines>...
+8994.3s 257 )
+8994.3s 258 [1;35mtorch.distributed.elastic.multiprocessing.errors.ChildFailedError[0m: [35m
+8994.3s 259 ============================================================
+8994.3s 260 sar2eo.train FAILED
+8994.3s 261 ------------------------------------------------------------
+8994.3s 262 Failures:
+8994.3s 263 [1]:
+8994.3s 264 time      : 2026-10-28_00:13:50
+8994.3s 265 host      : 92f084296d81
+8994.3s 266 rank      : 0 (local_rank: 0)
+8994.3s 267 exitcode  : 1 (pid: 201)
+8994.3s 268 error_file: <N/A>
+8994.3s 269 traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+8994.3s 270 ------------------------------------------------------------
+8994.3s 271 Root Cause (first observed failure):
+8994.3s 272 [0]:
+8994.3s 273 time      : 2026-10-28_00:13:50
+8994.3s 274 host      : 92f084296d81
+8994.3s 275 rank      : 1 (local_rank: 1)
+8994.3s 276 exitcode  : 1 (pid: 202)
+8994.3s 277 error_file: <N/A>
+8994.3s 278 traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+8994.3s 279 ============================================================[0m
+8996.7s 280 W1028 00:13:52.723000 220 torch/distributed/run.py:982]
+8996.7s 281 W1028 00:13:52.723000 220 torch/distributed/run.py:982] *****************************************
+8996.7s 282 W1028 00:13:52.723000 220 torch/distributed/run.py:982] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+8996.7s 283 W1028 00:13:52.723000 220 torch/distributed/run.py:982] *****************************************
+8999.4s 284 /usr/local/lib/python3.13/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+8999.4s 285 return func(*args, **kwargs)
+8999.4s 286 [rank0]:[W1028 00:13:55.550632973 ProcessGroupNCCL.cpp:5310] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+8999.7s 287 /usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:431: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+8999.7s 288 self.check_worker_number_rationality()
+8999.7s 289 /usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:431: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+8999.7s 290 self.check_worker_number_rationality()
+9006.9s 291 SAR-JEPA iRPE tables present: True
+9006.9s 292 SAR checkpoint missing: []
+9006.9s 293 SAR checkpoint unexpected: ['blocks.0.attn.rpe_k.lookup_table_weight', 'blocks.1.attn.rpe_k.lookup_table_weight', 'blocks.2.attn.rpe_k.lookup_table_weight', 'blocks.3.attn.rpe_k.lookup_table_weight', 'blocks.4.attn.rpe_k.lookup_table_weight', 'blocks.5.attn.rpe_k.lookup_table_weight', 'blocks.6.attn.rpe_k.lookup_table_weight', 'blocks.7.attn.rpe_k.lookup_table_weight', 'blocks.8.attn.rpe_k.lookup_table_weight', 'blocks.9.attn.rpe_k.lookup_table_weight', 'blocks.10.attn.rpe_k.lookup_table_weight', 'blocks.11.attn.rpe_k.lookup_table_weight']
+9006.9s 294 SAR-JEPA iRPE tables present: True
+9006.9s 295 SAR checkpoint missing: []
+9006.9s 296 SAR checkpoint unexpected: ['blocks.0.attn.rpe_k.lookup_table_weight', 'blocks.1.attn.rpe_k.lookup_table_weight', 'blocks.2.attn.rpe_k.lookup_table_weight', 'blocks.3.attn.rpe_k.lookup_table_weight', 'blocks.4.attn.rpe_k.lookup_table_weight', 'blocks.5.attn.rpe_k.lookup_table_weight', 'blocks.6.attn.rpe_k.lookup_table_weight', 'blocks.7.attn.rpe_k.lookup_table_weight', 'blocks.8.attn.rpe_k.lookup_table_weight', 'blocks.9.attn.rpe_k.lookup_table_weight', 'blocks.10.attn.rpe_k.lookup_table_weight', 'blocks.11.attn.rpe_k.lookup_table_weight']
+9009.8s 297 [rank0]: Traceback (most recent call last):
+9009.8s 298 [rank0]:   File "<frozen runpy>", line 203, in _run_module_as_main
+9009.8s 299 [rank0]:   File "<frozen runpy>", line 88, in _run_code
+9009.8s 300 [rank0]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 355, in <module>
+9009.8s 301 [rank0]:     main()
+9009.8s 302 [rank0]:     ~~~~^^
+9009.8s 303 [rank0]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 184, in main
+9009.8s 304 [rank0]:     ema.load_state_dict(base_model.state_dict())
+9009.8s 305 [rank0]:     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+9009.8s 306 [rank0]:   File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 2643, in load_state_dict
+9009.8s 307 [rank0]:     raise RuntimeError(
+9009.8s 308 [rank0]:     ...<3 lines>...
+9009.8s 309 [rank0]:     )
+9009.8s 310 [rank0]: RuntimeError: Error(s) in loading state_dict for SAR2EO:
+9009.8s 311 [rank0]: 	Missing key(s) in state_dict: "sar_encoder.vit.blocks.0.mlp.fc1.weight", "sar_encoder.vit.blocks.0.mlp.fc1.bias", "sar_encoder.vit.blocks.0.mlp.fc2.weight", "sar_encoder.vit.blocks.0.mlp.fc2.bias", "sar_encoder.vit.blocks.1.mlp.fc1.weight", "sar_encoder.vit.blocks.1.mlp.fc1.bias", "sar_encoder.vit.blocks.1.mlp.fc2.weight", "sar_encoder.vit.blocks.1.mlp.fc2.bias", "sar_encoder.vit.blocks.2.mlp.fc1.weight", "sar_encoder.vit.blocks.2.mlp.fc1.bias", "sar_encoder.vit.blocks.2.mlp.fc2.weight", "sar_encoder.vit.blocks.2.mlp.fc2.bias", "sar_encoder.vit.blocks.3.mlp.fc1.weight", "sar_encoder.vit.blocks.3.mlp.fc1.bias", "sar_encoder.vit.blocks.3.mlp.fc2.weight", "sar_encoder.vit.blocks.3.mlp.fc2.bias", "sar_encoder.vit.blocks.4.mlp.fc1.weight", "sar_encoder.vit.blocks.4.mlp.fc1.bias", "sar_encoder.vit.blocks.4.mlp.fc2.weight", "sar_encoder.vit.blocks.4.mlp.fc2.bias", "sar_encoder.vit.blocks.5.mlp.fc1.weight", "sar_encoder.vit.blocks.5.mlp.fc1.bias", "sar_encoder.vit.blocks.5.mlp.fc2.weight", "sar_encoder.vit.blocks.5.mlp.fc2.bias", "sar_encoder.vit.blocks.6.mlp.fc1.weight", "sar_encoder.vit.blocks.6.mlp.fc1.bias", "sar_encoder.vit.blocks.6.mlp.fc2.weight", "sar_encoder.vit.blocks.6.mlp.fc2.bias", "sar_encoder.vit.blocks.7.mlp.fc1.weight", "sar_encoder.vit.blocks.7.mlp.fc1.bias", "sar_encoder.vit.blocks.7.mlp.fc2.weight", "sar_encoder.vit.blocks.7.mlp.fc2.bias", "sar_encoder.vit.blocks.8.mlp.fc1.weight", "sar_encoder.vit.blocks.8.mlp.fc1.bias", "sar_encoder.vit.blocks.8.mlp.fc2.weight", "sar_encoder.vit.blocks.8.mlp.fc2.bias", "sar_encoder.vit.blocks.9.mlp.fc1.weight", "sar_encoder.vit.blocks.9.mlp.fc1.bias", "sar_encoder.vit.blocks.9.mlp.fc2.weight", "sar_encoder.vit.blocks.9.mlp.fc2.bias", "sar_encoder.vit.blocks.10.mlp.fc1.weight", "sar_encoder.vit.blocks.10.mlp.fc1.bias", "sar_encoder.vit.blocks.10.mlp.fc2.weight", "sar_encoder.vit.blocks.10.mlp.fc2.bias", "sar_encoder.vit.blocks.11.mlp.fc1.weight", "sar_encoder.vit.blocks.11.mlp.fc1.bias", "sar_encoder.vit.blocks.11.mlp.fc2.weight", "sar_encoder.vit.blocks.11.mlp.fc2.bias".
+9009.8s 312 [rank0]: 	Unexpected key(s) in state_dict: "sar_encoder.vit.cls_token", "sar_encoder.vit.blocks.0.mlp.0.weight", "sar_encoder.vit.blocks.0.mlp.0.bias", "sar_encoder.vit.blocks.0.mlp.2.weight", "sar_encoder.vit.blocks.0.mlp.2.bias", "sar_encoder.vit.blocks.1.mlp.0.weight", "sar_encoder.vit.blocks.1.mlp.0.bias", "sar_encoder.vit.blocks.1.mlp.2.weight", "sar_encoder.vit.blocks.1.mlp.2.bias", "sar_encoder.vit.blocks.2.mlp.0.weight", "sar_encoder.vit.blocks.2.mlp.0.bias", "sar_encoder.vit.blocks.2.mlp.2.weight", "sar_encoder.vit.blocks.2.mlp.2.bias", "sar_encoder.vit.blocks.3.mlp.0.weight", "sar_encoder.vit.blocks.3.mlp.0.bias", "sar_encoder.vit.blocks.3.mlp.2.weight", "sar_encoder.vit.blocks.3.mlp.2.bias", "sar_encoder.vit.blocks.4.mlp.0.weight", "sar_encoder.vit.blocks.4.mlp.0.bias", "sar_encoder.vit.blocks.4.mlp.2.weight", "sar_encoder.vit.blocks.4.mlp.2.bias", "sar_encoder.vit.blocks.5.mlp.0.weight", "sar_encoder.vit.blocks.5.mlp.0.bias", "sar_encoder.vit.blocks.5.mlp.2.weight", "sar_encoder.vit.blocks.5.mlp.2.bias", "sar_encoder.vit.blocks.6.mlp.0.weight", "sar_encoder.vit.blocks.6.mlp.0.bias", "sar_encoder.vit.blocks.6.mlp.2.weight", "sar_encoder.vit.blocks.6.mlp.2.bias", "sar_encoder.vit.blocks.7.mlp.0.weight", "sar_encoder.vit.blocks.7.mlp.0.bias", "sar_encoder.vit.blocks.7.mlp.2.weight", "sar_encoder.vit.blocks.7.mlp.2.bias", "sar_encoder.vit.blocks.8.mlp.0.weight", "sar_encoder.vit.blocks.8.mlp.0.bias", "sar_encoder.vit.blocks.8.mlp.2.weight", "sar_encoder.vit.blocks.8.mlp.2.bias", "sar_encoder.vit.blocks.9.mlp.0.weight", "sar_encoder.vit.blocks.9.mlp.0.bias", "sar_encoder.vit.blocks.9.mlp.2.weight", "sar_encoder.vit.blocks.9.mlp.2.bias", "sar_encoder.vit.blocks.10.mlp.0.weight", "sar_encoder.vit.blocks.10.mlp.0.bias", "sar_encoder.vit.blocks.10.mlp.2.weight", "sar_encoder.vit.blocks.10.mlp.2.bias", "sar_encoder.vit.blocks.11.mlp.0.weight", "sar_encoder.vit.blocks.11.mlp.0.bias", "sar_encoder.vit.blocks.11.mlp.2.weight", "sar_encoder.vit.blocks.11.mlp.2.bias".
+9009.8s 313 [rank0]: 	size mismatch for sar_encoder.vit.pos_embed: copying a param with shape torch.Size([1, 197, 768]) from checkpoint, the shape in current model is torch.Size([1, 256, 768]).
+9009.8s 314 [rank1]: Traceback (most recent call last):
+9009.8s 315 [rank1]:   File "<frozen runpy>", line 203, in _run_module_as_main
+9009.8s 316 [rank1]:   File "<frozen runpy>", line 88, in _run_code
+9009.8s 317 [rank1]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 355, in <module>
+9009.8s 318 [rank1]:     main()
+9009.8s 319 [rank1]:     ~~~~^^
+9009.8s 320 [rank1]:   File "/kaggle/working/sar_to_eo/sar2eo/train.py", line 184, in main
+9009.8s 321 [rank1]:     ema.load_state_dict(base_model.state_dict())
+9009.8s 322 [rank1]:     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+9009.8s 323 [rank1]:   File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 2643, in load_state_dict
+9009.8s 324 [rank1]:     raise RuntimeError(
+9009.8s 325 [rank1]:     ...<3 lines>...
+9009.8s 326 [rank1]:     )
+9009.8s 327 [rank1]: RuntimeError: Error(s) in loading state_dict for SAR2EO:
+9009.8s 328 [rank1]: 	Missing key(s) in state_dict: "sar_encoder.vit.blocks.0.mlp.fc1.weight", "sar_encoder.vit.blocks.0.mlp.fc1.bias", "sar_encoder.vit.blocks.0.mlp.fc2.weight", "sar_encoder.vit.blocks.0.mlp.fc2.bias", "sar_encoder.vit.blocks.1.mlp.fc1.weight", "sar_encoder.vit.blocks.1.mlp.fc1.bias", "sar_encoder.vit.blocks.1.mlp.fc2.weight", "sar_encoder.vit.blocks.1.mlp.fc2.bias", "sar_encoder.vit.blocks.2.mlp.fc1.weight", "sar_encoder.vit.blocks.2.mlp.fc1.bias", "sar_encoder.vit.blocks.2.mlp.fc2.weight", "sar_encoder.vit.blocks.2.mlp.fc2.bias", "sar_encoder.vit.blocks.3.mlp.fc1.weight", "sar_encoder.vit.blocks.3.mlp.fc1.bias", "sar_encoder.vit.blocks.3.mlp.fc2.weight", "sar_encoder.vit.blocks.3.mlp.fc2.bias", "sar_encoder.vit.blocks.4.mlp.fc1.weight", "sar_encoder.vit.blocks.4.mlp.fc1.bias", "sar_encoder.vit.blocks.4.mlp.fc2.weight", "sar_encoder.vit.blocks.4.mlp.fc2.bias", "sar_encoder.vit.blocks.5.mlp.fc1.weight", "sar_encoder.vit.blocks.5.mlp.fc1.bias", "sar_encoder.vit.blocks.5.mlp.fc2.weight", "sar_encoder.vit.blocks.5.mlp.fc2.bias", "sar_encoder.vit.blocks.6.mlp.fc1.weight", "sar_encoder.vit.blocks.6.mlp.fc1.bias", "sar_encoder.vit.blocks.6.mlp.fc2.weight", "sar_encoder.vit.blocks.6.mlp.fc2.bias", "sar_encoder.vit.blocks.7.mlp.fc1.weight", "sar_encoder.vit.blocks.7.mlp.fc1.bias", "sar_encoder.vit.blocks.7.mlp.fc2.weight", "sar_encoder.vit.blocks.7.mlp.fc2.bias", "sar_encoder.vit.blocks.8.mlp.fc1.weight", "sar_encoder.vit.blocks.8.mlp.fc1.bias", "sar_encoder.vit.blocks.8.mlp.fc2.weight", "sar_encoder.vit.blocks.8.mlp.fc2.bias", "sar_encoder.vit.blocks.9.mlp.fc1.weight", "sar_encoder.vit.blocks.9.mlp.fc1.bias", "sar_encoder.vit.blocks.9.mlp.fc2.weight", "sar_encoder.vit.blocks.9.mlp.fc2.bias", "sar_encoder.vit.blocks.10.mlp.fc1.weight", "sar_encoder.vit.blocks.10.mlp.fc1.bias", "sar_encoder.vit.blocks.10.mlp.fc2.weight", "sar_encoder.vit.blocks.10.mlp.fc2.bias", "sar_encoder.vit.blocks.11.mlp.fc1.weight", "sar_encoder.vit.blocks.11.mlp.fc1.bias", "sar_encoder.vit.blocks.11.mlp.fc2.weight", "sar_encoder.vit.blocks.11.mlp.fc2.bias".
+9009.8s 329 [rank1]: 	Unexpected key(s) in state_dict: "sar_encoder.vit.cls_token", "sar_encoder.vit.blocks.0.mlp.0.weight", "sar_encoder.vit.blocks.0.mlp.0.bias", "sar_encoder.vit.blocks.0.mlp.2.weight", "sar_encoder.vit.blocks.0.mlp.2.bias", "sar_encoder.vit.blocks.1.mlp.0.weight", "sar_encoder.vit.blocks.1.mlp.0.bias", "sar_encoder.vit.blocks.1.mlp.2.weight", "sar_encoder.vit.blocks.1.mlp.2.bias", "sar_encoder.vit.blocks.2.mlp.0.weight", "sar_encoder.vit.blocks.2.mlp.0.bias", "sar_encoder.vit.blocks.2.mlp.2.weight", "sar_encoder.vit.blocks.2.mlp.2.bias", "sar_encoder.vit.blocks.3.mlp.0.weight", "sar_encoder.vit.blocks.3.mlp.0.bias", "sar_encoder.vit.blocks.3.mlp.2.weight", "sar_encoder.vit.blocks.3.mlp.2.bias", "sar_encoder.vit.blocks.4.mlp.0.weight", "sar_encoder.vit.blocks.4.mlp.0.bias", "sar_encoder.vit.blocks.4.mlp.2.weight", "sar_encoder.vit.blocks.4.mlp.2.bias", "sar_encoder.vit.blocks.5.mlp.0.weight", "sar_encoder.vit.blocks.5.mlp.0.bias", "sar_encoder.vit.blocks.5.mlp.2.weight", "sar_encoder.vit.blocks.5.mlp.2.bias", "sar_encoder.vit.blocks.6.mlp.0.weight", "sar_encoder.vit.blocks.6.mlp.0.bias", "sar_encoder.vit.blocks.6.mlp.2.weight", "sar_encoder.vit.blocks.6.mlp.2.bias", "sar_encoder.vit.blocks.7.mlp.0.weight", "sar_encoder.vit.blocks.7.mlp.0.bias", "sar_encoder.vit.blocks.7.mlp.2.weight", "sar_encoder.vit.blocks.7.mlp.2.bias", "sar_encoder.vit.blocks.8.mlp.0.weight", "sar_encoder.vit.blocks.8.mlp.0.bias", "sar_encoder.vit.blocks.8.mlp.2.weight", "sar_encoder.vit.blocks.8.mlp.2.bias", "sar_encoder.vit.blocks.9.mlp.0.weight", "sar_encoder.vit.blocks.9.mlp.0.bias", "sar_encoder.vit.blocks.9.mlp.2.weight", "sar_encoder.vit.blocks.9.mlp.2.bias", "sar_encoder.vit.blocks.10.mlp.0.weight", "sar_encoder.vit.blocks.10.mlp.0.bias", "sar_encoder.vit.blocks.10.mlp.2.weight", "sar_encoder.vit.blocks.10.mlp.2.bias", "sar_encoder.vit.blocks.11.mlp.0.weight", "sar_encoder.vit.blocks.11.mlp.0.bias", "sar_encoder.vit.blocks.11.mlp.2.weight", "sar_encoder.vit.blocks.11.mlp.2.bias".
+9009.8s 330 [rank1]: 	size mismatch for sar_encoder.vit.pos_embed: copying a param with shape torch.Size([1, 197, 768]) from checkpoint, the shape in current model is torch.Size([1, 256, 768]).
+9011.1s 331 W1028 00:14:07.137000 220 torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 229 closing signal SIGTERM
+9011.1s 332 E1028 00:14:07.170000 220 torch/distributed/elastic/multiprocessing/api.py:1002] failed (exitcode: 1) local_rank: 1 (pid: 230) of binary: /usr/bin/python3
+9011.1s 333 Traceback (most recent call last):
+9011.1s 334 File [35m"/usr/local/bin/torchrun"[0m, line [35m6[0m, in [35m<module>[0m
+9011.1s 335 sys.exit([31mmain[0m[1;31m()[0m)
+9011.1s 336 [31m~~~~[0m[1;31m^^[0m
+9011.1s 337 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py"[0m, line [35m380[0m, in [35mwrapper[0m
+9011.1s 338 return f(*args, **kwargs)
+9011.1s 339 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/run.py"[0m, line [35m1138[0m, in [35mmain[0m
+9011.1s 340 [31mrun[0m[1;31m(args)[0m
+9011.1s 341 [31m~~~[0m[1;31m^^^^^^[0m
+9011.1s 342 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/run.py"[0m, line [35m1129[0m, in [35mrun[0m
+9011.1s 343 [31melastic_launch([0m
+9011.1s 344 [31m~~~~~~~~~~~~~~~[0m
+9011.1s 345 [31mconfig=config,[0m
+9011.1s 346 [31m~~~~~~~~~~~~~~[0m
+9011.1s 347 [31mentrypoint=cmd,[0m
+9011.1s 348 [31m~~~~~~~~~~~~~~~[0m
+9011.1s 349 [31m)[0m[1;31m(*cmd_args)[0m
+9011.1s 350 [31m~[0m[1;31m^^^^^^^^^^^[0m
+9011.1s 351 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/launcher/api.py"[0m, line [35m197[0m, in [35m__call__[0m
+9011.1s 352 return launch_agent(
+9011.1s 353 self._config,
+9011.1s 354 ...<2 lines>...
+9011.1s 355 health_check_server=self._health_check_server,
+9011.1s 356 )
+9011.1s 357 File [35m"/usr/local/lib/python3.13/dist-packages/torch/distributed/launcher/api.py"[0m, line [35m386[0m, in [35mlaunch_agent[0m
+9011.1s 358 raise ChildFailedError(
+9011.1s 359 ...<2 lines>...
+9011.1s 360 )
+9011.1s 361 [1;35mtorch.distributed.elastic.multiprocessing.errors.ChildFailedError[0m: [35m
+9011.1s 362 ============================================================
+9011.1s 363 sar2eo.train FAILED
+9011.1s 364 ------------------------------------------------------------
+9011.1s 365 Failures:
+9011.1s 366 [1]:
+9011.1s 367 time      : 2026-10-28_00:14:07
+9011.1s 368 host      : 92f084296d81
+9011.1s 369 rank      : 0 (local_rank: 0)
+9011.1s 370 exitcode  : 1 (pid: 229)
+9011.1s 371 error_file: <N/A>
+9011.1s 372 traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+9011.1s 373 ------------------------------------------------------------
+9011.1s 374 Root Cause (first observed failure):
+9011.1s 375 [0]:
+9011.1s 376 time      : 2026-10-28_00:14:07
+9011.1s 377 host      : 92f084296d81
+9011.1s 378 rank      : 1 (local_rank: 1)
+9011.1s 379 exitcode  : 1 (pid: 230)
+9011.1s 380 error_file: <N/A>
+9011.1s 381 traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+9011.1s 382 ============================================================[0m
+9019.3s 383 Traceback (most recent call last):
+9019.3s 384 File [35m"<frozen runpy>"[0m, line [35m203[0m, in [35m_run_module_as_main[0m
+9019.3s 385 File [35m"<frozen runpy>"[0m, line [35m88[0m, in [35m_run_code[0m
+9019.3s 386 File [35m"/kaggle/working/sar_to_eo/sar2eo/evaluate.py"[0m, line [35m45[0m, in [35m<module>[0m
+9019.3s 387 if __name__ == "__main__": [31mmain[0m[1;31m()[0m
+9019.3s 388 [31m~~~~[0m[1;31m^^[0m
+9019.3s 389 File [35m"/kaggle/working/sar_to_eo/sar2eo/evaluate.py"[0m, line [35m29[0m, in [35mmain[0m
+9019.3s 390 model = SAR2EO(cfg.d_model, cfg.depth, cfg.heads, cfg.align_layer, cfg.dino_dim).to(device); state = [31mtorch.load[0m[1;31m(a.checkpoint, map_location=device, weights_only=False)[0m; model.load_state_dict(state.get("ema", state.get("model", state))); model.eval()
+9019.3s 391 [31m~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+9019.3s 392 File [35m"/usr/local/lib/python3.13/dist-packages/torch/serialization.py"[0m, line [35m1565[0m, in [35mload[0m
+9019.3s 393 with [31m_open_file_like[0m[1;31m(f, "rb")[0m as opened_file:
+9019.3s 394 [31m~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^[0m
+9019.3s 395 File [35m"/usr/local/lib/python3.13/dist-packages/torch/serialization.py"[0m, line [35m795[0m, in [35m_open_file_like[0m
+9019.3s 396 return _open_file(name_or_buffer, mode)
+9019.3s 397 File [35m"/usr/local/lib/python3.13/dist-packages/torch/serialization.py"[0m, line [35m776[0m, in [35m__init__[0m
+9019.3s 398 super().__init__([31mopen[0m[1;31m(name, mode)[0m)  # noqa: SIM115
+9019.3s 399 [31m~~~~[0m[1;31m^^^^^^^^^^^^[0m
+9019.3s 400 [1;35mFileNotFoundError[0m: [35m[Errno 2] No such file or directory: 'runs/main/checkpoint_last.pt'[0m
+9020.4s 401 /bin/bash: line 1: sar-file: No such file or directory
+9023.1s 402 /usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+9023.1s 403 cells[i][c] = re.sub('\\\\\|', '|', cell)
+9023.3s 404 /usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+9023.3s 405 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+9024.1s 406 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+9024.2s 407 [NbConvertApp] Writing 81133 bytes to __notebook__.ipynb
+9026.6s 408 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+9027.1s 409 [NbConvertApp] Writing 354477 bytes to __results__.html

@@ -12,12 +12,14 @@ try:
     from .frozen import FrozenTargets
     from .model import SAR2EO
     from .sample import sample
+    from .sar_encoder import load_sar_checkpoint
 except ImportError:
     from sar2eo.configs import Config
     from sar2eo.dataset import PairedSEN12
     from sar2eo.frozen import FrozenTargets
     from sar2eo.model import SAR2EO
     from sar2eo.sample import sample
+    from sar2eo.sar_encoder import load_sar_checkpoint
 
 
 def psnr(a, b): return float((-10 * torch.log10(F.mse_loss(a, b).clamp_min(1e-8))).item())
@@ -26,7 +28,11 @@ def psnr(a, b): return float((-10 * torch.log10(F.mse_loss(a, b).clamp_min(1e-8)
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--checkpoint", required=True); ap.add_argument("--config", default="runs/main/config.json"); ap.add_argument("--split", default="splits/test.txt"); ap.add_argument("--out", default="results/metrics.csv"); a = ap.parse_args()
     cfg = Config.load(a.config); device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = SAR2EO(cfg.d_model, cfg.depth, cfg.heads, cfg.align_layer, cfg.dino_dim).to(device); state = torch.load(a.checkpoint, map_location=device, weights_only=False); model.load_state_dict(state.get("ema", state.get("model", state))); model.eval()
+    model = SAR2EO(cfg.d_model, cfg.depth, cfg.heads, cfg.align_layer, cfg.dino_dim).to(device)
+    load_sar_checkpoint(model.sar_encoder, cfg.sar_checkpoint)
+    state = torch.load(a.checkpoint, map_location=device, weights_only=False)
+    model.load_state_dict(state.get("ema", state.get("model", state)))
+    model.eval()
     targets = FrozenTargets(cfg.vae_id, cfg.dino_id).to(device); loader = DataLoader(PairedSEN12(a.split, False), batch_size=1, num_workers=cfg.num_workers, pin_memory=True)
     vals = {"psnr": [], "lpips": [], "ssim": [], "edge_f1": []}
     try: import cv2

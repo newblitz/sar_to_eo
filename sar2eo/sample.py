@@ -8,10 +8,12 @@ try:
     from .configs import Config
     from .frozen import FrozenTargets
     from .model import SAR2EO
+    from .sar_encoder import load_sar_checkpoint
 except ImportError:
     from sar2eo.configs import Config
     from sar2eo.frozen import FrozenTargets
     from sar2eo.model import SAR2EO
+    from sar2eo.sar_encoder import load_sar_checkpoint
 
 
 def load_sar(path, device):
@@ -33,7 +35,10 @@ def sample(model, sar, steps=50, cfg_scale=1.5):
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--checkpoint", required=True); ap.add_argument("--sar", required=True); ap.add_argument("--output", default="results/sample.png"); ap.add_argument("--config", default="runs/main/config.json"); ap.add_argument("--cfg", type=float, default=1.5); a = ap.parse_args()
     cfg = Config.load(a.config); device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = SAR2EO(cfg.d_model, cfg.depth, cfg.heads, cfg.align_layer, cfg.dino_dim).to(device); state = torch.load(a.checkpoint, map_location=device, weights_only=False); model.load_state_dict(state.get("ema", state.get("model", state)))
+    model = SAR2EO(cfg.d_model, cfg.depth, cfg.heads, cfg.align_layer, cfg.dino_dim).to(device)
+    load_sar_checkpoint(model.sar_encoder, cfg.sar_checkpoint)
+    state = torch.load(a.checkpoint, map_location=device, weights_only=False)
+    model.load_state_dict(state.get("ema", state.get("model", state)))
     targets = FrozenTargets(cfg.vae_id, cfg.dino_id).to(device); z = sample(model, load_sar(a.sar, device), cfg_scale=a.cfg); image = ((targets.decode(z, cfg.vae_scale)[0] + 1) * 127.5).byte().permute(1, 2, 0).cpu().numpy(); Path(a.output).parent.mkdir(parents=True, exist_ok=True); Image.fromarray(image).save(a.output)
 
 

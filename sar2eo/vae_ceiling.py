@@ -18,7 +18,11 @@ except ImportError:
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--config", default="runs/main/config.json"); ap.add_argument("--split", default="splits/val.txt"); ap.add_argument("--out", default="results/vae_ceiling.json"); a = ap.parse_args()
-    cfg = Config.load(a.config); device = torch.device("cuda" if torch.cuda.is_available() else "cpu"); targets = FrozenTargets(cfg.vae_id, cfg.dino_id).to(device); loader = DataLoader(PairedSEN12(a.split), batch_size=1, num_workers=cfg.num_workers)
+    cfg_path = Path(a.config)
+    cfg = Config.load(cfg_path) if cfg_path.exists() else Config()
+    if not cfg_path.exists():
+        print(f"Config not found at {cfg_path}; using default Config for frozen-asset evaluation.")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu"); targets = FrozenTargets(cfg.vae_id, cfg.dino_id).to(device); loader = DataLoader(PairedSEN12(a.split), batch_size=1, num_workers=cfg.num_workers)
     scores = []; lpips_metric = None
     try:
         import lpips

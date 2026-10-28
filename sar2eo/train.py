@@ -1,5 +1,6 @@
 import argparse
 import contextlib
+import copy
 import csv
 import math
 import os
@@ -180,8 +181,10 @@ def main():
 
     base_model = SAR2EO(cfg.d_model, cfg.depth, cfg.heads, cfg.align_layer, cfg.dino_dim, cfg.in_chans).to(device)
     load_sar_checkpoint(base_model.sar_encoder, cfg.sar_checkpoint)
-    ema = SAR2EO(cfg.d_model, cfg.depth, cfg.heads, cfg.align_layer, cfg.dino_dim, cfg.in_chans).to(device)
-    ema.load_state_dict(base_model.state_dict())
+    # Copy after SAR-JEPA adaptation. Constructing a second SAR2EO independently
+    # can select the timm ViT path, while the loaded base model uses the compact
+    # SAR-JEPA-compatible encoder with different key names and positional shape.
+    ema = copy.deepcopy(base_model).to(device)
     ema.requires_grad_(False)
 
     sar_ids = {id(p) for p in base_model.sar_encoder.vit.parameters()}
