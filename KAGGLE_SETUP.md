@@ -77,7 +77,21 @@ The script fails instead of silently substituting a different SAR checkpoint.
 Preflight must show CUDA available, the Kaggle GPU name, the local VAE and
 DINOv2 directories, and the SAR-JEPA checkpoint.
 
-## 5. Measure the frozen VAE ceiling
+## 5. Run one two-GPU smoke test
+
+This performs one real distributed forward and backward pass through the
+dataset, official SAR-JEPA/iRPE encoder, frozen SD-VAE, frozen DINOv2,
+SiT-B/2 path, and both training losses. It does not create checkpoints or
+enter the 60,000-step training loop. Require a `status: PASS` result before
+starting a training run.
+
+~~~bash
+!CUDA_VISIBLE_DEVICES=0,1 torchrun --standalone --nproc_per_node=2 \
+  -m sar2eo.smoke_test \
+  --split splits/train.txt
+~~~
+
+## 6. Measure the frozen VAE ceiling
 
 ~~~bash
 !CUDA_VISIBLE_DEVICES=0 python -m sar2eo.vae_ceiling \
@@ -91,7 +105,7 @@ Check the available options if needed:
 !python -m sar2eo.vae_ceiling --help
 ~~~
 
-## 6. Run the required overfit/debug check
+## 7. Run the required overfit/debug check
 
 ~~~bash
 !CUDA_VISIBLE_DEVICES=0,1 torchrun --standalone --nproc_per_node=2 \
@@ -101,7 +115,7 @@ Check the available options if needed:
 Inspect runs/overfit/logs.csv and confirm that the loss decreases before
 starting the full run.
 
-## 7. Run the main training job
+## 8. Run the main training job
 
 ~~~bash
 !CUDA_VISIBLE_DEVICES=0,1 torchrun --standalone --nproc_per_node=2 \
@@ -119,7 +133,7 @@ To resume after a Kaggle session interruption, rerun the setup cells and use:
   -m sar2eo.train --run main --steps 60000
 ~~~
 
-## 8. Evaluate and save results
+## 9. Evaluate and save results
 
 ~~~bash
 !python -m sar2eo.evaluate \
@@ -140,7 +154,7 @@ Generate one sample:
   --cfg 1.5
 ~~~
 
-## 9. Persist outputs
+## 10. Persist outputs
 
 Kaggle sessions are temporary. Save runs/, results/, and REPORT.md as notebook
 output or copy them to a Kaggle Dataset after training. Never commit v_2/,
