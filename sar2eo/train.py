@@ -36,7 +36,14 @@ def setup_distributed():
             raise RuntimeError("Distributed training requires CUDA GPUs.")
         local_rank = int(os.environ.get("LOCAL_RANK", "0"))
         torch.cuda.set_device(local_rank)
-        dist.init_process_group(backend="nccl", init_method="env://")
+        rank_device = torch.device("cuda", local_rank)
+        try:
+            dist.init_process_group(
+                backend="nccl", init_method="env://", device_id=rank_device
+            )
+        except TypeError:
+            # PyTorch before device_id support still uses the device set above.
+            dist.init_process_group(backend="nccl", init_method="env://")
         rank = dist.get_rank()
     else:
         local_rank, rank = 0, 0

@@ -42,7 +42,12 @@ def main() -> None:
     local_rank = int(os.environ.get("LOCAL_RANK", "0"))
     torch.cuda.set_device(local_rank)
     device = torch.device("cuda", local_rank)
-    dist.init_process_group(backend="nccl", init_method="env://")
+    try:
+        dist.init_process_group(
+            backend="nccl", init_method="env://", device_id=device
+        )
+    except TypeError:
+        dist.init_process_group(backend="nccl", init_method="env://")
 
     try:
         cfg = Config.load(args.config) if args.config else Config()
@@ -85,6 +90,7 @@ def main() -> None:
             find_unused_parameters=True,
         )
         targets = FrozenTargets(cfg.vae_id, cfg.dino_id).to(device)
+        optimizer = torch.optim.AdamW(model.parameters(), lr=cfg.lr_new, betas=(0.9, 0.95))
         model.train()
 
         with torch.autocast(device_type="cuda", dtype=torch.bfloat16):
@@ -109,6 +115,15 @@ def main() -> None:
         if not torch.isfinite(loss.detach()):
             raise FloatingPointError(f"Non-finite smoke-test loss: {loss.item()}")
         loss.backward()
+        trainable_grads = [
+            parameter.grad for parameter in model.parameters() if parameter.requires_grad
+        ]
+        if not any(gradient is not None and torch.isfinite(gradient).all() for gradient in trainable_grads):
+            raise RuntimeError("No finite gradients were produced for trainable model parameters.")
+        if any(parameter.grad is not None for parameter in targets.parameters()):
+            raise RuntimeError("A frozen VAE or DINOv2 parameter received a gradient.")
+        optimizer.step()
+        optimizer.zero_grad(set_to_none=True)
         dist.barrier()
 
         if rank == 0:
@@ -124,6 +139,7 @@ def main() -> None:
                     "velocity": tuple(velocity.shape),
                     "aligned": tuple(aligned.shape),
                     "loss": float(loss.detach().item()),
+                    "optimizer_step": "completed",
                 },
                 flush=True,
             )

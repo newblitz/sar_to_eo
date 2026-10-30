@@ -26,15 +26,36 @@ def psnr(a, b): return float((-10 * torch.log10(F.mse_loss(a, b).clamp_min(1e-8)
 
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("--checkpoint", required=True); ap.add_argument("--config", default="runs/main/config.json"); ap.add_argument("--split", default="splits/test.txt"); ap.add_argument("--out", default="results/metrics.csv"); a = ap.parse_args()
-    cfg = Config.load(a.config); device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--checkpoint", required=True)
+    ap.add_argument("--config", default=None)
+    ap.add_argument("--split", default="splits/test.txt")
+    ap.add_argument("--out", default="results/metrics.csv")
+    a = ap.parse_args()
+    checkpoint = Path(a.checkpoint)
+    config_path = Path(a.config) if a.config else checkpoint.parent / "config.json"
+    if not config_path.is_file():
+        raise FileNotFoundError(
+            f"No configuration was found for checkpoint {checkpoint}. "
+            f"Pass --config explicitly; looked for {config_path}."
+        )
+    cfg = Config.load(config_path)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = SAR2EO(cfg.d_model, cfg.depth, cfg.heads, cfg.align_layer, cfg.dino_dim)
     load_sar_checkpoint(model.sar_encoder, cfg.sar_checkpoint)
     model = model.to(device)
-    state = torch.load(a.checkpoint, map_location=device, weights_only=False)
+    if not checkpoint.is_file():
+        raise FileNotFoundError(f"Evaluation checkpoint does not exist: {checkpoint}")
+    state = torch.load(checkpoint, map_location=device, weights_only=False)
     model.load_state_dict(state.get("ema", state.get("model", state)))
     model.eval()
-    targets = FrozenTargets(cfg.vae_id, cfg.dino_id).to(device); loader = DataLoader(PairedSEN12(a.split, False), batch_size=1, num_workers=cfg.num_workers, pin_memory=True)
+    targets = FrozenTargets(cfg.vae_id, cfg.dino_id).to(device)
+    loader = DataLoader(
+        PairedSEN12(a.split, False, cfg.image_size),
+        batch_size=1,
+        num_workers=cfg.num_workers,
+        pin_memory=device.type == "cuda",
+    )
     vals = {"psnr": [], "lpips": [], "ssim": [], "edge_f1": []}
     try: import cv2
     except ImportError: cv2 = None

@@ -1,33 +1,8 @@
-import re
 import sys
 from pathlib import Path
 import torch
 from torch import nn
 import torch.nn.functional as F
-try:
-    from .compat import ensure_torchvision_ops
-except ImportError:
-    from sar2eo.compat import ensure_torchvision_ops
-
-
-class _Attention(nn.Module):
-    def __init__(self, dim=768, heads=12):
-        super().__init__(); self.heads = heads; self.head_dim = dim // heads
-        self.qkv = nn.Linear(dim, dim * 3); self.proj = nn.Linear(dim, dim)
-
-    def forward(self, x):
-        b, n, c = x.shape; q, k, v = self.qkv(x).reshape(b, n, 3, self.heads, self.head_dim).permute(2, 0, 3, 1, 4)
-        y = F.scaled_dot_product_attention(q, k, v).transpose(1, 2).reshape(b, n, c)
-        return self.proj(y)
-
-
-class _Block(nn.Module):
-    def __init__(self, dim=768, heads=12):
-        super().__init__(); self.norm1 = nn.LayerNorm(dim); self.attn = _Attention(dim, heads); self.norm2 = nn.LayerNorm(dim); self.mlp = nn.Sequential(nn.Linear(dim, dim * 4), nn.GELU(), nn.Linear(dim * 4, dim))
-
-    def forward(self, x):
-        x = x + self.attn(self.norm1(x))
-        return x + self.mlp(self.norm2(x))
 
 
 def _upstream_sar_jepa_encoder():
@@ -50,14 +25,19 @@ class SARJEPAViT(nn.Module):
     def __init__(self):
         super().__init__()
         self.encoder = _upstream_sar_jepa_encoder()
-        self.embed_dim = 768
-
+        self.embed_dim = self.encoder.patch_embed.proj.out_channels
+        if self.embed_dim != 768 or len(self.encoder.blocks) != 12:
+            raise RuntimeError(
+                "SAR-JEPA factory is not the required ViT-B/16: "
+                f"width={self.embed_dim}, depth={len(self.encoder.blocks)}"
+            )
     def forward(self, x):
         if x.shape[-2:] != (224, 224):
             x = F.interpolate(x, size=(224, 224), mode="bilinear", align_corners=False)
         h = self.encoder.patch_embed(x).float()
         cls = self.encoder.cls_token.expand(h.shape[0], -1, -1)
         h = torch.cat((cls, h), dim=1)
+        h = h + self.encoder.pos_embed
         for block in self.encoder.blocks:
             h = block(h)
         h = self.encoder.norm(h)[:, 1:]
@@ -65,23 +45,14 @@ class SARJEPAViT(nn.Module):
         return F.interpolate(h, size=(16, 16), mode="bilinear", align_corners=False).flatten(2).transpose(1, 2)
 
 
-class _FallbackViT(nn.Module):
-    def __init__(self, in_chans=1):
-        super().__init__(); self.patch = nn.Conv2d(in_chans, 768, 16, 16); self.norm = nn.LayerNorm(768)
-    def forward(self, x): return self.norm(self.patch(x).flatten(2).transpose(1, 2))
-
-
 class SARViT(nn.Module):
+    """Required SAR-JEPA ViT-B/16 encoder; no generic-encoder fallback exists."""
     def __init__(self, in_chans: int = 1, img_size: int = 256):
-        super().__init__(); self.embed_dim = 768
-        try:
-            ensure_torchvision_ops()
-            import timm
-            # The explicit SAR-JEPA checkpoint is loaded later; never trigger an
-            # implicit network download while constructing the wrapper.
-            self.vit = timm.create_model("vit_base_patch16_224", pretrained=False, num_classes=0, global_pool="", class_token=False, img_size=img_size, in_chans=in_chans, drop_path_rate=0.1)
-        except Exception:
-            self.vit = _FallbackViT(in_chans)
+        super().__init__()
+        if in_chans != 1 or img_size != 256:
+            raise ValueError("SAR-JEPA wrapper requires single-channel 256px SAR inputs.")
+        self.embed_dim = 768
+        self.vit = SARJEPAViT()
 
     def forward(self, x):
         h = self.vit(x)
@@ -100,23 +71,61 @@ def inspect_checkpoint(checkpoint: str | Path, report_path: str | Path = "result
 
 
 def load_sar_checkpoint(model: SARViT, checkpoint: str | None) -> None:
-    if not checkpoint or not Path(checkpoint).exists(): print("SAR-JEPA checkpoint unavailable; using fallback:", checkpoint); return
-    state = torch.load(checkpoint, map_location="cpu", weights_only=False); raw = state.get("model", state.get("state_dict", state));
-    has_rpe = any("rpe" in k for k in raw)
-    if has_rpe:
-        device = next(model.vit.parameters()).device
-        model.vit = SARJEPAViT().to(device)
+    """Load the required SAR-JEPA encoder and reject incomplete checkpoints."""
+    if not checkpoint:
+        raise FileNotFoundError("No SAR-JEPA checkpoint path was configured.")
+    path = Path(checkpoint)
+    if not path.is_file():
+        raise FileNotFoundError(f"Required SAR-JEPA checkpoint does not exist: {path}")
+
+    state = torch.load(path, map_location="cpu", weights_only=False)
+    raw = state.get("model", state.get("state_dict", state))
+    if not isinstance(raw, dict) or not raw:
+        raise ValueError(f"SAR-JEPA checkpoint has no usable model state dictionary: {path}")
     clean = {}
+    renamed_buffers = 0
     for key, value in raw.items():
-        if key.startswith(("module.decoder", "module.hogs", "module.mask_token", "module.encoder_pred", "module.sarfeature")): continue
         key = key.removeprefix("module.")
+        # Older SAR-JEPA checkpoints called these fixed handcrafted feature
+        # modules ``hogs*``; the current upstream factory calls them
+        # ``sarfeature*``. They are non-trainable buffers, so this is a
+        # verified state-dict naming compatibility alias, not a dropped key.
+        for index in range(1, 5):
+            old_prefix = f"hogs{index}."
+            if key.startswith(old_prefix):
+                key = f"sarfeature{index}." + key[len(old_prefix):]
+                renamed_buffers += 1
+                break
         clean[key] = value
-    if has_rpe:
-        clean = {f"encoder.{key}": value for key, value in clean.items()}
-    missing, unexpected = model.vit.load_state_dict(clean, strict=False)
-    print("SAR-JEPA iRPE tables present:", has_rpe)
-    print("SAR checkpoint missing:", missing)
-    print("SAR checkpoint unexpected:", unexpected)
+
+    expected = set(model.vit.encoder.state_dict())
+    received = set(clean)
+    missing = sorted(expected - received)
+    unexpected = sorted(received - expected)
+    if missing or unexpected:
+        raise RuntimeError(
+            "SAR-JEPA checkpoint/model key mismatch. "
+            f"missing={missing}; unexpected={unexpected}. "
+            "The complete upstream SAR-JEPA model state must match."
+        )
+    try:
+        incompatible = model.vit.encoder.load_state_dict(clean, strict=True)
+    except RuntimeError as exc:
+        raise RuntimeError(f"SAR-JEPA checkpoint shape mismatch for {path}: {exc}") from exc
+    if incompatible.missing_keys or incompatible.unexpected_keys:
+        raise AssertionError(f"Unexpected strict load result: {incompatible}")
+
+    patch_key = "patch_embed.proj.weight"
+    if not torch.equal(model.vit.encoder.state_dict()[patch_key].cpu(), clean[patch_key].cpu()):
+        raise RuntimeError("SAR-JEPA patch embedding weight was not loaded from the checkpoint.")
+    rpe_keys = [key for key in clean if ".rpe_" in key]
+    if not rpe_keys:
+        raise RuntimeError("SAR-JEPA checkpoint is missing required iRPE tables.")
+    print(f"SAR-JEPA checkpoint loaded strictly: {path}")
+    print(f"SAR-JEPA parameters loaded: {len(clean)}")
+    if renamed_buffers:
+        print(f"SAR-JEPA compatibility aliases applied: {renamed_buffers}")
+    print(f"SAR-JEPA iRPE tables loaded: {len(rpe_keys)}")
 
 
 def llrd_groups(vit: nn.Module, base_lr: float, decay: float = 0.75, wd: float = 0.05):

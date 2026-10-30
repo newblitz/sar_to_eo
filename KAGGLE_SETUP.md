@@ -38,8 +38,13 @@ assets/SiT/                       -> cloned SiT source
 assets/SAR-JEPA/                 -> cloned SAR-JEPA source
 assets/sd-vae-ft-ema/            -> downloaded SD-VAE
 assets/dinov2-base/              -> downloaded DINOv2
-assets/sar_jepa/checkpoint-200.pth -> attached SAR-JEPA checkpoint
+assets/sar_jepa/checkpoint-200.pth -> attached SAR-JEPA checkpoint (diagnostic link)
 ~~~
+
+The saved `Config` uses the required canonical checkpoint location
+`/kaggle/input/datasets/prateeking/sar-jepa-input/checkpoint-200.pth`. The setup
+script also creates the `assets/sar_jepa/` link for inspection and legacy
+overrides; do not substitute a different checkpoint silently.
 
 ~~~bash
 !python scripts/kaggle_setup.py \
@@ -146,10 +151,10 @@ To resume after a Kaggle session interruption, rerun the setup cells and use:
 Generate one sample:
 
 ~~~bash
-!python -m sar2eo.sample \
+!SAR_FILE=$(find v_2 -path '*/s1/*.png' -print -quit); test -n "$SAR_FILE"; python -m sar2eo.sample \
   --checkpoint runs/main/checkpoint_last.pt \
   --config runs/main/config.json \
-  --sar /kaggle/working/sar_to_eo/v_2/agri/s1/<sar-file>.png \
+  --sar "$SAR_FILE" \
   --output results/sample_agri.png \
   --cfg 1.5
 ~~~

@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import argparse
+import ast
+import compileall
 import os
 import subprocess
 import sys
@@ -61,6 +63,98 @@ def clone_if_missing(url: str, destination: Path) -> None:
     run("git", "clone", "--depth", "1", url, str(destination))
 
 
+def _uses_name(source: str, name: str) -> bool:
+    """Return whether a source file uses a name outside of an import statement."""
+    tree = ast.parse(source)
+    return any(isinstance(node, ast.Name) and node.id == name for node in ast.walk(tree))
+
+
+def patch_sar_jepa_compatibility(source_root: Path) -> None:
+    """Apply the minimal, audited Python/timm compatibility patch to SAR-JEPA.
+
+    The upstream LoMaR file imports ``T`` from :mod:`re`; ``re`` has never
+    exported that symbol and the name is unused by the upstream model.  The
+    source also uses timm 0.3 import locations that moved in current Kaggle
+    timm releases.  These substitutions change imports only, never model
+    layers, tensor operations, or checkpoint keys.
+    """
+    pretraining = source_root / "Pretraining"
+    if not pretraining.is_dir():
+        raise FileNotFoundError(f"SAR-JEPA Pretraining source is missing: {pretraining}")
+
+    repaired_imports: list[Path] = []
+    for path in pretraining.rglob("*.py"):
+        text = path.read_text()
+        lines = text.splitlines()
+        invalid_lines = [line for line in lines if line.strip() == "from re import T"]
+        if invalid_lines:
+            without_import = "\n".join(
+                line for line in lines if line.strip() != "from re import T"
+            ) + "\n"
+            if _uses_name(without_import, "T"):
+                raise RuntimeError(
+                    f"Refusing to remove 'from re import T' from {path}: T is used elsewhere."
+                )
+            path.write_text(without_import)
+            repaired_imports.append(path)
+
+    irpe = pretraining / "vision_transformer_irpe.py"
+    if not irpe.exists():
+        raise FileNotFoundError(f"Missing upstream iRPE implementation: {irpe}")
+    text = irpe.read_text()
+    replacements = {
+        "from timm.models.helpers import load_pretrained": (
+            "try:\n"
+            "    from timm.models.helpers import load_pretrained\n"
+            "except ImportError:\n"
+            "    from timm.models._builder import load_pretrained"
+        ),
+        "from timm.models.layers import DropPath, to_2tuple, trunc_normal_": (
+            "try:\n"
+            "    from timm.models.layers import DropPath, to_2tuple, trunc_normal_\n"
+            "except ImportError:\n"
+            "    from timm.layers import DropPath, to_2tuple, trunc_normal_"
+        ),
+        "from timm.models.registry import register_model": (
+            "try:\n"
+            "    from timm.models.registry import register_model\n"
+            "except ImportError:\n"
+            "    from timm.models._registry import register_model"
+        ),
+    }
+    for old, new in replacements.items():
+        if old in text:
+            text = text.replace(old, new)
+            if irpe not in repaired_imports:
+                repaired_imports.append(irpe)
+    irpe.write_text(text)
+
+    if not compileall.compile_dir(pretraining, quiet=1):
+        raise RuntimeError("SAR-JEPA source does not compile after compatibility patching.")
+    print(
+        "SAR-JEPA compatibility patch:",
+        "updated " + ", ".join(map(str, repaired_imports))
+        if repaired_imports
+        else "already applied; source compiled successfully",
+    )
+
+
+def verify_sar_jepa_import(source_root: Path) -> None:
+    """Test the actual upstream factory in a fresh Python interpreter."""
+    pretraining = source_root / "Pretraining"
+    code = (
+        "import sys; "
+        "from sar2eo.compat import ensure_torchvision_ops; ensure_torchvision_ops(); "
+        f"sys.path.insert(0, {str(pretraining)!r}); "
+        "from models_lomar import mae_vit_base_patch16_dec512d8b; "
+        "model = mae_vit_base_patch16_dec512d8b(img_size=224, in_chans=1); "
+        "assert len(model.blocks) == 12; "
+        "assert model.patch_embed.proj.weight.shape == (768, 1, 16, 16); "
+        "print('SAR-JEPA factory import: OK')"
+    )
+    run(sys.executable, "-c", code)
+
+
 def download_hf(repo_id: str, destination: Path) -> None:
     if (destination / "config.json").exists():
         print(f"using existing Hugging Face asset: {destination}")
@@ -108,6 +202,8 @@ def main() -> None:
 
     clone_if_missing("https://github.com/willisma/SiT", root / "assets/SiT")
     clone_if_missing("https://github.com/waterdisappear/SAR-JEPA", root / "assets/SAR-JEPA")
+    patch_sar_jepa_compatibility(root / "assets/SAR-JEPA")
+    verify_sar_jepa_import(root / "assets/SAR-JEPA")
     download_hf("stabilityai/sd-vae-ft-ema", root / "assets/sd-vae-ft-ema")
     download_hf("facebook/dinov2-base", root / "assets/dinov2-base")
 

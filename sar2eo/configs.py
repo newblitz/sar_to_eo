@@ -37,7 +37,7 @@ class Config:
     vae_id: str = "assets/sd-vae-ft-ema"
     dino_id: str = "assets/dinov2-base"
     sit_checkpoint: str = ""
-    sar_checkpoint: str = "assets/sar_jepa/checkpoint-200.pth"
+    sar_checkpoint: str = "/kaggle/input/datasets/prateeking/sar-jepa-input/checkpoint-200.pth"
     sar_preprocessing: str = "8-bit scaled intensity; x/127.5 - 1; no dB conversion"
     terrain_categories: tuple[str, ...] = ("agriculture", "barren", "grassland", "urban")
 
