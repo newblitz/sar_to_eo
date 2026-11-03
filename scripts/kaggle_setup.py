@@ -8,12 +8,15 @@ import compileall
 import os
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 
 def run(*command: str) -> None:
     print("+", " ".join(command), flush=True)
+    started = time.monotonic()
     subprocess.run(command, check=True)
+    print(f"completed in {time.monotonic() - started:.1f}s", flush=True)
 
 
 def replace_link(target: Path, source: Path) -> None:
@@ -192,6 +195,7 @@ def main() -> None:
     parser.add_argument("--allow-missing-sar", action="store_true")
     args = parser.parse_args()
 
+    setup_started = time.monotonic()
     root = args.repo_root.resolve()
     input_root = args.kaggle_input.resolve()
     os.chdir(root)
@@ -235,6 +239,14 @@ def main() -> None:
         root / "assets/sar_jepa/checkpoint-200.pth",
     ):
         print(f"  {path}: {'OK' if path.exists() else 'MISSING'}")
+    dataset_pairs = sum(
+        len(list((dataset / folder / "s1").glob("*.png")))
+        for folder in ("agri", "barrenland", "grassland", "urban")
+    )
+    print(
+        f"dataset estimate: {dataset_pairs:,} SAR samples; "
+        f"setup elapsed {time.monotonic() - setup_started:.1f}s"
+    )
 
 
 if __name__ == "__main__":

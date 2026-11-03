@@ -13,6 +13,7 @@ try:
     from .model import SAR2EO
     from .sample import sample
     from .sar_encoder import load_sar_checkpoint
+    from .progress import Progress
 except ImportError:
     from sar2eo.configs import Config
     from sar2eo.dataset import PairedSEN12
@@ -20,6 +21,7 @@ except ImportError:
     from sar2eo.model import SAR2EO
     from sar2eo.sample import sample
     from sar2eo.sar_encoder import load_sar_checkpoint
+    from sar2eo.progress import Progress
 
 
 def psnr(a, b): return float((-10 * torch.log10(F.mse_loss(a, b).clamp_min(1e-8))).item())
@@ -59,11 +61,13 @@ def main():
     vals = {"psnr": [], "lpips": [], "ssim": [], "edge_f1": []}
     try: import cv2
     except ImportError: cv2 = None
+    progress = Progress(len(loader), "evaluation")
     for batch in loader:
         sar, gt = batch["sar"].to(device), batch["eo"].to(device); pred = targets.decode(sample(model, sar), cfg.vae_scale)
         vals["psnr"].append(psnr(pred, gt)); vals["ssim"].append(float((1 - (pred - gt).abs().mean()).clamp(0, 1).item()))
         if cv2 is not None:
             pa = cv2.Canny(((pred[0].permute(1, 2, 0).cpu().numpy() + 1) * 127.5).astype(np.uint8), 50, 150) > 0; ga = cv2.Canny(((gt[0].permute(1, 2, 0).cpu().numpy() + 1) * 127.5).astype(np.uint8), 50, 150) > 0; vals["edge_f1"].append(float(2 * (pa & ga).sum() / (pa.sum() + ga.sum() + 1e-8)))
+        progress.update()
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     with open(a.out, "w", newline="") as f:
         w = csv.writer(f); w.writerow(["metric", "value"]); [w.writerow([k, float(np.mean(v)) if v else "unavailable"]) for k, v in vals.items()]

@@ -20,12 +20,14 @@ try:
     from .frozen import FrozenTargets
     from .model import SAR2EO
     from .sar_encoder import llrd_groups, load_sar_checkpoint
+    from .progress import format_duration
 except ImportError:
     from sar2eo.configs import Config
     from sar2eo.dataset import PairedSEN12
     from sar2eo.frozen import FrozenTargets
     from sar2eo.model import SAR2EO
     from sar2eo.sar_encoder import llrd_groups, load_sar_checkpoint
+    from sar2eo.progress import format_duration
 
 
 def setup_distributed():
@@ -242,6 +244,7 @@ def main():
         )
 
     started = time.time()
+    progress_report_every = 100
     iterator = iter(loader)
     model.train()
     opt.zero_grad(set_to_none=True)
@@ -307,12 +310,16 @@ def main():
             align_value = mean_across_workers(l_align.item(), distributed, device)
             if is_main and step % 100 == 0:
                 elapsed = max(time.time() - started, 1e-6)
+                steps_per_second = step / elapsed
+                remaining = (cfg.total_steps - step) / steps_per_second
                 lr = opt.param_groups[0]["lr"]
                 with logs.open("a", newline="") as f:
                     csv.writer(f).writerow([step, flow_value, align_value, lr, step / elapsed])
                 print(
                     f"step={step} flow={flow_value:.5f} align={align_value:.5f} "
-                    f"lr={lr:.3e}"
+                    f"lr={lr:.3e} rate={steps_per_second:.2f} steps/s "
+                    f"elapsed={format_duration(elapsed)} "
+                    f"ETA={format_duration(remaining)}"
                 )
 
             if step % 2000 == 0:

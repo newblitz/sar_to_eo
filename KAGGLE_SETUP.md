@@ -86,6 +86,11 @@ These patches are idempotent and the source is compiled and imported afterward.
 Preflight must show CUDA available, the Kaggle GPU name, the local VAE and
 DINOv2 directories, and the SAR-JEPA checkpoint.
 
+Setup prints command durations and the discovered SAR sample count. Dataset
+preparation, evaluation, and VAE ceiling commands show progress, throughput,
+elapsed time, and ETA. Training prints steps/second and an ETA every 100 steps;
+the first estimate becomes more accurate after the initial warm-up steps.
+
 ## 5. Run one-sample GPU end-to-end test
 
 Run this before distributed training. It loads exactly one sample, performs

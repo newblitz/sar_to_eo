@@ -4,6 +4,7 @@ from pathlib import Path
 import argparse, json, random, re
 import numpy as np
 from PIL import Image, ImageDraw
+from .progress import Progress
 
 CATEGORIES = {"agri": "agriculture", "barrenland": "barren", "grassland": "grassland", "urban": "urban"}
 TARGETS = {"train": 3500, "val": 150, "test": 350}
@@ -68,10 +69,12 @@ def main():
     Path("results").mkdir(exist_ok=True)
     print("dataset root:", root.resolve()); print("folders:", sorted(p.name for p in root.iterdir() if p.is_dir()))
     all_splits = {k: [] for k in TARGETS}; summary = {"categories": {}, "dropped": {}, "scene_split_fallback": {}}
+    dataset_progress = Progress(len(CATEGORIES), "dataset categories")
     for folder in CATEGORIES:
         print(folder, "sample:", [str(p.relative_to(root)) for p in sorted((root / folder).rglob("*.png"))[:3]])
         rows = pair_category(root, folder); splits, fallback = split_category(rows, a.seed); summary["categories"][CATEGORIES[folder]] = {k: len(v) for k, v in splits.items()}; summary["scene_split_fallback"][CATEGORIES[folder]] = fallback
         for split, values in splits.items(): all_splits[split].extend(values)
+        dataset_progress.update()
     rng = random.Random(a.seed)
     for split, rows in all_splits.items():
         rng.shuffle(rows)
