@@ -123,10 +123,16 @@ def patch_sar_jepa_compatibility(source_root: Path) -> None:
         ),
     }
     for old, new in replacements.items():
-        if old in text:
+        if old in text and f"try:\n    {old}" not in text:
             text = text.replace(old, new)
             if irpe not in repaired_imports:
                 repaired_imports.append(irpe)
+    pos_embed = pretraining / "util" / "pos_embed.py"
+    if not pos_embed.exists():
+        raise FileNotFoundError(f"Missing positional-embedding implementation: {pos_embed}")
+    if "dtype=np.float)" in pos_embed.read_text():
+        pos_embed.write_text(pos_embed.read_text().replace("dtype=np.float)", "dtype=float)"))
+        repaired_imports.append(pos_embed)
     irpe.write_text(text)
 
     if not compileall.compile_dir(pretraining, quiet=1):
@@ -145,7 +151,7 @@ def verify_sar_jepa_import(source_root: Path) -> None:
     code = (
         "import sys; "
         "from sar2eo.compat import ensure_torchvision_ops; ensure_torchvision_ops(); "
-        f"sys.path.insert(0, {str(pretraining)!r}); "
+        f"sys.path.append({str(pretraining)!r}); "
         "from models_lomar import mae_vit_base_patch16_dec512d8b; "
         "model = mae_vit_base_patch16_dec512d8b(img_size=224, in_chans=1); "
         "assert len(model.blocks) == 12; "

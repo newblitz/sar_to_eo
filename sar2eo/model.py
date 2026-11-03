@@ -36,7 +36,7 @@ class SAR2EO(nn.Module):
             ensure_torchvision_ops()
             sit_root = Path(__file__).resolve().parent.parent / "assets" / "SiT"
             if sit_root.exists():
-                sys.path.insert(0, str(sit_root))
+                sys.path.append(str(sit_root))
                 from models import SiT_B_2
                 self.backbone = SiT_B_2(input_size=32, in_channels=4, learn_sigma=False)
                 self.x_embedder = self.backbone.x_embedder; self.pos_embed = self.backbone.pos_embed; self.t_embedder = self.backbone.t_embedder; self.blocks = self.backbone.blocks; self.final_layer = self.backbone.final_layer; self._uses_local_sit = True
@@ -61,7 +61,8 @@ class SAR2EO(nn.Module):
             mask = drop.bool().view(b, 1, 1)
             cond = torch.where(mask, self.null_tok.expand(b, -1, -1), cond)
             g = torch.where(mask.squeeze(-1), self.null_glob.expand(b, -1), g)
-        c = self.t_embedder(t.float().view(b)) + g
+        t_input = t.float().view(b) if self._uses_local_sit else t.float().view(b, 1)
+        c = self.t_embedder(t_input) + g
         h = self.x_embedder(x_t)
         if h.ndim == 4: h = h.flatten(2).transpose(1, 2)
         h = h + self.pos_embed + cond
@@ -81,4 +82,3 @@ class SAR2EO(nn.Module):
     def forward(self, x_t, t, sar, drop=None, sar_trainable=True):
         with torch.set_grad_enabled(sar_trainable): cond, g = self.encode_sar(sar)
         return self.denoise(x_t, t, cond, g, drop)
-

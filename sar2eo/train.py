@@ -280,7 +280,7 @@ def main():
                 )
                 l_flow = F.mse_loss(v.float(), (eps - x0).float())
                 l_align = -(
-                    F.normalize(z.float(), -1) * F.normalize(dino.float(), -1)
+                    F.normalize(z.float(), dim=-1) * F.normalize(dino.float(), dim=-1)
                 ).sum(-1).mean()
                 loss = (l_flow + cfg.alignment_lambda * l_align) / accum_steps
             finite = torch.isfinite(loss.detach())

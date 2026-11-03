@@ -70,6 +70,10 @@ If the checkpoint has a nonstandard filename or location:
 
 The script fails instead of silently substituting a different SAR checkpoint.
 
+During setup, the script applies the NumPy 2.x `np.float` compatibility fix
+and current timm import compatibility wrappers to the cloned SAR-JEPA source.
+These patches are idempotent and the source is compiled and imported afterward.
+
 ## 4. Prepare data and run preflight
 
 ~~~bash
@@ -82,7 +86,20 @@ The script fails instead of silently substituting a different SAR checkpoint.
 Preflight must show CUDA available, the Kaggle GPU name, the local VAE and
 DINOv2 directories, and the SAR-JEPA checkpoint.
 
-## 5. Run one two-GPU smoke test
+## 5. Run one-sample GPU end-to-end test
+
+Run this before distributed training. It loads exactly one sample, performs
+the full forward/backward path, checks finite trainable gradients, and takes
+one optimizer step. It must print `status: PASS`.
+
+~~~bash
+!CUDA_VISIBLE_DEVICES=0 python -m sar2eo.sample_test \
+  --split splits/train.txt \
+  --index 0 \
+  --device 0
+~~~
+
+## 6. Run one two-GPU smoke test
 
 This performs one real distributed forward and backward pass through the
 dataset, official SAR-JEPA/iRPE encoder, frozen SD-VAE, frozen DINOv2,
@@ -96,7 +113,7 @@ starting a training run.
   --split splits/train.txt
 ~~~
 
-## 6. Measure the frozen VAE ceiling
+## 7. Measure the frozen VAE ceiling
 
 ~~~bash
 !CUDA_VISIBLE_DEVICES=0 python -m sar2eo.vae_ceiling \
@@ -110,7 +127,7 @@ Check the available options if needed:
 !python -m sar2eo.vae_ceiling --help
 ~~~
 
-## 7. Run the required overfit/debug check
+## 8. Run the required overfit/debug check
 
 ~~~bash
 !CUDA_VISIBLE_DEVICES=0,1 torchrun --standalone --nproc_per_node=2 \
@@ -120,7 +137,7 @@ Check the available options if needed:
 Inspect runs/overfit/logs.csv and confirm that the loss decreases before
 starting the full run.
 
-## 8. Run the main training job
+## 9. Run the main training job
 
 ~~~bash
 !CUDA_VISIBLE_DEVICES=0,1 torchrun --standalone --nproc_per_node=2 \
@@ -138,7 +155,7 @@ To resume after a Kaggle session interruption, rerun the setup cells and use:
   -m sar2eo.train --run main --steps 60000
 ~~~
 
-## 9. Evaluate and save results
+## 10. Evaluate and save results
 
 ~~~bash
 !python -m sar2eo.evaluate \
@@ -159,7 +176,7 @@ Generate one sample:
   --cfg 1.5
 ~~~
 
-## 10. Persist outputs
+## 11. Persist outputs
 
 Kaggle sessions are temporary. Save runs/, results/, and REPORT.md as notebook
 output or copy them to a Kaggle Dataset after training. Never commit v_2/,

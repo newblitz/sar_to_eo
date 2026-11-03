@@ -14,7 +14,7 @@ def _upstream_sar_jepa_encoder():
         )
     source = str(source_root)
     if source not in sys.path:
-        sys.path.insert(0, source)
+        sys.path.append(source)
     from models_lomar import mae_vit_base_patch16_dec512d8b
 
     return mae_vit_base_patch16_dec512d8b(img_size=224, in_chans=1)
