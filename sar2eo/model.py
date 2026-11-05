@@ -27,6 +27,7 @@ class SAR2EO(nn.Module):
     """SiT-shaped latent flow transformer with SAR token conditioning."""
     def __init__(self, d_model=768, depth=12, heads=12, align_layer=4, dino_dim=768, in_chans=1):
         super().__init__(); self.d_model, self.depth, self.align_layer = d_model, depth, align_layer
+        self.sar_trainable = True
         self.sar_encoder = SARViT(in_chans)
         self.cond_proj = nn.Sequential(nn.LayerNorm(768), nn.Linear(768, d_model), nn.GELU(), nn.Linear(d_model, d_model))
         nn.init.zeros_(self.cond_proj[-1].weight); nn.init.zeros_(self.cond_proj[-1].bias)
@@ -79,6 +80,8 @@ class SAR2EO(nn.Module):
             velocity = patch.reshape(b, 4, 4, 16, 16).permute(0, 1, 3, 2, 4).reshape(b, 4, 32, 32)
         return velocity, aligned if self.training else None
 
-    def forward(self, x_t, t, sar, drop=None, sar_trainable=True):
+    def forward(self, x_t, t, sar, drop=None, sar_trainable=None):
+        if sar_trainable is None:
+            sar_trainable = self.sar_trainable
         with torch.set_grad_enabled(sar_trainable): cond, g = self.encode_sar(sar)
         return self.denoise(x_t, t, cond, g, drop)

@@ -91,6 +91,16 @@ preparation, evaluation, and VAE ceiling commands show progress, throughput,
 elapsed time, and ETA. Training prints steps/second and an ETA every 100 steps;
 the first estimate becomes more accurate after the initial warm-up steps.
 
+Build the cached image arrays and VAE latents once before the fast training
+run:
+
+~~~bash
+!python scripts/make_cache.py \
+  --splits splits \
+  --out /kaggle/working/cache \
+  --vae assets/sd-vae-ft-ema
+~~~
+
 ## 5. Run one-sample GPU end-to-end test
 
 Run this before distributed training. It loads exactly one sample, performs
@@ -145,19 +155,21 @@ starting the full run.
 ## 9. Run the main training job
 
 ~~~bash
-!CUDA_VISIBLE_DEVICES=0,1 torchrun --standalone --nproc_per_node=2 \
-  -m sar2eo.train --run main --steps 60000
+!CACHE_DIR=/kaggle/working/cache OMP_NUM_THREADS=1 CUDA_VISIBLE_DEVICES=0,1 \
+  torchrun --standalone --nproc_per_node=2 \
+  -m sar2eo.train --run main --cache-dir /kaggle/working/cache --micro-batch 16 --steps 20000
 ~~~
 
-The default configuration uses 256px images, latent size 32, SiT-B/2
-dimensions, 1,000-step warmup, 3,000-step SAR freeze, EMA decay 0.999, and
-alignment weight 0.5.
+The fast run uses cached VAE latents, a global batch of 64, T4-safe fp16
+scaling, a 1,000-step warmup, 2,000-step SAR freeze, EMA decay 0.999, and
+alignment weight 0.5. Run `python scripts/make_cache.py` once before training.
 
 To resume after a Kaggle session interruption, rerun the setup cells and use:
 
 ~~~bash
-!CUDA_VISIBLE_DEVICES=0,1 torchrun --standalone --nproc_per_node=2 \
-  -m sar2eo.train --run main --steps 60000
+!CACHE_DIR=/kaggle/working/cache OMP_NUM_THREADS=1 CUDA_VISIBLE_DEVICES=0,1 \
+  torchrun --standalone --nproc_per_node=2 \
+  -m sar2eo.train --run main --cache-dir /kaggle/working/cache --micro-batch 16 --steps 20000
 ~~~
 
 ## 10. Evaluate and save results

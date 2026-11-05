@@ -9,12 +9,14 @@ try:
     from .dataset import PairedSEN12
     from .frozen import FrozenTargets
     from .evaluate import psnr
+    from .fastutils import psnr01
     from .progress import Progress
 except ImportError:
     from sar2eo.configs import Config
     from sar2eo.dataset import PairedSEN12
     from sar2eo.frozen import FrozenTargets
     from sar2eo.evaluate import psnr
+    from sar2eo.fastutils import psnr01
     from sar2eo.progress import Progress
 
 
@@ -34,7 +36,11 @@ def main():
     lpips_scores = []
     progress = Progress(len(loader), "VAE ceiling")
     for batch in loader:
-        eo = batch["eo"].to(device); z, _ = targets.encode(eo, cfg.vae_scale); decoded = targets.decode(z, cfg.vae_scale); scores.append(psnr(decoded, eo))
+        eo = batch["eo"].to(device)
+        with torch.no_grad():
+            z = targets.vae.encode(eo).latent_dist.mean * cfg.vae_scale
+            decoded = targets.decode(z, cfg.vae_scale)
+        scores.append(float(psnr01(decoded, eo).item()))
         if lpips_metric is not None: lpips_scores.append(float(lpips_metric(decoded, eo).mean().item()))
         progress.update()
     Path(a.out).parent.mkdir(parents=True, exist_ok=True); Path(a.out).write_text(json.dumps({"count": len(scores), "psnr": sum(scores) / len(scores) if scores else None, "lpips": sum(lpips_scores) / len(lpips_scores) if lpips_scores else None}, indent=2) + "\n")

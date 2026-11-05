@@ -52,6 +52,15 @@ python -m sar2eo.prepare_data --root v_2 --seed 0
 python -m sar2eo.preflight --root .
 ```
 
+Build the cached uint8 image arrays and frozen-VAE latents once:
+
+```bash
+python scripts/make_cache.py \
+  --splits splits \
+  --out /kaggle/working/cache \
+  --vae assets/sd-vae-ft-ema
+```
+
 ## Training
 
 Run the recommended one-sample and distributed smoke tests before training:
@@ -68,7 +77,8 @@ Start training with:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0,1 torchrun --standalone --nproc_per_node=2 \
-  -m sar2eo.train --run main --steps 60000
+  -m sar2eo.train --run main --cache-dir /kaggle/working/cache \
+  --micro-batch 16 --steps 20000
 ```
 
 Training automatically resumes from the latest checkpoint in

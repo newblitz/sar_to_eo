@@ -13,6 +13,7 @@ try:
     from .model import SAR2EO
     from .sample import sample
     from .sar_encoder import load_sar_checkpoint
+    from .fastutils import psnr01
     from .progress import Progress
 except ImportError:
     from sar2eo.configs import Config
@@ -21,10 +22,11 @@ except ImportError:
     from sar2eo.model import SAR2EO
     from sar2eo.sample import sample
     from sar2eo.sar_encoder import load_sar_checkpoint
+    from sar2eo.fastutils import psnr01
     from sar2eo.progress import Progress
 
 
-def psnr(a, b): return float((-10 * torch.log10(F.mse_loss(a, b).clamp_min(1e-8))).item())
+def psnr(a, b): return float(psnr01(a, b).item())
 
 
 def main():
