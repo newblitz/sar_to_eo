@@ -55,6 +55,6 @@ sar-jeppa/*.pth
 CODING_AGENT_INSTRUCTIONS_claude.md
 CODING_AGENT_INSTRUCTIONS_COMPLETE.md
 KAGGLE_SETUP.md
-REPORT.md
-requirements-kaggle.txt
+
 speedup.md
+eval_fix.md

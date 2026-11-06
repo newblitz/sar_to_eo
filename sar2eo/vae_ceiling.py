@@ -8,15 +8,13 @@ try:
     from .configs import Config
     from .dataset import PairedSEN12
     from .frozen import FrozenTargets
-    from .evaluate import psnr
-    from .fastutils import psnr01
+    from . import metrics_fixed as M
     from .progress import Progress
 except ImportError:
     from sar2eo.configs import Config
     from sar2eo.dataset import PairedSEN12
     from sar2eo.frozen import FrozenTargets
-    from sar2eo.evaluate import psnr
-    from sar2eo.fastutils import psnr01
+    from sar2eo import metrics_fixed as M
     from sar2eo.progress import Progress
 
 
@@ -27,23 +25,23 @@ def main():
     if not cfg_path.exists():
         print(f"Config not found at {cfg_path}; using default Config for frozen-asset evaluation.")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu"); targets = FrozenTargets(cfg.vae_id, cfg.dino_id).to(device); loader = DataLoader(PairedSEN12(a.split), batch_size=1, num_workers=cfg.num_workers)
-    scores = []; lpips_metric = None
-    try:
-        import lpips
-        lpips_metric = lpips.LPIPS(net="alex").to(device).eval()
-    except Exception:
-        pass
-    lpips_scores = []
+    lpips_metric = M.LPIPSMetric(str(device))
+    reconstructions, real_images = [], []
     progress = Progress(len(loader), "VAE ceiling")
     for batch in loader:
         eo = batch["eo"].to(device)
         with torch.no_grad():
             z = targets.vae.encode(eo).latent_dist.mean * cfg.vae_scale
             decoded = targets.decode(z, cfg.vae_scale)
-        scores.append(float(psnr01(decoded, eo).item()))
-        if lpips_metric is not None: lpips_scores.append(float(lpips_metric(decoded, eo).mean().item()))
+        reconstructions.append(M.m11_to_u8(decoded))
+        real_images.append(M.m11_to_u8(eo))
         progress.update()
-    Path(a.out).parent.mkdir(parents=True, exist_ok=True); Path(a.out).write_text(json.dumps({"count": len(scores), "psnr": sum(scores) / len(scores) if scores else None, "lpips": sum(lpips_scores) / len(lpips_scores) if lpips_scores else None}, indent=2) + "\n")
+    reconstructed = np.concatenate(reconstructions)
+    originals = np.concatenate(real_images)
+    values = M.per_image_metrics(reconstructed, originals, lpips_metric)
+    summary = M.summarize(values)
+    Path(a.out).parent.mkdir(parents=True, exist_ok=True)
+    Path(a.out).write_text(json.dumps({"count": len(originals), **summary["all"]}, indent=2) + "\n")
 
 
 if __name__ == "__main__": main()

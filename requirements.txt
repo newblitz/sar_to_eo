@@ -6,6 +6,7 @@ huggingface_hub
 accelerate
 torchmetrics[image]
 lpips
+scikit-image
 opencv-python-headless
 Pillow
 numpy

@@ -9,8 +9,11 @@ except ImportError:
 
 
 def version(name):
-    try: return getattr(__import__(name), "__version__", "installed")
-    except Exception: return "missing"
+    try:
+        module = __import__(name)
+        return getattr(module, "__version__", "installed")
+    except Exception:
+        return None
 
 
 def main():
@@ -18,7 +21,23 @@ def main():
     ensure_torchvision_ops()
     print("python:", sys.version); print("torch:", torch.__version__); print("cuda:", torch.cuda.is_available(), "count:", torch.cuda.device_count())
     if torch.cuda.is_available(): print("gpu:", torch.cuda.get_device_name(0), "memory_gb:", round(torch.cuda.get_device_properties(0).total_memory / 2**30, 2), "bf16:", torch.cuda.is_bf16_supported())
-    for package in ["diffusers", "transformers", "huggingface_hub", "timm", "torchmetrics", "lpips", "cv2"]: print(package + ":", version(package))
+    for package in ["diffusers", "transformers", "huggingface_hub", "timm", "cv2"]:
+        print(package + ":", version(package) or "missing")
+    required = {
+        "lpips": "lpips",
+        "torchmetrics": "torchmetrics",
+        "torch-fidelity": "torch_fidelity",
+    }
+    missing = []
+    for label, module_name in required.items():
+        installed = version(module_name)
+        print(label + ":", "OK" if installed else "missing")
+        if not installed:
+            missing.append(label)
+    if missing:
+        raise RuntimeError(
+            "Required evaluation dependencies are missing: " + ", ".join(missing)
+        )
     assets = {"SiT source": root / "assets/SiT", "SAR-JEPA source": root / "assets/SAR-JEPA", "SD-VAE": root / "assets/sd-vae-ft-ema", "DINOv2": root / "assets/dinov2-base", "SAR-JEPA checkpoint": root / "assets/sar_jepa"}
     for name, path in assets.items(): print(name + ":", path, "exists=" + str(path.exists()))
     attached = root / "assets/sar_jepa/checkpoint-200.pth"

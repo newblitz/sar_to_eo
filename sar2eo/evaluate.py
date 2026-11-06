@@ -3,7 +3,6 @@ import csv
 from pathlib import Path
 import numpy as np
 import torch
-import torch.nn.functional as F
 from torch.utils.data import DataLoader
 
 try:
@@ -13,7 +12,7 @@ try:
     from .model import SAR2EO
     from .sample import sample
     from .sar_encoder import load_sar_checkpoint
-    from .fastutils import psnr01
+    from . import metrics_fixed as M
     from .progress import Progress
 except ImportError:
     from sar2eo.configs import Config
@@ -22,11 +21,8 @@ except ImportError:
     from sar2eo.model import SAR2EO
     from sar2eo.sample import sample
     from sar2eo.sar_encoder import load_sar_checkpoint
-    from sar2eo.fastutils import psnr01
+    from sar2eo import metrics_fixed as M
     from sar2eo.progress import Progress
-
-
-def psnr(a, b): return float(psnr01(a, b).item())
 
 
 def main():
@@ -60,20 +56,19 @@ def main():
         num_workers=cfg.num_workers,
         pin_memory=device.type == "cuda",
     )
-    vals = {"psnr": [], "lpips": [], "ssim": [], "edge_f1": []}
-    try: import cv2
-    except ImportError: cv2 = None
+    generated, real = [], []
+    lpips_metric = M.LPIPSMetric(str(device))
     progress = Progress(len(loader), "evaluation")
     for batch in loader:
         sar, gt = batch["sar"].to(device), batch["eo"].to(device); pred = targets.decode(sample(model, sar), cfg.vae_scale)
-        vals["psnr"].append(psnr(pred, gt)); vals["ssim"].append(float((1 - (pred - gt).abs().mean()).clamp(0, 1).item()))
-        if cv2 is not None:
-            pa = cv2.Canny(((pred[0].permute(1, 2, 0).cpu().numpy() + 1) * 127.5).astype(np.uint8), 50, 150) > 0; ga = cv2.Canny(((gt[0].permute(1, 2, 0).cpu().numpy() + 1) * 127.5).astype(np.uint8), 50, 150) > 0; vals["edge_f1"].append(float(2 * (pa & ga).sum() / (pa.sum() + ga.sum() + 1e-8)))
+        generated.append(M.m11_to_u8(pred))
+        real.append(M.m11_to_u8(gt))
         progress.update()
+    metrics = M.summarize(M.per_image_metrics(np.concatenate(generated), np.concatenate(real), lpips_metric))
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     with open(a.out, "w", newline="") as f:
-        w = csv.writer(f); w.writerow(["metric", "value"]); [w.writerow([k, float(np.mean(v)) if v else "unavailable"]) for k, v in vals.items()]
-    print({k: float(np.mean(v)) if v else None for k, v in vals.items()})
+        w = csv.writer(f); w.writerow(["metric", "value"]); [w.writerow([k, v]) for k, v in metrics["all"].items()]
+    print(metrics["all"])
 
 
 if __name__ == "__main__": main()
