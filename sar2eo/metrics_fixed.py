@@ -28,7 +28,9 @@ def m11_to_u8(x: torch.Tensor) -> np.ndarray:
 def _t01(u8: np.ndarray) -> torch.Tensor:
     if u8.dtype != np.uint8 or u8.ndim != 4 or u8.shape[-1] != 3:
         raise ValueError(f"expected uint8 (N,H,W,3), got {u8.dtype} {u8.shape}")
-    return torch.from_numpy(np.ascontiguousarray(u8)).permute(0, 3, 1, 2).float() / 255.0
+    # np.load(..., mmap_mode="r") returns read-only arrays; copy before
+    # constructing a tensor so PyTorch cannot observe an unsafe writable view.
+    return torch.from_numpy(np.ascontiguousarray(u8).copy()).permute(0, 3, 1, 2).float() / 255.0
 
 
 def _check_pair(a_u8: np.ndarray, b_u8: np.ndarray) -> None:

@@ -55,6 +55,9 @@ sar-jeppa/*.pth
 CODING_AGENT_INSTRUCTIONS_claude.md
 CODING_AGENT_INSTRUCTIONS_COMPLETE.md
 KAGGLE_SETUP.md
-
+checkpoints/
 speedup.md
 eval_fix.md
+# Large datasets and model checkpoints
+cache/*.npy
+checkpoint/

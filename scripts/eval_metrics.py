@@ -6,6 +6,7 @@ import argparse
 import json
 import os
 import sys
+from pathlib import Path
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 
@@ -13,6 +14,26 @@ import numpy as np
 import torch
 
 from sar2eo import metrics_fixed as M
+
+
+def load_vae(path: str, device: str):
+    """Load a local Diffusers VAE and fail before expensive metric work."""
+    vae_path = Path(path)
+    if not vae_path.is_dir():
+        raise FileNotFoundError(
+            f"VAE directory does not exist: {vae_path}. "
+            "Run scripts/kaggle_setup.py or pass --vae to the attached VAE directory."
+        )
+    if not (vae_path / "config.json").is_file():
+        entries = ", ".join(sorted(item.name for item in vae_path.iterdir())[:12])
+        raise FileNotFoundError(
+            f"VAE directory {vae_path} is incomplete: config.json is missing "
+            f"(contains: {entries or 'no files'}). Attach/download the complete "
+            "stabilityai/sd-vae-ft-ema Diffusers directory."
+        )
+    from diffusers import AutoencoderKL
+
+    return AutoencoderKL.from_pretrained(str(vae_path), local_files_only=True).to(device).eval()
 
 
 def table(name, per_image, terrain):
@@ -43,6 +64,7 @@ def main():
     if terrain is not None and len(terrain) != len(real):
         raise ValueError(f"split rows ({len(terrain)}) != real images ({len(real)})")
 
+    vae = load_vae(args.vae, args.device) if args.vae else None
     lpips_metric = None if args.no_lpips else M.LPIPSMetric(args.device)
     result = {"n": len(real), "real_color": M.color_stats(real), "calibration": {}}
     for name, candidate in M.reference_candidates(real).items():
@@ -50,13 +72,9 @@ def main():
             f"reference: {name}", M.per_image_metrics(candidate, real, lpips_metric), terrain
         )
 
-    if args.vae:
-        from diffusers import AutoencoderKL
-
+    if vae is not None:
         reconstruction = M.vae_reconstruct(
-            AutoencoderKL.from_pretrained(args.vae, local_files_only=True),
-            real,
-            args.device,
+            vae, real, args.device,
         )
         result["vae_ceiling"] = table(
             "VAE ceiling", M.per_image_metrics(reconstruction, real, lpips_metric), terrain

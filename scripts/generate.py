@@ -27,6 +27,27 @@ def _cfg_name(value: float) -> str:
     return str(float(value))
 
 
+def resolve_checkpoint(requested: str) -> Path:
+    """Resolve common Kaggle upload names without guessing unrelated files."""
+    path = Path(requested)
+    candidates = [path]
+    if path.suffix == "":
+        candidates.extend((path.with_suffix(".pt"), path.with_suffix(".pth")))
+    existing = [candidate for candidate in candidates if candidate.is_file()]
+    if len(existing) == 1:
+        return existing[0]
+    if path.is_dir():
+        raise FileNotFoundError(
+            f"checkpoint path is a directory, not a torch checkpoint file: {path}. "
+            "Pass the uploaded best_ema.pt or best_ema.pth file, not its containing folder."
+        )
+    tried = ", ".join(str(candidate) for candidate in candidates)
+    raise FileNotFoundError(
+        f"EMA checkpoint was not found. Tried: {tried}. "
+        "Check the Kaggle input filename with `find /kaggle/input -name 'best_ema*'`."
+    )
+
+
 def _save_grid(split: str, sar: np.ndarray, generated: np.ndarray, real: np.ndarray) -> None:
     panels = []
     for index in range(min(8, len(generated))):
@@ -54,9 +75,7 @@ def main() -> None:
     if args.num_workers > 2:
         raise ValueError("--num-workers must be at most 2")
 
-    checkpoint_path = Path(args.checkpoint)
-    if not checkpoint_path.is_file():
-        raise FileNotFoundError(f"EMA checkpoint does not exist: {checkpoint_path}")
+    checkpoint_path = resolve_checkpoint(args.checkpoint)
     config_path = Path(args.config) if args.config else checkpoint_path.parent / "config.json"
     if not config_path.is_file():
         raise FileNotFoundError(f"configuration does not exist: {config_path}")
