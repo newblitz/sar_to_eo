@@ -7,6 +7,7 @@ from the SEN1-2 dataset.
 
 ![Model architecture](model_archietecture/sar2eo_paper_figure_architecture.png)
 ![Model Generated EO Image Left(SAR Image) ,Far Right(Model Generated), Ground Truth(Centre)  ](check_grid_test.png)
+Model Generated EO Image Far Right(Model Generated),Left(SAR Image),Ground Truth(Centre)
 
 ## Architecture
 
