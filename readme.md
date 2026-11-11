@@ -35,66 +35,6 @@ cd sar_to_eo
 pip install -r requirements.txt
 ```
 
-For the complete CUDA/Kaggle setup, attach the SEN1-2 dataset and SAR-JEPA
-checkpoint, then run:
-
-```bash
-pip install -r requirements-kaggle.txt
-python scripts/kaggle_setup.py \
-  --repo-root /kaggle/working/sar_to_eo \
-  --sar-jepa-input /kaggle/input/<checkpoint-dataset>/checkpoint-200.pth
-```
-
-Prepare the dataset and generate the train, validation, and test splits:
-
-```bash
-python -m sar2eo.prepare_data --root v_2 --seed 0
-python -m sar2eo.preflight --root .
-```
-
-Build the cached uint8 image arrays and frozen-VAE latents once:
-
-```bash
-python scripts/make_cache.py \
-  --splits splits \
-  --out /kaggle/working/cache \
-  --vae assets/sd-vae-ft-ema
-```
-
-## Training
-
-Run the recommended one-sample and distributed smoke tests before training:
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python -m sar2eo.sample_test \
-  --split splits/train.txt --index 0 --device 0
-
-CUDA_VISIBLE_DEVICES=0,1 torchrun --standalone --nproc_per_node=2 \
-  -m sar2eo.smoke_test --split splits/train.txt
-```
-
-Start training with:
-
-```bash
-CUDA_VISIBLE_DEVICES=0,1 torchrun --standalone --nproc_per_node=2 \
-  -m sar2eo.train --run main --cache-dir /kaggle/working/cache \
-  --micro-batch 16 --steps 20000
-```
-
-Training automatically resumes from the latest checkpoint in
-`runs/main/checkpoint_last.pt`.
-
-## Evaluation
-
-Evaluate a trained checkpoint with:
-
-```bash
-python -m sar2eo.evaluate \
-  --checkpoint runs/main/checkpoint_last.pt \
-  --config runs/main/config.json \
-  --split splits/test.txt \
-  --out results/metrics.csv
-```
 
 ## Results
 
@@ -102,5 +42,7 @@ The current reported results are:
 
 | Metric | Score |
 |---|---:|
-| PSNR | 18.4 dB |
-| LPIPS | 0.417 |
+| PSNR | 12.90 dB |
+| LPIPS | 0.4797 |
+| FID | 82.81 |
+| SSIM| 0.1652 |
