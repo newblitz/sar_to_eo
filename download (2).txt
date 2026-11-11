@@ -1,600 +1,0 @@
-6.6s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
-6.6s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
-6.6s 3 0.00s - to python to disable frozen modules.
-6.6s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
-7.2s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
-7.2s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
-7.2s 7 0.00s - to python to disable frozen modules.
-7.2s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
-9.4s 9 Path to dataset files: /kaggle/input/datasets/requiemonk/sentinel12-image-pairs-segregated-by-terrain
-9.6s 10 Cloning into 'sar_to_eo'...
-10.4s 11 remote: Enumerating objects: 215, done.[K
-10.4s 12 remote: Counting objects:   0% (1/215)[Kremote: Counting objects:   1% (3/215)[Kremote: Counting objects:   2% (5/215)[Kremote: Counting objects:   3% (7/215)[Kremote: Counting objects:   4% (9/215)[Kremote: Counting objects:   5% (11/215)[Kremote: Counting objects:   6% (13/215)[Kremote: Counting objects:   7% (16/215)[Kremote: Counting objects:   8% (18/215)[Kremote: Counting objects:   9% (20/215)[Kremote: Counting objects:  10% (22/215)[Kremote: Counting objects:  11% (24/215)[Kremote: Counting objects:  12% (26/215)[Kremote: Counting objects:  13% (28/215)[Kremote: Counting objects:  14% (31/215)[Kremote: Counting objects:  15% (33/215)[Kremote: Counting objects:  16% (35/215)[Kremote: Counting objects:  17% (37/215)[Kremote: Counting objects:  18% (39/215)[Kremote: Counting objects:  19% (41/215)[Kremote: Counting objects:  20% (43/215)[Kremote: Counting objects:  21% (46/215)[Kremote: Counting objects:  22% (48/215)[Kremote: Counting objects:  23% (50/215)[Kremote: Counting objects:  24% (52/215)[Kremote: Counting objects:  25% (54/215)[Kremote: Counting objects:  26% (56/215)[Kremote: Counting objects:  27% (59/215)[Kremote: Counting objects:  28% (61/215)[Kremote: Counting objects:  29% (63/215)[Kremote: Counting objects:  30% (65/215)[Kremote: Counting objects:  31% (67/215)[Kremote: Counting objects:  32% (69/215)[Kremote: Counting objects:  33% (71/215)[Kremote: Counting objects:  34% (74/215)[Kremote: Counting objects:  35% (76/215)[Kremote: Counting objects:  36% (78/215)[Kremote: Counting objects:  37% (80/215)[Kremote: Counting objects:  38% (82/215)[Kremote: Counting objects:  39% (84/215)[Kremote: Counting objects:  40% (86/215)[Kremote: Counting objects:  41% (89/215)[Kremote: Counting objects:  42% (91/215)[Kremote: Counting objects:  43% (93/215)[Kremote: Counting objects:  44% (95/215)[Kremote: Counting objects:  45% (97/215)[Kremote: Counting objects:  46% (99/215)[Kremote: Counting objects:  47% (102/215)[Kremote: Counting objects:  48% (104/215)[Kremote: Counting objects:  49% (106/215)[Kremote: Counting objects:  50% (108/215)[Kremote: Counting objects:  51% (110/215)[Kremote: Counting objects:  52% (112/215)[Kremote: Counting objects:  53% (114/215)[Kremote: Counting objects:  54% (117/215)[Kremote: Counting objects:  55% (119/215)[Kremote: Counting objects:  56% (121/215)[Kremote: Counting objects:  57% (123/215)[Kremote: Counting objects:  58% (125/215)[Kremote: Counting objects:  59% (127/215)[Kremote: Counting objects:  60% (129/215)[Kremote: Counting objects:  61% (132/215)[Kremote: Counting objects:  62% (134/215)[Kremote: Counting objects:  63% (136/215)[Kremote: Counting objects:  64% (138/215)[Kremote: Counting objects:  65% (140/215)[Kremote: Counting objects:  66% (142/215)[Kremote: Counting objects:  67% (145/215)[Kremote: Counting objects:  68% (147/215)[Kremote: Counting objects:  69% (149/215)[Kremote: Counting objects:  70% (151/215)[Kremote: Counting objects:  71% (153/215)[Kremote: Counting objects:  72% (155/215)[Kremote: Counting objects:  73% (157/215)[Kremote: Counting objects:  74% (160/215)[Kremote: Counting objects:  75% (162/215)[Kremote: Counting objects:  76% (164/215)[Kremote: Counting objects:  77% (166/215)[Kremote: Counting objects:  78% (168/215)[Kremote: Counting objects:  79% (170/215)[Kremote: Counting objects:  80% (172/215)[Kremote: Counting objects:  81% (175/215)[Kremote: Counting objects:  82% (177/215)[Kremote: Counting objects:  83% (179/215)[Kremote: Counting objects:  84% (181/215)[Kremote: Counting objects:  85% (183/215)[Kremote: Counting objects:  86% (185/215)[Kremote: Counting objects:  87% (188/215)[Kremote: Counting objects:  88% (190/215)[Kremote: Counting objects:  89% (192/215)[Kremote: Counting objects:  90% (194/215)[Kremote: Counting objects:  91% (196/215)[Kremote: Counting objects:  92% (198/215)[Kremote: Counting objects:  93% (200/215)[Kremote: Counting objects:  94% (203/215)[Kremote: Counting objects:  95% (205/215)[Kremote: Counting objects:  96% (207/215)[Kremote: Counting objects:  97% (209/215)[Kremote: Counting objects:  98% (211/215)[Kremote: Counting objects:  99% (213/215)[Kremote: Counting objects: 100% (215/215)[Kremote: Counting objects: 100% (215/215), done.[K
-10.6s 13 remote: Compressing objects:   0% (1/159)[Kremote: Compressing objects:   1% (2/159)[Kremote: Compressing objects:   2% (4/159)[Kremote: Compressing objects:   3% (5/159)[Kremote: Compressing objects:   4% (7/159)[Kremote: Compressing objects:   5% (8/159)[Kremote: Compressing objects:   6% (10/159)[Kremote: Compressing objects:   7% (12/159)[Kremote: Compressing objects:   8% (13/159)[Kremote: Compressing objects:   9% (15/159)[Kremote: Compressing objects:  10% (16/159)[Kremote: Compressing objects:  11% (18/159)[Kremote: Compressing objects:  12% (20/159)[Kremote: Compressing objects:  13% (21/159)[Kremote: Compressing objects:  14% (23/159)[Kremote: Compressing objects:  15% (24/159)[Kremote: Compressing objects:  16% (26/159)[Kremote: Compressing objects:  17% (28/159)[Kremote: Compressing objects:  18% (29/159)[Kremote: Compressing objects:  19% (31/159)[Kremote: Compressing objects:  20% (32/159)[Kremote: Compressing objects:  21% (34/159)[Kremote: Compressing objects:  22% (35/159)[Kremote: Compressing objects:  23% (37/159)[Kremote: Compressing objects:  24% (39/159)[Kremote: Compressing objects:  25% (40/159)[Kremote: Compressing objects:  26% (42/159)[Kremote: Compressing objects:  27% (43/159)[Kremote: Compressing objects:  28% (45/159)[Kremote: Compressing objects:  29% (47/159)[Kremote: Compressing objects:  30% (48/159)[Kremote: Compressing objects:  31% (50/159)[Kremote: Compressing objects:  32% (51/159)[Kremote: Compressing objects:  33% (53/159)[Kremote: Compressing objects:  34% (55/159)[Kremote: Compressing objects:  35% (56/159)[Kremote: Compressing objects:  36% (58/159)[Kremote: Compressing objects:  37% (59/159)[Kremote: Compressing objects:  38% (61/159)[Kremote: Compressing objects:  39% (63/159)[Kremote: Compressing objects:  40% (64/159)[Kremote: Compressing objects:  41% (66/159)[Kremote: Compressing objects:  42% (67/159)[Kremote: Compressing objects:  43% (69/159)[Kremote: Compressing objects:  44% (70/159)[Kremote: Compressing objects:  45% (72/159)[Kremote: Compressing objects:  46% (74/159)[Kremote: Compressing objects:  47% (75/159)[Kremote: Compressing objects:  48% (77/159)[Kremote: Compressing objects:  49% (78/159)[Kremote: Compressing objects:  50% (80/159)[Kremote: Compressing objects:  51% (82/159)[Kremote: Compressing objects:  52% (83/159)[Kremote: Compressing objects:  53% (85/159)[Kremote: Compressing objects:  54% (86/159)[Kremote: Compressing objects:  55% (88/159)[Kremote: Compressing objects:  56% (90/159)[Kremote: Compressing objects:  57% (91/159)[Kremote: Compressing objects:  58% (93/159)[Kremote: Compressing objects:  59% (94/159)[Kremote: Compressing objects:  60% (96/159)[Kremote: Compressing objects:  61% (97/159)[Kremote: Compressing objects:  62% (99/159)[Kremote: Compressing objects:  63% (101/159)[Kremote: Compressing objects:  64% (102/159)[Kremote: Compressing objects:  65% (104/159)[Kremote: Compressing objects:  66% (105/159)[Kremote: Compressing objects:  67% (107/159)[Kremote: Compressing objects:  68% (109/159)[Kremote: Compressing objects:  69% (110/159)[Kremote: Compressing objects:  70% (112/159)[Kremote: Compressing objects:  71% (113/159)[Kremote: Compressing objects:  72% (115/159)[Kremote: Compressing objects:  73% (117/159)[Kremote: Compressing objects:  74% (118/159)[Kremote: Compressing objects:  75% (120/159)[Kremote: Compressing objects:  76% (121/159)[Kremote: Compressing objects:  77% (123/159)[Kremote: Compressing objects:  78% (125/159)[Kremote: Compressing objects:  79% (126/159)[Kremote: Compressing objects:  80% (128/159)[Kremote: Compressing objects:  81% (129/159)[Kremote: Compressing objects:  82% (131/159)[Kremote: Compressing objects:  83% (132/159)[Kremote: Compressing objects:  84% (134/159)[Kremote: Compressing objects:  85% (136/159)[Kremote: Compressing objects:  86% (137/159)[Kremote: Compressing objects:  87% (139/159)[Kremote: Compressing objects:  88% (140/159)[Kremote: Compressing objects:  89% (142/159)[Kremote: Compressing objects:  90% (144/159)[Kremote: Compressing objects:  91% (145/159)[Kremote: Compressing objects:  92% (147/159)[Kremote: Compressing objects:  93% (148/159)[Kremote: Compressing objects:  94% (150/159)[Kremote: Compressing objects:  95% (152/159)[Kremote: Compressing objects:  96% (153/159)[Kremote: Compressing objects:  97% (155/159)[Kremote: Compressing objects:  98% (156/159)[Kremote: Compressing objects:  99% (158/159)[Kremote: Compressing objects: 100% (159/159)[Kremote: Compressing objects: 100% (159/159), done.[K
-11.1s 14 Receiving objects:   0% (1/215)Receiving objects:   1% (3/215)Receiving objects:   2% (5/215)Receiving objects:   3% (7/215)Receiving objects:   4% (9/215)Receiving objects:   5% (11/215)Receiving objects:   6% (13/215)Receiving objects:   7% (16/215)Receiving objects:   8% (18/215)Receiving objects:   9% (20/215)Receiving objects:  10% (22/215)Receiving objects:  11% (24/215)Receiving objects:  12% (26/215)Receiving objects:  13% (28/215)Receiving objects:  14% (31/215)Receiving objects:  15% (33/215)Receiving objects:  16% (35/215)Receiving objects:  17% (37/215)Receiving objects:  18% (39/215)Receiving objects:  19% (41/215)Receiving objects:  20% (43/215)Receiving objects:  21% (46/215)Receiving objects:  22% (48/215)Receiving objects:  23% (50/215)Receiving objects:  24% (52/215)Receiving objects:  25% (54/215)Receiving objects:  26% (56/215)Receiving objects:  27% (59/215)Receiving objects:  28% (61/215)Receiving objects:  29% (63/215)Receiving objects:  30% (65/215)Receiving objects:  31% (67/215)Receiving objects:  32% (69/215)Receiving objects:  33% (71/215)Receiving objects:  34% (74/215)Receiving objects:  35% (76/215)Receiving objects:  36% (78/215)Receiving objects:  37% (80/215)Receiving objects:  38% (82/215)Receiving objects:  39% (84/215)Receiving objects:  40% (86/215)Receiving objects:  41% (89/215)Receiving objects:  42% (91/215)Receiving objects:  43% (93/215)Receiving objects:  44% (95/215)Receiving objects:  45% (97/215)Receiving objects:  46% (99/215)Receiving objects:  47% (102/215)Receiving objects:  48% (104/215)Receiving objects:  49% (106/215)Receiving objects:  50% (108/215)Receiving objects:  51% (110/215)Receiving objects:  52% (112/215)Receiving objects:  53% (114/215)Receiving objects:  54% (117/215)Receiving objects:  55% (119/215)Receiving objects:  56% (121/215)Receiving objects:  57% (123/215)Receiving objects:  58% (125/215)Receiving objects:  59% (127/215)Receiving objects:  60% (129/215)Receiving objects:  61% (132/215)Receiving objects:  62% (134/215)Receiving objects:  63% (136/215)Receiving objects:  64% (138/215)Receiving objects:  65% (140/215)Receiving objects:  66% (142/215)Receiving objects:  67% (145/215)Receiving objects:  68% (147/215)Receiving objects:  69% (149/215)Receiving objects:  70% (151/215)Receiving objects:  71% (153/215)Receiving objects:  72% (155/215)Receiving objects:  73% (157/215)Receiving objects:  74% (160/215)Receiving objects:  75% (162/215)Receiving objects:  76% (164/215)Receiving objects:  77% (166/215)Receiving objects:  78% (168/215)Receiving objects:  79% (170/215)Receiving objects:  80% (172/215)Receiving objects:  81% (175/215)Receiving objects:  82% (177/215)Receiving objects:  83% (179/215)Receiving objects:  84% (181/215)Receiving objects:  85% (183/215)Receiving objects:  86% (185/215)Receiving objects:  87% (188/215)Receiving objects:  88% (190/215)Receiving objects:  89% (192/215)Receiving objects:  90% (194/215)Receiving objects:  91% (196/215)Receiving objects:  92% (198/215)Receiving objects:  93% (200/215)Receiving objects:  94% (203/215)Receiving objects:  95% (205/215)remote: Total 215 (delta 102), reused 162 (delta 49), pack-reused 0 (from 0)[K
-11.1s 15 Receiving objects:  96% (207/215)Receiving objects:  97% (209/215)Receiving objects:  98% (211/215)Receiving objects:  99% (213/215)Receiving objects: 100% (215/215)Receiving objects: 100% (215/215), 13.46 MiB | 28.13 MiB/s, done.
-11.1s 16 Resolving deltas:   0% (0/102)Resolving deltas:   1% (2/102)Resolving deltas:   2% (3/102)Resolving deltas:   3% (4/102)Resolving deltas:   4% (5/102)Resolving deltas:   5% (6/102)Resolving deltas:   7% (8/102)Resolving deltas:   8% (9/102)Resolving deltas:   9% (10/102)Resolving deltas:  10% (11/102)Resolving deltas:  11% (12/102)Resolving deltas:  13% (14/102)Resolving deltas:  14% (15/102)Resolving deltas:  15% (16/102)Resolving deltas:  16% (17/102)Resolving deltas:  17% (18/102)Resolving deltas:  19% (20/102)Resolving deltas:  20% (21/102)Resolving deltas:  21% (22/102)Resolving deltas:  22% (23/102)Resolving deltas:  23% (24/102)Resolving deltas:  24% (25/102)Resolving deltas:  25% (26/102)Resolving deltas:  26% (27/102)Resolving deltas:  27% (28/102)Resolving deltas:  29% (30/102)Resolving deltas:  30% (31/102)Resolving deltas:  31% (32/102)Resolving deltas:  32% (33/102)Resolving deltas:  34% (35/102)Resolving deltas:  35% (36/102)Resolving deltas:  36% (37/102)Resolving deltas:  38% (39/102)Resolving deltas:  39% (40/102)Resolving deltas:  40% (41/102)Resolving deltas:  41% (42/102)Resolving deltas:  42% (43/102)Resolving deltas:  43% (44/102)Resolving deltas:  44% (45/102)Resolving deltas:  45% (46/102)Resolving deltas:  46% (47/102)Resolving deltas:  47% (48/102)Resolving deltas:  48% (49/102)Resolving deltas:  50% (51/102)Resolving deltas:  51% (53/102)Resolving deltas:  52% (54/102)Resolving deltas:  53% (55/102)Resolving deltas:  54% (56/102)Resolving deltas:  55% (57/102)Resolving deltas:  56% (58/102)Resolving deltas:  57% (59/102)Resolving deltas:  58% (60/102)Resolving deltas:  60% (62/102)Resolving deltas:  61% (63/102)Resolving deltas:  62% (64/102)Resolving deltas:  63% (65/102)Resolving deltas:  64% (66/102)Resolving deltas:  65% (67/102)Resolving deltas:  66% (68/102)Resolving deltas:  67% (69/102)Resolving deltas:  68% (70/102)Resolving deltas:  69% (71/102)Resolving deltas:  70% (72/102)Resolving deltas:  71% (73/102)Resolving deltas:  72% (74/102)Resolving deltas:  73% (75/102)Resolving deltas:  74% (76/102)Resolving deltas:  75% (77/102)Resolving deltas:  76% (78/102)Resolving deltas:  77% (79/102)Resolving deltas:  78% (80/102)Resolving deltas:  79% (81/102)Resolving deltas:  80% (82/102)Resolving deltas:  81% (83/102)Resolving deltas:  82% (84/102)Resolving deltas:  83% (85/102)Resolving deltas:  84% (86/102)Resolving deltas:  85% (87/102)Resolving deltas:  86% (88/102)Resolving deltas:  87% (89/102)Resolving deltas:  88% (90/102)Resolving deltas:  89% (91/102)Resolving deltas:  90% (92/102)Resolving deltas:  91% (93/102)Resolving deltas:  92% (94/102)Resolving deltas:  93% (95/102)Resolving deltas:  94% (96/102)Resolving deltas:  95% (97/102)Resolving deltas:  97% (99/102)Resolving deltas:  98% (100/102)Resolving deltas:  99% (101/102)Resolving deltas: 100% (102/102)Resolving deltas: 100% (102/102), done.
-11.4s 17 /kaggle/working/sar_to_eo
-11.8s 18 Already up to date.
-12.6s 19 Found existing installation: torchaudio 2.11.0+cu128
-12.6s 20 Uninstalling torchaudio-2.11.0+cu128:
-12.7s 21 Successfully uninstalled torchaudio-2.11.0+cu128
-43.3s 22 [31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-43.3s 23 bigframes 2.48.0 requires google-cloud-bigquery-storage<3.0.0,>=2.30.0, which is not installed.
-43.3s 24 ydata-profiling 4.18.4 requires numpy<2.4,>=1.22, but you have numpy 2.5.4 which is incompatible.
-43.3s 25 dopamine-rl 4.1.2 requires gym<=0.25.2, but you have gym 0.26.2 which is incompatible.
-43.3s 26 gradio 6.26.0 requires pillow<13.0,>=8.0, but you have pillow 13.0.0 which is incompatible.
-43.3s 27 moviepy 1.0.3 requires decorator<5.0,>=4.0.2, but you have decorator 5.3.1 which is incompatible.
-43.3s 28 numba 0.61.2 requires numpy<2.3,>=1.24, but you have numpy 2.5.4 which is incompatible.
-43.3s 29 cucim-cu12 26.2.1 requires scikit-image<0.26.0,>=0.19.0, but you have scikit-image 0.26.0 which is incompatible.[0m[31m
-49.2s 30 [0mtorch: 2.11.0+cu128
-49.5s 31 cuda: True count: 2
-72.5s 32 diffusers/transformers imports: OK
-76.6s 33 Requirement already satisfied: lpips in /usr/local/lib/python3.13/dist-packages (0.1.4)
-76.6s 34 Requirement already satisfied: torch>=0.4.0 in /usr/local/lib/python3.13/dist-packages (from lpips) (2.11.0+cu128)
-76.6s 35 Requirement already satisfied: torchvision>=0.2.1 in /usr/local/lib/python3.13/dist-packages (from lpips) (0.26.0+cu128)
-76.6s 36 Requirement already satisfied: numpy>=1.14.3 in /usr/local/lib/python3.13/dist-packages (from lpips) (2.5.4)
-76.6s 37 Requirement already satisfied: scipy>=1.0.1 in /usr/local/lib/python3.13/dist-packages (from lpips) (1.16.3)
-76.6s 38 Requirement already satisfied: tqdm>=4.28.1 in /usr/local/lib/python3.13/dist-packages (from lpips) (4.67.3)
-76.6s 39 Requirement already satisfied: filelock in /usr/local/lib/python3.13/dist-packages (from torch>=0.4.0->lpips) (3.32.5)
-76.6s 40 Requirement already satisfied: typing-extensions>=4.10.0 in /usr/local/lib/python3.13/dist-packages (from torch>=0.4.0->lpips) (4.16.0)
-76.6s 41 Requirement already satisfied: setuptools<82 in /usr/local/lib/python3.13/dist-packages (from torch>=0.4.0->lpips) (81.0.0)
-76.6s 42 Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.13/dist-packages (from torch>=0.4.0->lpips) (1.14.0)
-76.6s 43 Requirement already satisfied: networkx>=2.5.1 in /usr/local/lib/python3.13/dist-packages (from torch>=0.4.0->lpips) (3.6.1)
-76.6s 44 Requirement already satisfied: jinja2 in /usr/local/lib/python3.13/dist-packages (from torch>=0.4.0->lpips) (3.1.6)
-76.6s 45 Requirement already satisfied: fsspec>=0.8.5 in /usr/local/lib/python3.13/dist-packages (from torch>=0.4.0->lpips) (2025.12.0)
-76.6s 46 Requirement already satisfied: cuda-toolkit==12.8.1 in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=0.4.0->lpips) (12.8.1)
-76.6s 47 Requirement already satisfied: cuda-bindings<13,>=12.9.4 in /usr/local/lib/python3.13/dist-packages (from torch>=0.4.0->lpips) (12.9.7)
-76.6s 48 Requirement already satisfied: nvidia-cudnn-cu12==9.19.0.56 in /usr/local/lib/python3.13/dist-packages (from torch>=0.4.0->lpips) (9.19.0.56)
-76.6s 49 Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /usr/local/lib/python3.13/dist-packages (from torch>=0.4.0->lpips) (0.7.1)
-76.6s 50 Requirement already satisfied: nvidia-nccl-cu12==2.28.9 in /usr/local/lib/python3.13/dist-packages (from torch>=0.4.0->lpips) (2.28.9)
-76.6s 51 Requirement already satisfied: nvidia-nvshmem-cu12==3.4.5 in /usr/local/lib/python3.13/dist-packages (from torch>=0.4.0->lpips) (3.4.5)
-76.6s 52 Requirement already satisfied: triton==3.6.0 in /usr/local/lib/python3.13/dist-packages (from torch>=0.4.0->lpips) (3.6.0)
-76.6s 53 Requirement already satisfied: nvidia-cublas-cu12==12.8.4.1.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=0.4.0->lpips) (12.8.4.1)
-76.6s 54 Requirement already satisfied: nvidia-cuda-runtime-cu12==12.8.90.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=0.4.0->lpips) (12.8.90)
-76.6s 55 Requirement already satisfied: nvidia-cufft-cu12==11.3.3.83.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=0.4.0->lpips) (11.3.3.83)
-76.6s 56 Requirement already satisfied: nvidia-cufile-cu12==1.13.1.3.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=0.4.0->lpips) (1.13.1.3)
-76.6s 57 Requirement already satisfied: nvidia-cuda-cupti-cu12==12.8.90.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=0.4.0->lpips) (12.8.90)
-76.6s 58 Requirement already satisfied: nvidia-curand-cu12==10.3.9.90.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=0.4.0->lpips) (10.3.9.90)
-76.6s 59 Requirement already satisfied: nvidia-cusolver-cu12==11.7.3.90.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=0.4.0->lpips) (11.7.3.90)
-76.6s 60 Requirement already satisfied: nvidia-cusparse-cu12==12.5.8.93.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=0.4.0->lpips) (12.5.8.93)
-76.6s 61 Requirement already satisfied: nvidia-nvjitlink-cu12==12.8.93.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=0.4.0->lpips) (12.8.93)
-76.6s 62 Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.8.93.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=0.4.0->lpips) (12.8.93)
-76.6s 63 Requirement already satisfied: nvidia-nvtx-cu12==12.8.90.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == "Linux"->torch>=0.4.0->lpips) (12.8.90)
-76.6s 64 Requirement already satisfied: cuda-pathfinder~=1.1 in /usr/local/lib/python3.13/dist-packages (from cuda-bindings<13,>=12.9.4->torch>=0.4.0->lpips) (1.8.0)
-76.6s 65 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.13/dist-packages (from sympy>=1.13.3->torch>=0.4.0->lpips) (1.3.0)
-76.7s 66 Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /usr/local/lib/python3.13/dist-packages (from torchvision>=0.2.1->lpips) (13.0.0)
-76.7s 67 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.13/dist-packages (from jinja2->torch>=0.4.0->lpips) (3.0.3)
-469.7s 68 ======================================
-469.7s 69 Running validation with CFG=1.0
-469.7s 70 ======================================
-469.7s 71 Downloading: "https://download.pytorch.org/models/alexnet-owt-7be5be79.pth" to /root/.cache/torch/hub/checkpoints/alexnet-owt-7be5be79.pth
-469.7s 72 
-469.7s 73 [reference: identity]
-469.7s 74 all          psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 75 agri         psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 76 barrenland   psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 77 grassland    psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 78 urban        psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 79 
-469.7s 80 [reference: blur_sigma2]
-469.7s 81 all          psnr=23.7460  ssim=0.6270  edge_f1=0.2600  edge_f1_exact=0.1201  lpips=0.5740
-469.7s 82 agri         psnr=27.1032  ssim=0.7659  edge_f1=0.2596  edge_f1_exact=0.1518  lpips=0.4844
-469.7s 83 barrenland   psnr=25.6053  ssim=0.6502  edge_f1=0.1504  edge_f1_exact=0.0695  lpips=0.5649
-469.7s 84 grassland    psnr=23.7289  ssim=0.5702  edge_f1=0.1557  edge_f1_exact=0.0675  lpips=0.5856
-469.7s 85 urban        psnr=18.5466  ssim=0.5216  edge_f1=0.4744  edge_f1_exact=0.1917  lpips=0.6612
-469.7s 86 
-469.7s 87 [reference: brightness_+0.1]
-469.7s 88 all          psnr=19.9444  ssim=0.9186  edge_f1=0.9975  edge_f1_exact=0.9827  lpips=0.0288
-469.7s 89 agri         psnr=19.8831  ssim=0.8574  edge_f1=0.9971  edge_f1_exact=0.9900  lpips=0.0278
-469.7s 90 barrenland   psnr=19.9073  ssim=0.9551  edge_f1=0.9944  edge_f1_exact=0.9814  lpips=0.0320
-469.7s 91 grassland    psnr=19.8721  ssim=0.9222  edge_f1=0.9993  edge_f1_exact=0.9940  lpips=0.0281
-469.7s 92 urban        psnr=20.1150  ssim=0.9397  edge_f1=0.9994  edge_f1_exact=0.9653  lpips=0.0274
-469.7s 93 
-469.7s 94 [reference: shuffled_pairs]
-469.7s 95 all          psnr=10.4429  ssim=0.0971  edge_f1=0.5438  edge_f1_exact=0.1551  lpips=0.6177
-469.7s 96 agri         psnr=10.5439  ssim=0.1311  edge_f1=0.4005  edge_f1_exact=0.1043  lpips=0.6387
-469.7s 97 barrenland   psnr=10.6707  ssim=0.1065  edge_f1=0.5499  edge_f1_exact=0.1545  lpips=0.6219
-469.7s 98 grassland    psnr=10.9798  ssim=0.0902  edge_f1=0.5696  edge_f1_exact=0.1647  lpips=0.6121
-469.7s 99 urban        psnr=9.5769  ssim=0.0607  edge_f1=0.6552  edge_f1_exact=0.1967  lpips=0.5981
-469.7s 100 
-469.7s 101 [reference: dataset_mean_color]
-469.7s 102 all          psnr=13.6120  ssim=0.2474  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9439
-469.7s 103 agri         psnr=13.3032  ssim=0.3503  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9164
-469.7s 104 barrenland   psnr=14.3080  ssim=0.2838  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9771
-469.7s 105 grassland    psnr=14.7669  ssim=0.2197  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9175
-469.7s 106 urban        psnr=12.0698  ssim=0.1358  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9646
-469.7s 107 Completed CFG=1.0
-469.7s 108 ======================================
-469.7s 109 Running validation with CFG=1.5
-469.7s 110 ======================================
-469.7s 111 
-469.7s 112 [reference: identity]
-469.7s 113 all          psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 114 agri         psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 115 barrenland   psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 116 grassland    psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 117 urban        psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 118 
-469.7s 119 [reference: blur_sigma2]
-469.7s 120 all          psnr=23.7460  ssim=0.6270  edge_f1=0.2600  edge_f1_exact=0.1201  lpips=0.5740
-469.7s 121 agri         psnr=27.1032  ssim=0.7659  edge_f1=0.2596  edge_f1_exact=0.1518  lpips=0.4844
-469.7s 122 barrenland   psnr=25.6053  ssim=0.6502  edge_f1=0.1504  edge_f1_exact=0.0695  lpips=0.5649
-469.7s 123 grassland    psnr=23.7289  ssim=0.5702  edge_f1=0.1557  edge_f1_exact=0.0675  lpips=0.5856
-469.7s 124 urban        psnr=18.5466  ssim=0.5216  edge_f1=0.4744  edge_f1_exact=0.1917  lpips=0.6612
-469.7s 125 
-469.7s 126 [reference: brightness_+0.1]
-469.7s 127 all          psnr=19.9444  ssim=0.9186  edge_f1=0.9975  edge_f1_exact=0.9827  lpips=0.0288
-469.7s 128 agri         psnr=19.8831  ssim=0.8574  edge_f1=0.9971  edge_f1_exact=0.9900  lpips=0.0278
-469.7s 129 barrenland   psnr=19.9073  ssim=0.9551  edge_f1=0.9944  edge_f1_exact=0.9814  lpips=0.0320
-469.7s 130 grassland    psnr=19.8721  ssim=0.9222  edge_f1=0.9993  edge_f1_exact=0.9940  lpips=0.0281
-469.7s 131 urban        psnr=20.1150  ssim=0.9397  edge_f1=0.9994  edge_f1_exact=0.9653  lpips=0.0274
-469.7s 132 
-469.7s 133 [reference: shuffled_pairs]
-469.7s 134 all          psnr=10.4429  ssim=0.0971  edge_f1=0.5438  edge_f1_exact=0.1551  lpips=0.6177
-469.7s 135 agri         psnr=10.5439  ssim=0.1311  edge_f1=0.4005  edge_f1_exact=0.1043  lpips=0.6387
-469.7s 136 barrenland   psnr=10.6707  ssim=0.1065  edge_f1=0.5499  edge_f1_exact=0.1545  lpips=0.6219
-469.7s 137 grassland    psnr=10.9798  ssim=0.0902  edge_f1=0.5696  edge_f1_exact=0.1647  lpips=0.6121
-469.7s 138 urban        psnr=9.5769  ssim=0.0607  edge_f1=0.6552  edge_f1_exact=0.1967  lpips=0.5981
-469.7s 139 
-469.7s 140 [reference: dataset_mean_color]
-469.7s 141 all          psnr=13.6120  ssim=0.2474  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9439
-469.7s 142 agri         psnr=13.3032  ssim=0.3503  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9164
-469.7s 143 barrenland   psnr=14.3080  ssim=0.2838  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9771
-469.7s 144 grassland    psnr=14.7669  ssim=0.2197  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9175
-469.7s 145 urban        psnr=12.0698  ssim=0.1358  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9646
-469.7s 146 Completed CFG=1.5
-469.7s 147 ======================================
-469.7s 148 Running validation with CFG=2.5
-469.7s 149 ======================================
-469.7s 150 
-469.7s 151 [reference: identity]
-469.7s 152 all          psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 153 agri         psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 154 barrenland   psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 155 grassland    psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 156 urban        psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-469.7s 157 
-469.7s 158 [reference: blur_sigma2]
-469.7s 159 all          psnr=23.7460  ssim=0.6270  edge_f1=0.2600  edge_f1_exact=0.1201  lpips=0.5740
-469.7s 160 agri         psnr=27.1032  ssim=0.7659  edge_f1=0.2596  edge_f1_exact=0.1518  lpips=0.4844
-469.7s 161 barrenland   psnr=25.6053  ssim=0.6502  edge_f1=0.1504  edge_f1_exact=0.0695  lpips=0.5649
-469.7s 162 grassland    psnr=23.7289  ssim=0.5702  edge_f1=0.1557  edge_f1_exact=0.0675  lpips=0.5856
-469.7s 163 urban        psnr=18.5466  ssim=0.5216  edge_f1=0.4744  edge_f1_exact=0.1917  lpips=0.6612
-469.7s 164 
-469.7s 165 [reference: brightness_+0.1]
-469.7s 166 all          psnr=19.9444  ssim=0.9186  edge_f1=0.9975  edge_f1_exact=0.9827  lpips=0.0288
-469.7s 167 agri         psnr=19.8831  ssim=0.8574  edge_f1=0.9971  edge_f1_exact=0.9900  lpips=0.0278
-469.7s 168 barrenland   psnr=19.9073  ssim=0.9551  edge_f1=0.9944  edge_f1_exact=0.9814  lpips=0.0320
-469.7s 169 grassland    psnr=19.8721  ssim=0.9222  edge_f1=0.9993  edge_f1_exact=0.9940  lpips=0.0281
-469.7s 170 urban        psnr=20.1150  ssim=0.9397  edge_f1=0.9994  edge_f1_exact=0.9653  lpips=0.0274
-469.7s 171 
-469.7s 172 [reference: shuffled_pairs]
-469.7s 173 all          psnr=10.4429  ssim=0.0971  edge_f1=0.5438  edge_f1_exact=0.1551  lpips=0.6177
-469.7s 174 agri         psnr=10.5439  ssim=0.1311  edge_f1=0.4005  edge_f1_exact=0.1043  lpips=0.6387
-469.7s 175 barrenland   psnr=10.6707  ssim=0.1065  edge_f1=0.5499  edge_f1_exact=0.1545  lpips=0.6219
-469.7s 176 grassland    psnr=10.9798  ssim=0.0902  edge_f1=0.5696  edge_f1_exact=0.1647  lpips=0.6121
-469.7s 177 urban        psnr=9.5769  ssim=0.0607  edge_f1=0.6552  edge_f1_exact=0.1967  lpips=0.5981
-469.7s 178 
-469.7s 179 [reference: dataset_mean_color]
-469.7s 180 all          psnr=13.6120  ssim=0.2474  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9439
-469.7s 181 agri         psnr=13.3032  ssim=0.3503  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9164
-469.7s 182 barrenland   psnr=14.3080  ssim=0.2838  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9771
-469.7s 183 grassland    psnr=14.7669  ssim=0.2197  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9175
-469.7s 184 urban        psnr=12.0698  ssim=0.1358  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9646
-469.7s 185 Completed CFG=2.5
-469.7s 186 Traceback (most recent call last):
-469.7s 187 File "/kaggle/working/sar_to_eo/scripts/generate.py", line 126, in <module>
-469.7s 188 main()
-469.7s 189 ~~~~^^
-469.7s 190 File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
-469.7s 191 return func(*args, **kwargs)
-469.7s 192 File "/kaggle/working/sar_to_eo/scripts/generate.py", line 59, in main
-469.7s 193 raise FileNotFoundError(f"EMA checkpoint does not exist: {checkpoint_path}")
-469.7s 194 FileNotFoundError: EMA checkpoint does not exist: /kaggle/input/datasets/prateeking/cache-and-best-check/best_ema
-469.7s 195 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-469.7s 196 warnings.warn(
-469.7s 197 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
-469.7s 198 warnings.warn(msg)
-469.7s 199 0%|          | 0.00/233M [00:00<?, ?B/s]  7%|▋         | 16.0M/233M [00:00<00:01, 167MB/s] 16%|█▌        | 36.4M/233M [00:00<00:01, 194MB/s] 25%|██▍       | 57.8M/233M [00:00<00:00, 207MB/s] 33%|███▎      | 78.0M/233M [00:00<00:00, 209MB/s] 42%|████▏     | 98.8M/233M [00:00<00:00, 212MB/s] 51%|█████     | 119M/233M [00:00<00:00, 213MB/s]  60%|█████▉    | 140M/233M [00:00<00:00, 210MB/s] 69%|██████▊   | 160M/233M [00:00<00:00, 209MB/s] 77%|███████▋  | 180M/233M [00:00<00:00, 211MB/s] 86%|████████▋ | 201M/233M [00:01<00:00, 214MB/s] 95%|█████████▌| 222M/233M [00:01<00:00, 214MB/s]100%|██████████| 233M/233M [00:01<00:00, 211MB/s]
-469.7s 200 /kaggle/working/sar_to_eo/scripts/../sar2eo/metrics_fixed.py:31: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
-469.7s 201 return torch.from_numpy(np.ascontiguousarray(u8)).permute(0, 3, 1, 2).float() / 255.0
-469.7s 202 Traceback (most recent call last):
-469.7s 203 File "/kaggle/working/sar_to_eo/scripts/eval_metrics.py", line 93, in <module>
-469.7s 204 main()
-469.7s 205 ~~~~^^
-469.7s 206 File "/kaggle/working/sar_to_eo/scripts/eval_metrics.py", line 67, in main
-469.7s 207 generated_file = np.load(args.gen, mmap_mode="r")
-469.7s 208 File "/usr/local/lib/python3.13/dist-packages/numpy/lib/_npyio_impl.py", line 454, in load
-469.7s 209 fid = stack.enter_context(open(os.fspath(file), "rb"))
-469.7s 210 ~~~~^^^^^^^^^^^^^^^^^^^^^^^
-469.7s 211 FileNotFoundError: [Errno 2] No such file or directory: 'results/gen_val_cfg1.0_steps50.npy'
-469.7s 212 Traceback (most recent call last):
-469.7s 213 File "/kaggle/working/sar_to_eo/scripts/generate.py", line 126, in <module>
-469.7s 214 main()
-469.7s 215 ~~~~^^
-469.7s 216 File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
-469.7s 217 return func(*args, **kwargs)
-469.7s 218 File "/kaggle/working/sar_to_eo/scripts/generate.py", line 59, in main
-469.7s 219 raise FileNotFoundError(f"EMA checkpoint does not exist: {checkpoint_path}")
-469.7s 220 FileNotFoundError: EMA checkpoint does not exist: /kaggle/input/datasets/prateeking/cache-and-best-check/best_ema
-469.7s 221 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-469.7s 222 warnings.warn(
-469.7s 223 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
-469.7s 224 warnings.warn(msg)
-469.7s 225 /kaggle/working/sar_to_eo/scripts/../sar2eo/metrics_fixed.py:31: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
-469.7s 226 return torch.from_numpy(np.ascontiguousarray(u8)).permute(0, 3, 1, 2).float() / 255.0
-469.7s 227 Traceback (most recent call last):
-469.7s 228 File "/kaggle/working/sar_to_eo/scripts/eval_metrics.py", line 93, in <module>
-469.7s 229 main()
-469.7s 230 ~~~~^^
-469.7s 231 File "/kaggle/working/sar_to_eo/scripts/eval_metrics.py", line 67, in main
-469.7s 232 generated_file = np.load(args.gen, mmap_mode="r")
-469.7s 233 File "/usr/local/lib/python3.13/dist-packages/numpy/lib/_npyio_impl.py", line 454, in load
-469.7s 234 fid = stack.enter_context(open(os.fspath(file), "rb"))
-469.7s 235 ~~~~^^^^^^^^^^^^^^^^^^^^^^^
-469.7s 236 FileNotFoundError: [Errno 2] No such file or directory: 'results/gen_val_cfg1.5_steps50.npy'
-469.7s 237 Traceback (most recent call last):
-469.7s 238 File "/kaggle/working/sar_to_eo/scripts/generate.py", line 126, in <module>
-469.7s 239 main()
-469.7s 240 ~~~~^^
-469.7s 241 File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
-469.7s 242 return func(*args, **kwargs)
-469.7s 243 File "/kaggle/working/sar_to_eo/scripts/generate.py", line 59, in main
-469.7s 244 raise FileNotFoundError(f"EMA checkpoint does not exist: {checkpoint_path}")
-469.7s 245 FileNotFoundError: EMA checkpoint does not exist: /kaggle/input/datasets/prateeking/cache-and-best-check/best_ema
-469.7s 246 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-469.7s 247 warnings.warn(
-469.7s 248 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
-469.7s 249 warnings.warn(msg)
-469.7s 250 /kaggle/working/sar_to_eo/scripts/../sar2eo/metrics_fixed.py:31: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
-469.7s 251 return torch.from_numpy(np.ascontiguousarray(u8)).permute(0, 3, 1, 2).float() / 255.0
-469.7s 252 Traceback (most recent call last):
-469.7s 253 File "/kaggle/working/sar_to_eo/scripts/eval_metrics.py", line 93, in <module>
-469.7s 254 main()
-469.7s 255 ~~~~^^
-469.7s 256 File "/kaggle/working/sar_to_eo/scripts/eval_metrics.py", line 67, in main
-469.7s 257 generated_file = np.load(args.gen, mmap_mode="r")
-469.7s 258 File "/usr/local/lib/python3.13/dist-packages/numpy/lib/_npyio_impl.py", line 454, in load
-469.7s 259 fid = stack.enter_context(open(os.fspath(file), "rb"))
-469.7s 260 ~~~~^^^^^^^^^^^^^^^^^^^^^^^
-469.7s 261 FileNotFoundError: [Errno 2] No such file or directory: 'results/gen_val_cfg2.5_steps50.npy'
-469.7s 262 
-469.7s 263 Traceback (most recent call last):
-469.7s 264 File "/kaggle/working/sar_to_eo/scripts/generate.py", line 126, in <module>
-469.7s 265 main()
-469.7s 266 ~~~~^^
-469.7s 267 File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
-469.7s 268 return func(*args, **kwargs)
-469.7s 269 File "/kaggle/working/sar_to_eo/scripts/generate.py", line 59, in main
-469.7s 270 raise FileNotFoundError(f"EMA checkpoint does not exist: {checkpoint_path}")
-469.7s 271 FileNotFoundError: EMA checkpoint does not exist: /kaggle/input/datasets/prateeking/cache-and-best-check/best_ema
-469.7s 272 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-469.7s 273 warnings.warn(
-469.7s 274 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
-469.7s 275 warnings.warn(msg)
-469.7s 276 0%|          | 0.00/233M [00:00<?, ?B/s]  7%|▋         | 16.0M/233M [00:00<00:01, 167MB/s] 16%|█▌        | 36.4M/233M [00:00<00:01, 194MB/s] 25%|██▍       | 57.8M/233M [00:00<00:00, 207MB/s] 33%|███▎      | 78.0M/233M [00:00<00:00, 209MB/s] 42%|████▏     | 98.8M/233M [00:00<00:00, 212MB/s] 51%|█████     | 119M/233M [00:00<00:00, 213MB/s]  60%|█████▉    | 140M/233M [00:00<00:00, 210MB/s] 69%|██████▊   | 160M/233M [00:00<00:00, 209MB/s] 77%|███████▋  | 180M/233M [00:00<00:00, 211MB/s] 86%|████████▋ | 201M/233M [00:01<00:00, 214MB/s] 95%|█████████▌| 222M/233M [00:01<00:00, 214MB/s]100%|██████████| 233M/233M [00:01<00:00, 211MB/s]
-469.7s 277 /kaggle/working/sar_to_eo/scripts/../sar2eo/metrics_fixed.py:31: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
-469.7s 278 return torch.from_numpy(np.ascontiguousarray(u8)).permute(0, 3, 1, 2).float() / 255.0
-469.7s 279 Traceback (most recent call last):
-469.7s 280 File "/kaggle/working/sar_to_eo/scripts/eval_metrics.py", line 93, in <module>
-469.7s 281 main()
-469.7s 282 ~~~~^^
-469.7s 283 File "/kaggle/working/sar_to_eo/scripts/eval_metrics.py", line 67, in main
-469.7s 284 generated_file = np.load(args.gen, mmap_mode="r")
-469.7s 285 File "/usr/local/lib/python3.13/dist-packages/numpy/lib/_npyio_impl.py", line 454, in load
-469.7s 286 fid = stack.enter_context(open(os.fspath(file), "rb"))
-469.7s 287 ~~~~^^^^^^^^^^^^^^^^^^^^^^^
-469.7s 288 FileNotFoundError: [Errno 2] No such file or directory: 'results/gen_val_cfg1.0_steps50.npy'
-469.7s 289 Traceback (most recent call last):
-469.7s 290 File "/kaggle/working/sar_to_eo/scripts/generate.py", line 126, in <module>
-469.7s 291 main()
-469.7s 292 ~~~~^^
-469.7s 293 File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
-469.7s 294 return func(*args, **kwargs)
-469.7s 295 File "/kaggle/working/sar_to_eo/scripts/generate.py", line 59, in main
-469.7s 296 raise FileNotFoundError(f"EMA checkpoint does not exist: {checkpoint_path}")
-469.7s 297 FileNotFoundError: EMA checkpoint does not exist: /kaggle/input/datasets/prateeking/cache-and-best-check/best_ema
-469.7s 298 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-469.7s 299 warnings.warn(
-469.7s 300 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
-469.7s 301 warnings.warn(msg)
-469.7s 302 /kaggle/working/sar_to_eo/scripts/../sar2eo/metrics_fixed.py:31: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
-469.7s 303 return torch.from_numpy(np.ascontiguousarray(u8)).permute(0, 3, 1, 2).float() / 255.0
-469.7s 304 Traceback (most recent call last):
-469.7s 305 File "/kaggle/working/sar_to_eo/scripts/eval_metrics.py", line 93, in <module>
-469.7s 306 main()
-469.7s 307 ~~~~^^
-469.7s 308 File "/kaggle/working/sar_to_eo/scripts/eval_metrics.py", line 67, in main
-469.7s 309 generated_file = np.load(args.gen, mmap_mode="r")
-469.7s 310 File "/usr/local/lib/python3.13/dist-packages/numpy/lib/_npyio_impl.py", line 454, in load
-469.7s 311 fid = stack.enter_context(open(os.fspath(file), "rb"))
-469.7s 312 ~~~~^^^^^^^^^^^^^^^^^^^^^^^
-469.7s 313 FileNotFoundError: [Errno 2] No such file or directory: 'results/gen_val_cfg1.5_steps50.npy'
-469.7s 314 Traceback (most recent call last):
-469.7s 315 File "/kaggle/working/sar_to_eo/scripts/generate.py", line 126, in <module>
-469.7s 316 main()
-469.7s 317 ~~~~^^
-469.7s 318 File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
-469.7s 319 return func(*args, **kwargs)
-469.7s 320 File "/kaggle/working/sar_to_eo/scripts/generate.py", line 59, in main
-469.7s 321 raise FileNotFoundError(f"EMA checkpoint does not exist: {checkpoint_path}")
-469.7s 322 FileNotFoundError: EMA checkpoint does not exist: /kaggle/input/datasets/prateeking/cache-and-best-check/best_ema
-469.7s 323 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-469.7s 324 warnings.warn(
-469.7s 325 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
-469.7s 326 warnings.warn(msg)
-469.7s 327 /kaggle/working/sar_to_eo/scripts/../sar2eo/metrics_fixed.py:31: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
-469.7s 328 return torch.from_numpy(np.ascontiguousarray(u8)).permute(0, 3, 1, 2).float() / 255.0
-469.7s 329 Traceback (most recent call last):
-469.7s 330 File "/kaggle/working/sar_to_eo/scripts/eval_metrics.py", line 93, in <module>
-469.7s 331 main()
-469.7s 332 ~~~~^^
-469.7s 333 File "/kaggle/working/sar_to_eo/scripts/eval_metrics.py", line 67, in main
-469.7s 334 generated_file = np.load(args.gen, mmap_mode="r")
-469.7s 335 File "/usr/local/lib/python3.13/dist-packages/numpy/lib/_npyio_impl.py", line 454, in load
-469.7s 336 fid = stack.enter_context(open(os.fspath(file), "rb"))
-469.7s 337 ~~~~^^^^^^^^^^^^^^^^^^^^^^^
-469.7s 338 FileNotFoundError: [Errno 2] No such file or directory: 'results/gen_val_cfg2.5_steps50.npy'
-471.5s 339 Traceback (most recent call last):
-471.5s 340 File [35m"/kaggle/working/sar_to_eo/scripts/generate.py"[0m, line [35m126[0m, in [35m<module>[0m
-471.5s 341 [31mmain[0m[1;31m()[0m
-471.5s 342 [31m~~~~[0m[1;31m^^[0m
-471.5s 343 File [35m"/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py"[0m, line [35m124[0m, in [35mdecorate_context[0m
-471.5s 344 return func(*args, **kwargs)
-471.5s 345 File [35m"/kaggle/working/sar_to_eo/scripts/generate.py"[0m, line [35m59[0m, in [35mmain[0m
-471.5s 346 raise FileNotFoundError(f"EMA checkpoint does not exist: {checkpoint_path}")
-471.5s 347 [1;35mFileNotFoundError[0m: [35mEMA checkpoint does not exist: /kaggle/input/datasets/prateeking/cache-and-best-check/best_ema[0m
-475.4s 348 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-475.4s 349 warnings.warn(
-475.4s 350 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
-475.4s 351 warnings.warn(msg)
-476.2s 352 /kaggle/working/sar_to_eo/scripts/../sar2eo/metrics_fixed.py:31: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
-476.2s 353 return torch.from_numpy(np.ascontiguousarray(u8)).permute(0, 3, 1, 2).float() / 255.0
-638.5s 354 
-638.5s 355 [reference: identity]
-638.5s 356 all          psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-638.5s 357 agri         psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-638.5s 358 barrenland   psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-638.5s 359 grassland    psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-638.5s 360 urban        psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-686.7s 361 
-686.7s 362 [reference: blur_sigma2]
-686.7s 363 all          psnr=23.6808  ssim=0.6124  edge_f1=0.2156  edge_f1_exact=0.0982  lpips=0.5824
-686.7s 364 agri         psnr=27.4472  ssim=0.7632  edge_f1=0.2154  edge_f1_exact=0.1268  lpips=0.4846
-686.7s 365 barrenland   psnr=24.8316  ssim=0.6359  edge_f1=0.1903  edge_f1_exact=0.0858  lpips=0.5709
-686.7s 366 grassland    psnr=21.8868  ssim=0.5388  edge_f1=0.2269  edge_f1_exact=0.0933  lpips=0.6070
-686.7s 367 urban        psnr=20.5574  ssim=0.5117  edge_f1=0.2300  edge_f1_exact=0.0866  lpips=0.6671
-735.7s 368 
-735.7s 369 [reference: brightness_+0.1]
-735.7s 370 all          psnr=19.9223  ssim=0.9061  edge_f1=0.9972  edge_f1_exact=0.9867  lpips=0.0298
-735.7s 371 agri         psnr=19.8643  ssim=0.8380  edge_f1=0.9972  edge_f1_exact=0.9918  lpips=0.0272
-735.7s 372 barrenland   psnr=20.0110  ssim=0.9307  edge_f1=0.9927  edge_f1_exact=0.9742  lpips=0.0350
-735.7s 373 grassland    psnr=19.8767  ssim=0.9348  edge_f1=0.9994  edge_f1_exact=0.9933  lpips=0.0263
-735.7s 374 urban        psnr=19.9372  ssim=0.9208  edge_f1=0.9995  edge_f1_exact=0.9874  lpips=0.0306
-785.1s 375 
-785.1s 376 [reference: shuffled_pairs]
-785.1s 377 all          psnr=10.8737  ssim=0.0924  edge_f1=0.5824  edge_f1_exact=0.1693  lpips=0.6113
-785.1s 378 agri         psnr=10.9706  ssim=0.1300  edge_f1=0.4025  edge_f1_exact=0.1057  lpips=0.6356
-785.1s 379 barrenland   psnr=10.6403  ssim=0.0931  edge_f1=0.5842  edge_f1_exact=0.1692  lpips=0.6187
-785.1s 380 grassland    psnr=11.1060  ssim=0.0736  edge_f1=0.6896  edge_f1_exact=0.2042  lpips=0.5767
-785.1s 381 urban        psnr=10.7779  ssim=0.0728  edge_f1=0.6535  edge_f1_exact=0.1983  lpips=0.6141
-833.1s 382 
-833.1s 383 [reference: dataset_mean_color]
-833.1s 384 all          psnr=13.9087  ssim=0.2349  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9496
-833.1s 385 agri         psnr=13.5504  ssim=0.3540  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9007
-833.1s 386 barrenland   psnr=13.4827  ssim=0.2532  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9823
-833.1s 387 grassland    psnr=14.6130  ssim=0.1608  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9360
-833.1s 388 urban        psnr=13.9890  ssim=0.1714  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9793
-833.1s 389 Traceback (most recent call last):
-833.1s 390 File [35m"/kaggle/working/sar_to_eo/scripts/eval_metrics.py"[0m, line [35m93[0m, in [35m<module>[0m
-833.1s 391 [31mmain[0m[1;31m()[0m
-833.1s 392 [31m~~~~[0m[1;31m^^[0m
-833.1s 393 File [35m"/kaggle/working/sar_to_eo/scripts/eval_metrics.py"[0m, line [35m67[0m, in [35mmain[0m
-833.1s 394 generated_file = np.load(args.gen, mmap_mode="r")
-833.1s 395 File [35m"/usr/local/lib/python3.13/dist-packages/numpy/lib/_npyio_impl.py"[0m, line [35m454[0m, in [35mload[0m
-833.1s 396 fid = stack.enter_context([31mopen[0m[1;31m(os.fspath(file), "rb")[0m)
-833.1s 397 [31m~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^[0m
-833.1s 398 [1;35mFileNotFoundError[0m: [35m[Errno 2] No such file or directory: 'results/gen_test_cfg1.5_steps50.npy'[0m
-837.3s 399 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-837.3s 400 warnings.warn(
-837.3s 401 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
-837.3s 402 warnings.warn(msg)
-838.2s 403 /kaggle/working/sar_to_eo/scripts/../sar2eo/metrics_fixed.py:31: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
-838.2s 404 return torch.from_numpy(np.ascontiguousarray(u8)).permute(0, 3, 1, 2).float() / 255.0
-865.6s 405 
-865.6s 406 [reference: identity]
-865.6s 407 all          psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-865.6s 408 agri         psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-865.6s 409 barrenland   psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-865.6s 410 grassland    psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-865.6s 411 urban        psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-886.2s 412 
-886.2s 413 [reference: blur_sigma2]
-886.2s 414 all          psnr=23.7460  ssim=0.6270  edge_f1=0.2600  edge_f1_exact=0.1201  lpips=0.5740
-886.2s 415 agri         psnr=27.1032  ssim=0.7659  edge_f1=0.2596  edge_f1_exact=0.1518  lpips=0.4844
-886.2s 416 barrenland   psnr=25.6053  ssim=0.6502  edge_f1=0.1504  edge_f1_exact=0.0695  lpips=0.5649
-886.2s 417 grassland    psnr=23.7289  ssim=0.5702  edge_f1=0.1557  edge_f1_exact=0.0675  lpips=0.5856
-886.2s 418 urban        psnr=18.5466  ssim=0.5216  edge_f1=0.4744  edge_f1_exact=0.1917  lpips=0.6612
-907.4s 419 
-907.4s 420 [reference: brightness_+0.1]
-907.4s 421 all          psnr=19.9444  ssim=0.9186  edge_f1=0.9975  edge_f1_exact=0.9827  lpips=0.0288
-907.4s 422 agri         psnr=19.8831  ssim=0.8574  edge_f1=0.9971  edge_f1_exact=0.9900  lpips=0.0278
-907.4s 423 barrenland   psnr=19.9073  ssim=0.9551  edge_f1=0.9944  edge_f1_exact=0.9814  lpips=0.0320
-907.4s 424 grassland    psnr=19.8721  ssim=0.9222  edge_f1=0.9993  edge_f1_exact=0.9940  lpips=0.0281
-907.4s 425 urban        psnr=20.1150  ssim=0.9397  edge_f1=0.9994  edge_f1_exact=0.9653  lpips=0.0274
-928.1s 426 
-928.1s 427 [reference: shuffled_pairs]
-928.1s 428 all          psnr=10.4429  ssim=0.0971  edge_f1=0.5438  edge_f1_exact=0.1551  lpips=0.6177
-928.1s 429 agri         psnr=10.5439  ssim=0.1311  edge_f1=0.4005  edge_f1_exact=0.1043  lpips=0.6387
-928.1s 430 barrenland   psnr=10.6707  ssim=0.1065  edge_f1=0.5499  edge_f1_exact=0.1545  lpips=0.6219
-928.1s 431 grassland    psnr=10.9798  ssim=0.0902  edge_f1=0.5696  edge_f1_exact=0.1647  lpips=0.6121
-928.1s 432 urban        psnr=9.5769  ssim=0.0607  edge_f1=0.6552  edge_f1_exact=0.1967  lpips=0.5981
-948.6s 433 
-948.6s 434 [reference: dataset_mean_color]
-948.6s 435 all          psnr=13.6120  ssim=0.2474  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9439
-948.6s 436 agri         psnr=13.3032  ssim=0.3503  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9164
-948.6s 437 barrenland   psnr=14.3080  ssim=0.2838  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9771
-948.6s 438 grassland    psnr=14.7669  ssim=0.2197  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9175
-948.6s 439 urban        psnr=12.0698  ssim=0.1358  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9646
-956.3s 440 /usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
-956.3s 441 warnings.warn(
-956.4s 442 Traceback (most recent call last):
-956.4s 443 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/configuration_utils.py"[0m, line [35m414[0m, in [35mload_config[0m
-956.4s 444 config_file = hf_hub_download(
-956.4s 445 pretrained_model_name_or_path,
-956.4s 446 ...<10 lines>...
-956.4s 447 local_dir_use_symlinks=local_dir_use_symlinks,
-956.4s 448 )
-956.4s 449 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py"[0m, line [35m89[0m, in [35m_inner_fn[0m
-956.4s 450 return fn(*args, **kwargs)
-956.4s 451 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_http.py"[0m, line [35m266[0m, in [35m_inner[0m
-956.4s 452 return fn(*args, **kwargs)
-956.4s 453 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/file_download.py"[0m, line [35m1047[0m, in [35mhf_hub_download[0m
-956.4s 454 return _hf_hub_download_to_cache_dir(
-956.4s 455 # Destination
-956.4s 456 ...<15 lines>...
-956.4s 457 dry_run=dry_run,
-956.4s 458 )
-956.4s 459 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/file_download.py"[0m, line [35m1194[0m, in [35m_hf_hub_download_to_cache_dir[0m
-956.4s 460 [31m_raise_on_head_call_error[0m[1;31m(head_call_error, force_download, local_files_only)[0m
-956.4s 461 [31m~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
-956.4s 462 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/file_download.py"[0m, line [35m1944[0m, in [35m_raise_on_head_call_error[0m
-956.4s 463 raise LocalEntryNotFoundError(
-956.4s 464 ...<2 lines>...
-956.4s 465 )
-956.4s 466 [1;35mhuggingface_hub.errors.LocalEntryNotFoundError[0m: [35mCannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.[0m
-956.4s 467 
-956.4s 468 During handling of the above exception, another exception occurred:
-956.4s 469 
-956.4s 470 Traceback (most recent call last):
-956.4s 471 File [35m"/kaggle/working/sar_to_eo/scripts/eval_metrics.py"[0m, line [35m93[0m, in [35m<module>[0m
-956.4s 472 [31mmain[0m[1;31m()[0m
-956.4s 473 [31m~~~~[0m[1;31m^^[0m
-956.4s 474 File [35m"/kaggle/working/sar_to_eo/scripts/eval_metrics.py"[0m, line [35m57[0m, in [35mmain[0m
-956.4s 475 [31mAutoencoderKL.from_pretrained[0m[1;31m(args.vae, local_files_only=True)[0m,
-956.4s 476 [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
-956.4s 477 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py"[0m, line [35m89[0m, in [35m_inner_fn[0m
-956.4s 478 return fn(*args, **kwargs)
-956.4s 479 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/models/modeling_utils.py"[0m, line [35m1164[0m, in [35mfrom_pretrained[0m
-956.4s 480 config, unused_kwargs, commit_hash = [31mcls.load_config[0m[1;31m([0m
-956.4s 481 [31m~~~~~~~~~~~~~~~[0m[1;31m^[0m
-956.4s 482 [1;31mconfig_path,[0m
-956.4s 483 [1;31m^^^^^^^^^^^^[0m
-956.4s 484 ...<10 lines>...
-956.4s 485 [1;31m**kwargs,[0m
-956.4s 486 [1;31m^^^^^^^^^[0m
-956.4s 487 [1;31m)[0m
-956.4s 488 [1;31m^[0m
-956.4s 489 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py"[0m, line [35m89[0m, in [35m_inner_fn[0m
-956.4s 490 return fn(*args, **kwargs)
-956.4s 491 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/configuration_utils.py"[0m, line [35m441[0m, in [35mload_config[0m
-956.4s 492 raise EnvironmentError(
-956.4s 493 f"{pretrained_model_name_or_path} does not appear to have a file named {cls.config_name}."
-956.4s 494 )
-956.4s 495 [1;35mOSError[0m: [35massets/sd-vae-ft-ema does not appear to have a file named config.json.[0m
-961.1s 496 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
-961.1s 497 warnings.warn(
-961.1s 498 /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
-961.1s 499 warnings.warn(msg)
-962.1s 500 /kaggle/working/sar_to_eo/scripts/../sar2eo/metrics_fixed.py:31: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
-962.1s 501 return torch.from_numpy(np.ascontiguousarray(u8)).permute(0, 3, 1, 2).float() / 255.0
-1025.3s 502 
-1025.3s 503 [reference: identity]
-1025.3s 504 all          psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-1025.3s 505 agri         psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-1025.3s 506 barrenland   psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-1025.3s 507 grassland    psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-1025.3s 508 urban        psnr=100.0000  ssim=1.0000  edge_f1=1.0000  edge_f1_exact=1.0000  lpips=0.0000
-1073.5s 509 
-1073.5s 510 [reference: blur_sigma2]
-1073.5s 511 all          psnr=23.6808  ssim=0.6124  edge_f1=0.2156  edge_f1_exact=0.0982  lpips=0.5824
-1073.5s 512 agri         psnr=27.4472  ssim=0.7632  edge_f1=0.2154  edge_f1_exact=0.1268  lpips=0.4846
-1073.5s 513 barrenland   psnr=24.8316  ssim=0.6359  edge_f1=0.1903  edge_f1_exact=0.0858  lpips=0.5709
-1073.5s 514 grassland    psnr=21.8868  ssim=0.5388  edge_f1=0.2269  edge_f1_exact=0.0933  lpips=0.6070
-1073.5s 515 urban        psnr=20.5574  ssim=0.5117  edge_f1=0.2300  edge_f1_exact=0.0866  lpips=0.6671
-1121.8s 516 
-1121.8s 517 [reference: brightness_+0.1]
-1121.8s 518 all          psnr=19.9223  ssim=0.9061  edge_f1=0.9972  edge_f1_exact=0.9867  lpips=0.0298
-1121.8s 519 agri         psnr=19.8643  ssim=0.8380  edge_f1=0.9972  edge_f1_exact=0.9918  lpips=0.0272
-1121.8s 520 barrenland   psnr=20.0110  ssim=0.9307  edge_f1=0.9927  edge_f1_exact=0.9742  lpips=0.0350
-1121.8s 521 grassland    psnr=19.8767  ssim=0.9348  edge_f1=0.9994  edge_f1_exact=0.9933  lpips=0.0263
-1121.8s 522 urban        psnr=19.9372  ssim=0.9208  edge_f1=0.9995  edge_f1_exact=0.9874  lpips=0.0306
-1170.6s 523 
-1170.6s 524 [reference: shuffled_pairs]
-1170.6s 525 all          psnr=10.8737  ssim=0.0924  edge_f1=0.5824  edge_f1_exact=0.1693  lpips=0.6113
-1170.6s 526 agri         psnr=10.9706  ssim=0.1300  edge_f1=0.4025  edge_f1_exact=0.1057  lpips=0.6356
-1170.6s 527 barrenland   psnr=10.6403  ssim=0.0931  edge_f1=0.5842  edge_f1_exact=0.1692  lpips=0.6187
-1170.6s 528 grassland    psnr=11.1060  ssim=0.0736  edge_f1=0.6896  edge_f1_exact=0.2042  lpips=0.5767
-1170.6s 529 urban        psnr=10.7779  ssim=0.0728  edge_f1=0.6535  edge_f1_exact=0.1983  lpips=0.6141
-1218.9s 530 
-1218.9s 531 [reference: dataset_mean_color]
-1218.9s 532 all          psnr=13.9087  ssim=0.2349  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9496
-1218.9s 533 agri         psnr=13.5504  ssim=0.3540  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9007
-1218.9s 534 barrenland   psnr=13.4827  ssim=0.2532  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9823
-1218.9s 535 grassland    psnr=14.6130  ssim=0.1608  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9360
-1218.9s 536 urban        psnr=13.9890  ssim=0.1714  edge_f1=0.0000  edge_f1_exact=0.0000  lpips=0.9793
-1226.4s 537 /usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
-1226.4s 538 warnings.warn(
-1226.4s 539 Traceback (most recent call last):
-1226.4s 540 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/configuration_utils.py"[0m, line [35m414[0m, in [35mload_config[0m
-1226.4s 541 config_file = hf_hub_download(
-1226.4s 542 pretrained_model_name_or_path,
-1226.4s 543 ...<10 lines>...
-1226.4s 544 local_dir_use_symlinks=local_dir_use_symlinks,
-1226.4s 545 )
-1226.4s 546 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py"[0m, line [35m89[0m, in [35m_inner_fn[0m
-1226.4s 547 return fn(*args, **kwargs)
-1226.4s 548 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_http.py"[0m, line [35m266[0m, in [35m_inner[0m
-1226.4s 549 return fn(*args, **kwargs)
-1226.4s 550 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/file_download.py"[0m, line [35m1047[0m, in [35mhf_hub_download[0m
-1226.4s 551 return _hf_hub_download_to_cache_dir(
-1226.4s 552 # Destination
-1226.4s 553 ...<15 lines>...
-1226.4s 554 dry_run=dry_run,
-1226.4s 555 )
-1226.4s 556 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/file_download.py"[0m, line [35m1194[0m, in [35m_hf_hub_download_to_cache_dir[0m
-1226.4s 557 [31m_raise_on_head_call_error[0m[1;31m(head_call_error, force_download, local_files_only)[0m
-1226.4s 558 [31m~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
-1226.4s 559 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/file_download.py"[0m, line [35m1944[0m, in [35m_raise_on_head_call_error[0m
-1226.4s 560 raise LocalEntryNotFoundError(
-1226.4s 561 ...<2 lines>...
-1226.4s 562 )
-1226.4s 563 [1;35mhuggingface_hub.errors.LocalEntryNotFoundError[0m: [35mCannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.[0m
-1226.4s 564 
-1226.4s 565 During handling of the above exception, another exception occurred:
-1226.4s 566 
-1226.4s 567 Traceback (most recent call last):
-1226.4s 568 File [35m"/kaggle/working/sar_to_eo/scripts/eval_metrics.py"[0m, line [35m93[0m, in [35m<module>[0m
-1226.4s 569 [31mmain[0m[1;31m()[0m
-1226.4s 570 [31m~~~~[0m[1;31m^^[0m
-1226.4s 571 File [35m"/kaggle/working/sar_to_eo/scripts/eval_metrics.py"[0m, line [35m57[0m, in [35mmain[0m
-1226.4s 572 [31mAutoencoderKL.from_pretrained[0m[1;31m(args.vae, local_files_only=True)[0m,
-1226.4s 573 [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
-1226.4s 574 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py"[0m, line [35m89[0m, in [35m_inner_fn[0m
-1226.4s 575 return fn(*args, **kwargs)
-1226.4s 576 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/models/modeling_utils.py"[0m, line [35m1164[0m, in [35mfrom_pretrained[0m
-1226.4s 577 config, unused_kwargs, commit_hash = [31mcls.load_config[0m[1;31m([0m
-1226.4s 578 [31m~~~~~~~~~~~~~~~[0m[1;31m^[0m
-1226.4s 579 [1;31mconfig_path,[0m
-1226.4s 580 [1;31m^^^^^^^^^^^^[0m
-1226.4s 581 ...<10 lines>...
-1226.4s 582 [1;31m**kwargs,[0m
-1226.4s 583 [1;31m^^^^^^^^^[0m
-1226.4s 584 [1;31m)[0m
-1226.4s 585 [1;31m^[0m
-1226.4s 586 File [35m"/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py"[0m, line [35m89[0m, in [35m_inner_fn[0m
-1226.4s 587 return fn(*args, **kwargs)
-1226.4s 588 File [35m"/usr/local/lib/python3.13/dist-packages/diffusers/configuration_utils.py"[0m, line [35m441[0m, in [35mload_config[0m
-1226.4s 589 raise EnvironmentError(
-1226.4s 590 f"{pretrained_model_name_or_path} does not appear to have a file named {cls.config_name}."
-1226.4s 591 )
-1226.4s 592 [1;35mOSError[0m: [35massets/sd-vae-ft-ema does not appear to have a file named config.json.[0m
-1230.3s 593 /usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
-1230.3s 594 cells[i][c] = re.sub('\\\\\|', '|', cell)
-1230.5s 595 /usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
-1230.5s 596 text = re.sub(r'_', '\_', text) # Escape underscores in display text
-1231.2s 597 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
-1231.3s 598 [NbConvertApp] Writing 88848 bytes to __notebook__.ipynb
-1233.9s 599 [NbConvertApp] Converting notebook __notebook__.ipynb to html
-1234.5s 600 [NbConvertApp] Writing 359518 bytes to __results__.html
